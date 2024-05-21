@@ -1,0 +1,107 @@
+.header {
+    background-color: var(--black-100);
+    height: 9rem;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+
+
+
+}
+
+.image {
+    height: 15rem;
+    width: 15rem;
+
+    margin: 0 auto;
+
+}
+
+.image:hover {
+    cursor: pointer;
+}
+
+.talkToUs {
+    display: flex;
+
+    align-items: center;
+    margin: 0 1rem;
+    margin-left: 2rem;
+    margin-bottom: -0.1rem;
+    cursor: pointer;
+    font-weight: bold;
+    gap: 0.3rem;
+    color: var(--yellow-300);
+
+
+}
+
+.talkToUs:hover {
+
+    color: var(--yellow-400);
+
+}
+
+.service {
+    display: flex;
+    align-items: center;
+    margin-bottom: -0.1rem;
+    cursor: pointer;
+    font-weight: bold;
+    gap: 0.3rem;
+    color: var(--yellow-300);
+}
+
+
+.service:hover {
+
+    color: var(--yellow-400);
+
+}
+
+.help {
+    display: flex;
+
+    gap: 2rem;
+    align-items: center;
+
+
+}
+
+.search {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-right: 3rem;
+
+}
+
+.input {
+    border: none;
+    border-radius: 5px;
+    height: 1.2rem;
+
+
+    background-color: var(--white-400);
+    color: var(--gray-400);
+}
+
+.input::placeholder {
+    padding-left: 8px;
+    font-size: 15px;
+    align-items: center;
+
+}
+
+.button {
+    border: none;
+    background: inherit;
+    display: flex;
+    color: var(--gray-200);
+}
+
+.button:hover {
+    color: var(--white-200);
+}

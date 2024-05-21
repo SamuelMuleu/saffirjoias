@@ -1,0 +1,27 @@
+.category{
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    color: var(--white-200);
+    
+ 
+
+  
+ 
+}
+.category p {
+text-align: center;
+margin: 0.5rem;
+font-weight: bold;
+letter-spacing: 2px
+}
+.category img {
+
+    transition: transform 0.3s ease; 
+}
+
+.category img:hover {
+    transform: scale(1.2);
+}

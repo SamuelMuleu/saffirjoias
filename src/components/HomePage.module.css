@@ -1,0 +1,94 @@
+.app {
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  gap: 70px;
+  
+
+}
+
+.swiper {
+  max-width: 60%;
+  padding: 1.25rem;
+  margin: 0 auto;
+
+}
+
+.swiper img {
+  border-radius: 18px;
+  margin-left: 111em;
+  width: 41%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.swiperslide {
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+
+
+  height: 12.5rem;
+  margin: 0 auto;
+}
+
+.options img {
+
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.category {
+
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+
+
+  justify-content: center;
+  flex-direction: column;
+
+
+}
+
+.category p {
+  margin: 1rem;
+  opacity: 0.4;
+
+
+}
+
+.line {
+  border: 1px var(--gray-400) solid;
+  width: 50rem;
+  align-items: center;
+  margin: 0 auto;
+
+
+}
+
+.swiper-button-prev, .swiper-button-next {
+  color: white;
+
+}
+
+@media (max-width: 600px) {
+  .swiper {
+    width: 100%;
+
+  }
+}
