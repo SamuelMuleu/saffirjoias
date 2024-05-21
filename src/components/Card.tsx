@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './Card.module.css';
 import { ArrowFatLeft } from "@phosphor-icons/react";
-import Lightbox from 'react-image-lightbox';
+
 import 'react-image-lightbox/style.css';
 
 interface Card {
@@ -48,12 +48,6 @@ export default function Alliance(props: Props) {
                 ))}
             </div>
 
-            {isOpen && currentImage && (
-                <Lightbox
-                    mainSrc={currentImage}
-                    onCloseRequest={() => setIsOpen(false)}
-                />
-            )}
         </div>
     );
 }
