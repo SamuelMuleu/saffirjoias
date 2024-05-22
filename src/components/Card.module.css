@@ -1,11 +1,11 @@
-.alliance {
+.container {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     align-items: center;
     gap: 20px;
     padding: 3.1rem;
     padding-top: 3.1rem;
-
+    transition: transform 0.3s ease; 
 }
 
 img {
@@ -14,6 +14,7 @@ img {
     cursor: pointer;
 
 }
+
 
 .back {
     display: flex;
@@ -28,6 +29,7 @@ img {
     cursor: pointer;
     font-weight: 800;
 
+
 }
 
 .back:hover {
@@ -36,3 +38,48 @@ img {
     color: var(--yellow-400);
 }
 
+.modal {
+    background: inherit;
+
+}
+
+.modalImage {
+
+    position: fixed;
+    z-index: 1;
+    margin-left: 33rem;
+    margin: -65.1rem auto 1rem 30rem;
+    height: 38rem;
+
+}
+
+.closeButton {
+    position: fixed;
+    z-index: 1;
+    color: var(--white-200);
+    margin-left: 33rem;
+    margin: -64rem auto 1rem 80rem;
+
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.closeButton:hover {
+    transform: scale(1.1);
+   
+    color: var(--white-400);
+    cursor: pointer;
+
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+
+
+}

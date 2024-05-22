@@ -1,8 +1,19 @@
 import { useState } from 'react';
 import styles from './Card.module.css';
-import { ArrowFatLeft } from "@phosphor-icons/react";
+import { ArrowFatLeft, XCircle } from "@phosphor-icons/react";
 
-import 'react-image-lightbox/style.css';
+
+
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+import Modal from 'react-modal';
+
+
+
+
 
 interface Card {
     name: string;
@@ -15,7 +26,10 @@ interface Card {
 interface Props {
     propsCard: Card[];
     onClick: () => void;
+
 }
+
+
 
 export default function Alliance(props: Props) {
     const { onClick, propsCard } = props;
@@ -28,26 +42,62 @@ export default function Alliance(props: Props) {
 
     };
 
+
+
+
+    const closeModal = () => {
+        setIsOpen(false);
+        setCurrentImage(null);
+    };
+
+
     return (
         <div>
             <div className={styles.back} onClick={onClick}>
                 <ArrowFatLeft /> Voltar
             </div>
             <div className={styles.alliance}>
-                {propsCard.map((card, index) => (
-                    <div key={index}>
-                        <img
-                            src={card.img}
-                            alt={card.description}
-                            onClick={() => handleImageClick(card.img)}
-                            className={styles.image}
-                        />
-                        <p>{card.name}</p>
-                        <p>{card.description}</p>
-                    </div>
-                ))}
+
+                <div
+
+                    className={styles.container}
+                >
+
+                    {propsCard.map((card, index) => (
+                        <div key={index}>
+
+                            <img
+
+                                src={card.img}
+                                alt={card.description}
+                                onClick={() => handleImageClick(card.img)}
+                                className={styles.image}
+                            />
+                            <p > {card.name}</p>
+                            <p>{card.description}</p>
+
+                        </div>
+                    ))}
+                </div>
             </div>
 
+            <Modal
+                isOpen={isOpen}
+                onRequestClose={closeModal}
+                className={styles.modal}
+                overlayClassName={styles.overlay} />
+            {currentImage && <img
+                src={currentImage}
+                alt="Current"
+                className={styles.modalImage} />}
+            {
+                currentImage &&
+                <button onClick={closeModal}
+                    className={styles.closeButton}>
+                    <XCircle
+                        size={32} />
+                </button>
+            }
         </div>
-    );
+    )
 }
