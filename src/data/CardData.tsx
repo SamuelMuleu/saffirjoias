@@ -1,13 +1,13 @@
 import alianca from "../assets/aliança.png";
 
 import { v4 as uuidv4 } from 'uuid';
-import cristo from "../assets/cristo.png";
+import brinco3 from "../assets/brinco3.png";
 import canga from "../assets/canga.png";
 import trevo from "../assets/trevo.png";
 import aneis from "../assets/aneis.png";
 
 import pingentes from "../assets/pingentes.png";
-import nome from "../assets/nome.png";
+import anelpingente from "../assets/anelpingente.png";
 import cordao from "../assets/cordao.png";
 
 
@@ -520,19 +520,18 @@ const imageCarousel = [
     },
     {
         id: uuidv4(),
-        url: cristo,
+        url: anelpingente,
         alt: 'Imagem 2',
 
         text: 'Pingentes'
-    }
-    ,
+    },
     {
         id: uuidv4(),
-        url: nome,
+        url: brinco3,
         alt: 'Imagem 2',
 
         text: 'Pingentes'
-    }
+    },
 ];
 
 

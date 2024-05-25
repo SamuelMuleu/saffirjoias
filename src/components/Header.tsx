@@ -7,13 +7,13 @@ import { WhatsappLogo, CallBell, MagnifyingGlass } from "@phosphor-icons/react";
 
 interface Props {
 
-    onClick: () => void;
+    onClickContact: () => void;
+    onClickService: () => void;
+
 
 
 }
-export function Header(props: Props) {
-
-    const { onClick } = props
+export default function Header({ onClickContact, onClickService }: Props) {
 
     function reloadPage() {
         location.reload();
@@ -21,13 +21,14 @@ export function Header(props: Props) {
     }
 
 
+
     return (
 
         <div className={styles.header}>
             <div className={styles.help}>
 
-                <div onClick={onClick} className={styles.talkToUs}>Fale conosco <WhatsappLogo size={18} /> </div>
-                <div className={styles.service}>Serviços<CallBell size={18} /></div>
+                <div onClick={onClickContact} className={styles.talkToUs}>Fale conosco <WhatsappLogo size={18} /> </div>
+                <div onClick={onClickService} className={styles.service}>Serviços<CallBell size={18} /></div>
 
 
             </div>
@@ -35,7 +36,7 @@ export function Header(props: Props) {
             <img className={styles.image} src={image} alt="" onClick={reloadPage} />
 
             <form className={styles.search}>
-                <input className={styles.input} placeholder="Pesquisar"  type="text" />
+                <input className={styles.input} placeholder="Pesquisar" type="text" />
                 <button className={styles.button}>
                     <MagnifyingGlass size={18} />
 

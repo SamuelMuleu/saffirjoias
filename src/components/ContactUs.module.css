@@ -47,18 +47,36 @@
     transition: transform 0.3s ease;
 
 }
+a{
+    color: var(--yellow-300);
+    text-decoration: none;
 
-a {
+
+    display: flex;
+flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+
+}
+a:hover{
+
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.a {
     color: var(--white-400);
     text-decoration: none;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 5px;
 
 }
 
-a:hover {
+.a:hover {
 
     cursor: pointer;
     transform: scale(1.1);
