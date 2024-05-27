@@ -11,6 +11,7 @@
     --white-400: #b4b0b0f3;
     --white-100: #b4b0b0f3;
     --white-200: #f3eeeef3;
+    --white-300: #fffff;
     --green-500:#25D366;
 }
 
@@ -24,7 +25,7 @@
 
 
 body {
-    background: var(--blue-100);
+    background: var(--white-300);
     color: var(--yellow-400);
 
     height: 100vh;
