@@ -4,8 +4,6 @@
   flex-direction: column;
 
   align-items: center;
-  gap: 30px;
-
 
 }
 
@@ -14,11 +12,13 @@
   padding: 1rem;
   margin: 0 auto;
 
+
 }
 
 .swiper img {
   width: 55%;
   height: 350px;
+
 }
 
 .swiperslide {
@@ -77,6 +77,9 @@
   margin: 0 auto;
 
 
+}
+.text{
+  padding: 2rem;
 }
 
 .swiper-button-prev, .swiper-button-next {

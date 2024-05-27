@@ -7,7 +7,7 @@
 
     margin-bottom:6rem;
 
-
+gap: 15rem;
 }
 
 .image {
@@ -15,7 +15,7 @@
     width: 16rem;
 
 
-    margin: 0 auto;
+
 
 }
 
@@ -74,9 +74,9 @@
 
     display: flex;
     align-items: center;
-    justify-content: center;
+margin-left: 3rem;
     gap: 10px;
-    margin-right: 3rem;
+
 
 }
 

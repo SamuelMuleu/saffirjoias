@@ -218,7 +218,7 @@ function HomePage() {
           </Swiper>
           <div className={styles.category}>
 
-            <h2>Conheça nossa Coleção</h2>
+            <h2 className={styles.text}>Conheça nossa Coleção</h2>
             <p>A Modernidade e a Sofisticação em Peças Artesanais e Exclusivas</p>
           </div>
           <div className={styles.line}></div>

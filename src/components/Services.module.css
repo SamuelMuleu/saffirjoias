@@ -1,6 +1,6 @@
 .back {
-  margin-top: 2rem;
-  margin-left: -11rem;
+
+  margin-left: -15rem;
   display: flex;
   align-items: center;
   gap: 5px;
@@ -14,3 +14,34 @@
   color: var(--white-200);
 }
 
+.swiper {
+  max-width: 30rem;
+  max-height: 50%;
+
+
+
+}
+
+.swiper img {
+  height: 25rem;
+  width: 25rem;
+  margin-top: 2rem;
+
+}
+
+.swiperslide {
+
+  margin-left: 15rem;
+
+  object-fit: cover;
+}
+
+.text {
+  font-weight: bold;
+margin: 20px;
+}
+
+.imageWrapper img {
+
+  width: 25rem;
+}
