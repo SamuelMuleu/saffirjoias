@@ -31,8 +31,8 @@
 }
 
 .line {
-    border: 1px var(--gray-400) solid;
-    width: 40rem;
+    border: 1px var(--white-300) solid;
+    width: 50vw;
     align-items: center;
     margin: 0 auto;
 
