@@ -32,7 +32,7 @@
 
 .line {
     border: 1px var(--white-300) solid;
-    width: 50vw;
+    width: 20rem;
     align-items: center;
     margin: 0 auto;
 
