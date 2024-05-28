@@ -1,7 +1,7 @@
 
 @media (max-width: 1200px) {
     
-.modal {
+.modal,.list {
 display:none;
 }
 .header {
