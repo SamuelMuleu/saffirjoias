@@ -96,6 +96,19 @@ function HomePage() {
     setSelectedComponent(null)
 
   }
+  const handleClicktAtendant = (clickedCard:{description:string}) => {
+   const itemName = clickedCard.description;
+   const mensage = `Gostaria de Saber Mais Sobre esse item ${itemName}`;
+   const mensagemCodificada = encodeURIComponent(mensage);
+   const Whatsapp = "+5522998371359"
+
+
+
+   window.open( `https://wa.me/${Whatsapp}?text=${mensagemCodificada}`,'_blank');
+
+
+  }
+
 
 
 
@@ -106,14 +119,14 @@ function HomePage() {
       url: cristo,
       alt: 'Imagem 1',
       text: 'Alianças',
-      component: () => <Cards propsCard={allianceCards} onClick={handleBackCard} />
+      component: () => <Cards propsCard={allianceCards} onClick={handleBackCard} onClickCard={handleClicktAtendant} />
     },
     {
       id: uuidv4(),
       url: brinco,
       alt: 'Imagem 2',
       text: 'Brincos',
-      component: () => <Cards propsCard={brincoCard} onClick={handleBackCard} />
+      component: () => <Cards propsCard={brincoCard} onClick={handleBackCard} onClickCard={handleClicktAtendant} />
 
     },
     {
@@ -121,28 +134,28 @@ function HomePage() {
       url: alianca,
       alt: 'Imagem 2',
       text: 'Anéis',
-      component: () => <Cards propsCard={aneisCard} onClick={handleBackCard} />
+      component: () => <Cards propsCard={aneisCard} onClick={handleBackCard} onClickCard={handleClicktAtendant}/>
     },
     {
       id: uuidv4(),
       url: trevo,
       alt: 'Imagem 2',
       text: 'Colares',
-      component: () => <Cards propsCard={colarCard} onClick={handleBackCard} />
+      component: () => <Cards propsCard={colarCard} onClick={handleBackCard} onClickCard={handleClicktAtendant} />
     },
     {
       id: uuidv4(),
       url: canga,
       alt: 'Imagem 2',
       text: 'Pingentes',
-      component: () => <Cards propsCard={pingenteCard} onClick={handleBackCard} />
+      component: () => <Cards propsCard={pingenteCard} onClick={handleBackCard}onClickCard={handleClicktAtendant} />
     },
     {
       id: uuidv4(),
       url: escapulario,
       alt: 'Imagem 2',
       text: 'escapulários',
-      component: () => <Cards propsCard={escapularioCard} onClick={handleBackCard} />
+      component: () => <Cards propsCard={escapularioCard} onClick={handleBackCard} onClickCard={handleClicktAtendant}/>
       ,
     }
 

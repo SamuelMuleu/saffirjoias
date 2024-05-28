@@ -26,13 +26,14 @@ interface Card {
 interface Props {
     propsCard: Card[];
     onClick: () => void;
+    onClickCard: (clickedCard: Card) => void;
 
 }
 
 
 
 export default function Alliance(props: Props) {
-    const { onClick, propsCard } = props;
+    const { onClick, propsCard, onClickCard } = props;
     const [isOpen, setIsOpen] = useState(false);
     const [currentImage, setCurrentImage] = useState<string | null>(null);
 
@@ -64,7 +65,9 @@ export default function Alliance(props: Props) {
                 >
 
                     {propsCard.map((card, index) => (
-                        <div key={index}  className={styles.card} >
+                        <div
+                            key={index}
+                            className={styles.card} >
 
                             <img
 
@@ -75,7 +78,12 @@ export default function Alliance(props: Props) {
                             />
                             <p > {card.name}</p>
                             <p>{card.description}</p>
-                            <button className={styles.button}>Falar com Atendente</button>
+                            <button
+                                onClick={() => onClickCard(card)}
+                                className={styles.button}
+                                formTarget='_blank'
+                            >Falar com Atendente
+                            </button>
 
                         </div>
                     ))}
@@ -86,6 +94,7 @@ export default function Alliance(props: Props) {
                 isOpen={isOpen}
                 onRequestClose={closeModal}
                 className={styles.modal}
+
                 overlayClassName={styles.overlay} />
             {currentImage && <img
                 src={currentImage}

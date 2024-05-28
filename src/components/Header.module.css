@@ -1,3 +1,7 @@
+
+@media (min-width: 1024) {
+    
+
 .header {
     background-color: var(--blue-100);
     height: 9rem;
@@ -18,6 +22,7 @@
 
 
 }
+
 
 .image:hover {
     cursor: pointer;
@@ -60,7 +65,7 @@
 .talkToUs:hover::after {
 
     width: 100%;
-    transition: 0.3s;
+    transition: width 0.9s ease;
 }
 
 .service {
@@ -97,7 +102,16 @@
 .service:hover::after {
 
     width: 100%;
-    transition: 0.3s;
+    transition: width 0.9s ease;
+}
+
+.service.active  {
+    width: 100%; 
+    position: absolute;
+    background-color: var(--white-300);
+    height: 3px;
+    width: 0;
+    bottom: 0;
 }
 
 .help {
@@ -145,4 +159,54 @@
 
 .button:hover {
     color: var(--white-200);
+}
+}
+
+@media (max-width: 600px) {
+
+    .talkToUs,.service,.input,.button{
+        display: none;
+    }
+
+.header {
+    background-color: var(--blue-100);
+    height: 9rem;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 6rem;
+
+    gap:-1rem;
+}
+.list{
+
+    background-color: inherit;
+    border: none;
+
+}
+.modal{ 
+
+
+    background-color: black;
+    height: 100vh;
+    background-color:#0a1b2d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    align-items: center;
+    
+    
+}
+.wrapperModal{
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    height: 100%;
+}
 }
