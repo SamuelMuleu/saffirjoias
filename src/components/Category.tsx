@@ -26,7 +26,7 @@ const  {image,onClick} = props
 
 
       {image.map((img, index) => (
-        <div key={index} onClick={() => handleClick(img)} >
+        <div key={index} className={styles.card}  onClick={() => handleClick(img)} >
           <img src={img.url} alt={img.alt} />
           <p>{img.text}</p>
         </div>

@@ -11,6 +11,7 @@
   max-width: 60%;
   padding: 1rem;
   margin: 0 auto;
+  
 
 
 }
@@ -65,13 +66,14 @@
 
 .category p {
   margin: 1rem;
-  opacity: 0.4;
+
+  opacity: 0.5;
 
 
 }
 
 .line {
-  border: 1px var(--gray-400) solid;
+  border: 1px var(--blue-100) solid;
   width: 50rem;
   align-items: center;
   margin: 0 auto;

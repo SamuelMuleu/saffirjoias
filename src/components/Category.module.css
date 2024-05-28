@@ -4,13 +4,16 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
-    color: var(--white-200);
-    
+ 
+    margin-top: 2rem;
  
 
   
  
 }
+
+  
+  
 .category p {
 text-align: center;
 margin: 0.5rem;
@@ -18,7 +21,7 @@ font-weight: bold;
 letter-spacing: 2px
 }
 .category img {
-
+margin-top: 2rem;
     transition: transform 0.3s ease; 
 }
 

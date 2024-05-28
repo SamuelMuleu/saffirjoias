@@ -37,7 +37,7 @@ export default function Services({ onClick }: Props) {
 
 
 
-<div className={styles.text} >Alianças Sem Solda</div>
+<div className={styles.swiperslide} >Alianças Sem Solda</div>
 
 <Swiper className={styles.swiper}
 
@@ -45,7 +45,7 @@ export default function Services({ onClick }: Props) {
     modules={[EffectFade, Navigation, Pagination, Scrollbar, A11y, Autoplay]}
     slidesPerView={1}
     autoplay={{
-        delay: 4000,
+        delay: 4500,
         disableOnInteraction: false,
     }}
     loop={true}

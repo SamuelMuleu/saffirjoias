@@ -27,8 +27,8 @@ export default function Header({ onClickContact, onClickService }: Props) {
         <div className={styles.header}>
             <div className={styles.help}>
 
-                <div onClick={onClickContact} className={styles.talkToUs}>Fale conosco <WhatsappLogo size={18} /> </div>
-                <div onClick={onClickService} className={styles.service}>Serviços<CallBell size={18} /></div>
+                <button onClick={onClickContact} className={styles.talkToUs}>Fale conosco <WhatsappLogo size={18} /> </button> 
+                <button onClick={onClickService} className={styles.service}>Serviços<CallBell size={18} /> </button>
 
 
             </div>

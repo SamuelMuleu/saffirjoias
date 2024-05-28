@@ -31,12 +31,12 @@
 }
 
 .line {
-    border: 1px var(--white-300) solid;
-    width: 20rem;
+    border: 1px var(--gray-200) solid;
+    width: 38rem;
     align-items: center;
     margin: 0 auto;
 
-    margin-top: 1rem;
+
 }
 
 .whatsapp {
@@ -58,6 +58,7 @@ a {
     justify-content: center;
     align-items: center;
     gap: 5px;
+    
 
 }
 
@@ -98,5 +99,7 @@ a:hover {
 }
 
 .back:hover {
-    color: var(--white-200);
+
+
+    color: var(--yellow-400);
 }

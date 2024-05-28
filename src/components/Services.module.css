@@ -1,47 +1,72 @@
 .back {
-
   margin-left: -15rem;
   display: flex;
   align-items: center;
   gap: 5px;
-
   cursor: pointer;
   font-weight: bold;
-
+  color: var(--black-100);
+  transition: color 0.3s ease;
 }
 
 .back:hover {
-  color: var(--white-200);
-}
 
+
+  color: var(--yellow-400);
+}
 .swiper {
   max-width: 30rem;
-  max-height: 50%;
+  max-height: 25rem;
 
-
-
+  border-radius: 10px;
+  overflow: hidden;
+margin-left: 5.2rem;
 }
 
 .swiper img {
-  height: 25rem;
-  width: 25rem;
-  margin-top: 2rem;
-
+  width: 100%;
+  height: auto;
+  
+  object-fit: cover;
+  max-width: 25rem;
 }
 
 .swiperslide {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  margin: 20px 0;
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--black-100);
 
-  margin-left: 15rem;
-
-  object-fit: cover;
 }
 
 .text {
   font-weight: bold;
-margin: 20px;
+  margin: 20px 0;
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.imageWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
 }
 
 .imageWrapper img {
+  width: 100%;
+  max-width: 25rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  width: 25rem;
+.imageWrapper img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }

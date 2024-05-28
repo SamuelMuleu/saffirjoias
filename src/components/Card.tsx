@@ -56,7 +56,7 @@ export default function Alliance(props: Props) {
             <div className={styles.back} onClick={onClick}>
                 <ArrowFatLeft /> Voltar
             </div>
-            <div className={styles.alliance}>
+            <div>
 
                 <div
 
@@ -64,7 +64,7 @@ export default function Alliance(props: Props) {
                 >
 
                     {propsCard.map((card, index) => (
-                        <div key={index}>
+                        <div key={index}  className={styles.card} >
 
                             <img
 
@@ -75,6 +75,7 @@ export default function Alliance(props: Props) {
                             />
                             <p > {card.name}</p>
                             <p>{card.description}</p>
+                            <button className={styles.button}>Falar com Atendente</button>
 
                         </div>
                     ))}

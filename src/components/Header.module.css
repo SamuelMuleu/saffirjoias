@@ -5,9 +5,9 @@
     display: flex;
     align-items: center;
 
-    margin-bottom:6rem;
+    margin-bottom: 6rem;
 
-gap: 15rem;
+    gap: 15rem;
 }
 
 .image {
@@ -25,6 +25,8 @@ gap: 15rem;
 
 .talkToUs {
     display: flex;
+    background: inherit;
+    border: none;
 
     align-items: center;
     margin: 0 1rem;
@@ -34,7 +36,7 @@ gap: 15rem;
     font-weight: bold;
     gap: 0.3rem;
     color: var(--yellow-300);
-
+    position: relative;
 
 }
 
@@ -44,13 +46,33 @@ gap: 15rem;
 
 }
 
+.talkToUs::after {
+
+    content: '';
+    position: absolute;
+    background-color: var(--white-300);
+    height: 3px;
+    width: 0;
+    bottom: 0;
+
+}
+
+.talkToUs:hover::after {
+
+    width: 100%;
+    transition: 0.3s;
+}
+
 .service {
+    background: inherit;
+    border: none;
     display: flex;
     align-items: center;
     margin-bottom: -0.1rem;
     cursor: pointer;
     font-weight: bold;
     gap: 0.3rem;
+    position: relative;
     color: var(--yellow-300);
 }
 
@@ -59,6 +81,23 @@ gap: 15rem;
 
     color: var(--yellow-400);
 
+}
+
+.service::after {
+
+    content: '';
+    position: absolute;
+    background-color: var(--white-300);
+    height: 3px;
+    width: 0;
+    bottom: 0;
+
+}
+
+.service:hover::after {
+
+    width: 100%;
+    transition: 0.3s;
 }
 
 .help {
@@ -74,7 +113,7 @@ gap: 15rem;
 
     display: flex;
     align-items: center;
-margin-left: 3rem;
+    margin-left: 3rem;
     gap: 10px;
 
 
@@ -101,7 +140,7 @@ margin-left: 3rem;
     border: none;
     background: inherit;
     display: flex;
-    color: var(--gray-200);
+    color: var(--gray-300);
 }
 
 .button:hover {
