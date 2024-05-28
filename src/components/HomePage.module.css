@@ -30,7 +30,7 @@
 }
 
 .swiperslide {
-
+  margin-top: -2rem;
   margin-left: 15rem;
 
   object-fit: cover;
