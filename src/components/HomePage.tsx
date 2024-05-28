@@ -234,11 +234,12 @@ function HomePage() {
             <h2 className={styles.text}>Conheça nossa Coleção</h2>
             <p>A Modernidade e a Sofisticação em Peças Artesanais e Exclusivas</p>
           </div>
+ 
+      <div className={styles.text}>Escolha Por Categoria</div>
           <div className={styles.line}></div>
           <div className={styles.options}>
 
 
-      <div className={styles.text}>Escolha Por Categoria</div>
             <Category image={images} onClick={handleClickCard} />
 
 
