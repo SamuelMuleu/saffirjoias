@@ -238,7 +238,7 @@ function HomePage() {
           <div className={styles.options}>
 
 
-
+      <div className={styles.text}>Escolha Por Categoria</div>
             <Category image={images} onClick={handleClickCard} />
 
 
