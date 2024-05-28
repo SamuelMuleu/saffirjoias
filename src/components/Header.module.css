@@ -183,6 +183,7 @@
 
     background-color: inherit;
     border: none;
+    color:var(--yellow-300);
 
 }
 .modal{ 
