@@ -24,6 +24,9 @@ export default function Header({ onClickContact, onClickService }: Props) {
 
     const [search, setSearch] = useState('');
 
+
+    const [modalIsOpen, setIsOpen] = React.useState(false);
+
     function reloadPage() {
         location.reload();
 
@@ -31,16 +34,19 @@ export default function Header({ onClickContact, onClickService }: Props) {
 
 
 
-    const [modalIsOpen, setIsOpen] = React.useState(false);
-
     function openModal() {
         setIsOpen(true);
+
+    
     }
 
 
 
     function closeModal() {
         setIsOpen(false);
+
+    
+
     }
 
 
@@ -52,6 +58,12 @@ export default function Header({ onClickContact, onClickService }: Props) {
         console.log(search);
 
     }
+    
+    const handleClickItem = (callback: () => void) => {
+        callback();
+        closeModal();
+    }
+
 
 
     return (
@@ -64,22 +76,26 @@ export default function Header({ onClickContact, onClickService }: Props) {
                     isOpen={modalIsOpen}
 
                     onRequestClose={closeModal}
+                 
                     className={styles.modal}
+             
+                    overlayClassName={styles.overlay}
+             
 
                 >
                     <div className={styles.wrapperModal}>
 
-                    <button onClick={onClickContact} className={styles.talkToUsMobile}>Fale conosco <WhatsappLogo size={18} /> </button>
-                    <button onClick={onClickService} className={styles.serviceMobile}>Serviços<CallBell size={18} /> </button>
-                    <form className={styles.search} >
+                        <button onClick={() => handleClickItem(onClickContact)} className={styles.talkToUsMobile}>Fale conosco <WhatsappLogo size={18} /> </button>
+                        <button onClick={() => handleClickItem(onClickService)}className={styles.serviceMobile}>Serviços<CallBell size={18} /> </button>
+                        <form className={styles.search} >
 
-                        <input value={search} onChange={handleSearchItems} className={styles.inputMobile} placeholder="Pesquisar" type="search" />
-                        <button className={styles.buttonMobile}  >
-                            <MagnifyingGlass size={18} />
+                            <input value={search} onChange={handleSearchItems} className={styles.inputMobile} placeholder="Pesquisar" type="search" />
+                            <button className={styles.buttonMobile}  >
+                                <MagnifyingGlass size={18} />
 
-                        </button>
-                    </form>
-                    <button onClick={closeModal}>close</button>
+                            </button>
+                        </form>
+                        <button className={styles.close} onClick={closeModal}>close</button>
                     </div>
 
                 </Modal>

@@ -9,8 +9,10 @@ import 'swiper/css/pagination';
 import 'swiper/css/a11y';
 import 'swiper/css/scrollbar';
 
+import Modal from 'react-modal';
 
 (window as any).global = window;
+Modal.setAppElement('#root');
 function App() {
   
 

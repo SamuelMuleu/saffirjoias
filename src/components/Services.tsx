@@ -37,7 +37,7 @@ export default function Services({ onClick }: Props) {
 
 
 
-<div className={styles.swiperslide} >Alianças Sem Solda</div>
+<div className={styles.text} >Alianças Sem Solda</div>
 
 <Swiper className={styles.swiper}
 
@@ -54,12 +54,15 @@ export default function Services({ onClick }: Props) {
 >
     <div className={styles.swiperslide}>
 
+<div className={styles.swiperslide}>
+
         <SwiperSlide><img src={aliancasemsolda1} alt="" /></SwiperSlide>
         <SwiperSlide><img src={aliancasemsolda4} alt="" /></SwiperSlide>
         <SwiperSlide><img src={aliancasemsolda5} alt="" /></SwiperSlide>
         <SwiperSlide><img src={aliancasemsolda3} alt="" /></SwiperSlide>
         <SwiperSlide><img src={aliancasemsolda2} alt="" /></SwiperSlide>
 
+</div>
 
 
 

@@ -231,11 +231,11 @@ function HomePage() {
           </Swiper>
           <div className={styles.category}>
 
-            <h2 className={styles.text}>Conheça nossa Coleção</h2>
+            <h1 className={styles.text}>Conheça nossa Coleção</h1>
             <p>A Modernidade e a Sofisticação em Peças Artesanais e Exclusivas</p>
           </div>
  
-      <div className={styles.text}>Escolha Por Categoria</div>
+      <h2 className={styles.text}>Escolha Por Categoria</h2>
           <div className={styles.line}></div>
           <div className={styles.options}>
 
