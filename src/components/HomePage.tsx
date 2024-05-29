@@ -232,10 +232,10 @@ function HomePage() {
           <div className={styles.category}>
 
             <h1 className={styles.text}>Conheça nossa Coleção</h1>
-            <p>A Modernidade e a Sofisticação em Peças Artesanais e Exclusivas</p>
+            < p>A Modernidade e a Sofisticação em Peças Artesanais e Exclusivas</p>
           </div>
  
-      <h2 className={styles.text}>Escolha Por Categoria</h2>
+      <h2 className={styles.text2}>Escolha Por Categoria</h2>
           <div className={styles.line}></div>
           <div className={styles.options}>
 

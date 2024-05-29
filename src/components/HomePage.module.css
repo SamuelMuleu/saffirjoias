@@ -1,60 +1,114 @@
-
-
-
 @media (min-width: 1024px) {
-  
 
 
-.app {
 
-  display: flex;
-  flex-direction: column;
+  .app {
 
-  align-items: center;
+    display: flex;
+    flex-direction: column;
 
+    align-items: center;
+
+  }
+
+  .swiper {
+    max-width: 60%;
+    padding: 1rem;
+    margin: 0 auto;
+
+
+  }
+
+  .swiper img {
+    width: 55%;
+    height: 350px;
+
+
+  }
+
+  .swiperslide {
+    margin-top: -3rem;
+    margin-left: 15rem;
+
+    object-fit: cover;
+  }
+
+
+  .options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+
+
+    height: 12.5rem;
+    margin: 0 auto;
+  }
+
+  .options img {
+
+    width: 10rem;
+    height: 10rem;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  .category {
+
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+
+
+    justify-content: center;
+    flex-direction: column;
+
+
+  }
+
+  .category p {
+    margin: 1rem;
+
+    opacity: 0.5;
+
+
+  }
+
+  .line {
+    border: 1px var(--blue-100) solid;
+    width: 50rem;
+    align-items: center;
+    margin: 0 auto;
+
+
+  }
+
+  .text {
+    padding: 2rem;
+  }
+  .text2{
+    padding: 2rem;
+  }
+
+  .swiper-button-prev, .swiper-button-next {
+    color: white;
+
+  }
 }
 
-.swiper {
-  max-width: 60%;
-  padding: 1rem;
-  margin: 0 auto;
+@media (max-width: 600px) {
 
+  .swiper {
+    display: flex;
 
-}
+    margin: 0 auto
+  }
+.swiper img{
+margin-left: 5rem;
+margin-bottom: 4rem;
 
-.swiper img {
-  width: 55%;
-  height: 350px;
-
-
-}
-
-.swiperslide {
-  margin-top: -3rem;
-  margin-left: 15rem;
-
-  object-fit: cover;
-}
-
-
-.options {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-
-
-
-  height: 12.5rem;
-  margin: 0 auto;
-}
-
-.options img {
-
-  width: 10rem;
-  height: 10rem;
-  object-fit: cover;
-  border-radius: 5px;
 }
 
 .category {
@@ -69,39 +123,37 @@
   flex-direction: column;
 
 
+
 }
 
 .category p {
-  margin: 1rem;
-
+  margin: 0.35rem;
+margin-left: 2rem;
   opacity: 0.5;
+  padding: 1rem;
 
+
+}
+.text{
+  margin: 0.6rem;
+
+
+}
+.text2{
+
+margin-left: 3rem;
+margin-top: 2rem;
+margin-bottom: -2.7rem;
 
 }
 
 .line {
   border: 1px var(--blue-100) solid;
-  width: 50rem;
+  width: 20rem;
   align-items: center;
   margin: 0 auto;
 
 
 }
-.text{
-  padding: 2rem;
-}
-
-.swiper-button-prev, .swiper-button-next {
-  color: white;
-
-}
-}
-
-@media (max-width: 600px) {
-
-.swiper{
-  position: relative;
-  z-index: 0;
-}  
 
 }
