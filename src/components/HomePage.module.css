@@ -13,6 +13,7 @@
 
   .swiper {
     max-width: 60%;
+
     padding: 1rem;
     margin: 0 auto;
 
@@ -24,10 +25,12 @@
     height: 350px;
 
 
+
+
   }
 
   .swiperslide {
-    margin-top: -3rem;
+
     margin-left: 15rem;
 
     object-fit: cover;
@@ -88,7 +91,8 @@
   .text {
     padding: 2rem;
   }
-  .text2{
+
+  .text2 {
     padding: 2rem;
   }
 
@@ -102,58 +106,61 @@
 
   .swiper {
     display: flex;
-
+    z-index: -1;
     margin: 0 auto
   }
-.swiper img{
-margin-left: 5rem;
-margin-bottom: 4rem;
 
-}
+  .swiper img {
+    margin-left: 5rem;
+    margin-bottom: 4rem;
 
-.category {
+  }
 
-  display: flex;
-  align-items: center;
-  overflow: hidden;
+  .category {
 
-
-
-  justify-content: center;
-  flex-direction: column;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
 
 
 
-}
-
-.category p {
-  margin: 0.35rem;
-margin-left: 2rem;
-  opacity: 0.5;
-  padding: 1rem;
+    justify-content: center;
+    flex-direction: column;
 
 
-}
-.text{
-  margin: 0.6rem;
+
+  }
+
+  .category p {
+    margin: 0.35rem;
+    margin-left: 2rem;
+    opacity: 0.5;
+    padding: 1rem;
 
 
-}
-.text2{
+  }
 
-margin-left: 3rem;
-margin-top: 2rem;
-margin-bottom: -2.7rem;
-
-}
-
-.line {
-  border: 1px var(--blue-100) solid;
-  width: 20rem;
-  align-items: center;
-  margin: 0 auto;
+  .text {
+    margin: 0.6rem;
 
 
-}
+  }
+
+  .text2 {
+
+    margin-left: 3rem;
+    margin-top: 2rem;
+    margin-bottom: -2.7rem;
+
+  }
+
+  .line {
+    border: 1px var(--blue-100) solid;
+    width: 20rem;
+    align-items: center;
+    margin: 0 auto;
+
+
+  }
 
 }
