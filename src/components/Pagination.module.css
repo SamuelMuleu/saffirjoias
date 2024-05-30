@@ -1,0 +1,26 @@
+.pagination {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 2rem;
+
+}
+
+.pagination button {
+
+    width: 1.4rem;
+    height: 1.4rem;
+
+}
+
+.pagination button:focus {
+    font-weight: bold;
+    border-color: var(--black-500);
+    border: solid var(--black-500) 1px; 
+    background-color: var(--blue-100);
+    color: var(--yellow-300);
+
+}

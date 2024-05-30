@@ -3,8 +3,6 @@ import styles from './Card.module.css';
 import { ArrowFatLeft, XCircle } from "@phosphor-icons/react";
 
 
-
-
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -13,7 +11,7 @@ import Modal from 'react-modal';
 
 
 
-
+import Pagination from './Pagination.tsx';
 
 interface Card {
     name: string;
@@ -36,6 +34,10 @@ export default function Alliance(props: Props) {
     const { onClick, propsCard, onClickCard } = props;
     const [isOpen, setIsOpen] = useState(false);
     const [currentImage, setCurrentImage] = useState<string | null>(null);
+    const [currentPage, setCurrentPage] = useState(1);
+    const [postPerPage, setPostPerPage] = useState(8);
+
+
 
     const handleImageClick = (img: string) => {
         setCurrentImage(img);
@@ -51,6 +53,10 @@ export default function Alliance(props: Props) {
         setCurrentImage(null);
     };
 
+    const lastPostIndex = currentPage * postPerPage;
+    const firstPostIndex = lastPostIndex - postPerPage;
+    const currentPosts = propsCard.slice(firstPostIndex, lastPostIndex);
+
 
     return (
         <div>
@@ -64,10 +70,14 @@ export default function Alliance(props: Props) {
                     className={styles.container}
                 >
 
-                    {propsCard.map((card, index) => (
+                    {currentPosts.map((card, index) => (
+
+
                         <div
                             key={index}
                             className={styles.card} >
+
+
 
                             <img
 
@@ -87,6 +97,10 @@ export default function Alliance(props: Props) {
 
                         </div>
                     ))}
+
+
+
+
                 </div>
             </div>
 
@@ -108,6 +122,17 @@ export default function Alliance(props: Props) {
                         size={32} />
                 </button>
             }
+                                <div className={styles.pagination}>
+
+<Pagination
+    totalPosts={propsCard.length}
+    postsPerPage={postPerPage}
+    setCurrentPage={setCurrentPage}
+    currentPage={currentPage}
+
+/>
+</div>
+
         </div>
     )
 }
