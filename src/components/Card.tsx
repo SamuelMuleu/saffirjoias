@@ -51,6 +51,7 @@ export default function Alliance(props: Props) {
     const closeModal = () => {
         setIsOpen(false);
         setCurrentImage(null);
+        setPostPerPage
     };
 
     const lastPostIndex = currentPage * postPerPage;

@@ -12,7 +12,7 @@ interface Props{
 
 const Pagination = (props:Props) => {
 
-    const { totalPosts, postsPerPage ,setCurrentPage,currentPage} = props;
+    const { totalPosts, postsPerPage ,setCurrentPage} = props;
 
     const pages = []
 
