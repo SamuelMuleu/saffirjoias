@@ -27,6 +27,8 @@
 
     .socialmedia {
         display: flex;
+        margin-right: 5rem;
+        justify-content: center;
         align-items: center;
 
         gap: 8px;
