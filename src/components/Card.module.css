@@ -208,10 +208,10 @@
     .modalImage {
 
         z-index: 1;
-        position: relative;
-        bottom: 2450px;
-        left: 15px;
-        height: 30rem;
+        position: fixed;
+        top: 160px;
+        left: 10px;
+        height: 31rem;
 
 
 
@@ -220,12 +220,12 @@
     }
 
     .closeButton {
-        position: relative;
+        position: fixed;
         z-index: 1;
         color: var(--white-200);
-        bottom: 3000px;
-        left: 350px;
 
+        top: 50px;
+        left: 340px;
         background: none;
         border: none;
         font-size: 1.2rem;

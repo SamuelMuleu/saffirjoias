@@ -34,7 +34,7 @@
     }
 
     .line {
-        border: 1px var(--gray-200) solid;
+        border: 1px var(--white-400) solid;
         width: 38rem;
         align-items: center;
         margin: 0 auto;
@@ -45,7 +45,8 @@
     .whatsapp {
 
         height: 30px;
-        border-radius: 50%;
+        min-width: 250%;
+        border-radius: 8px;
 
         transition: transform 0.3s ease;
 
@@ -163,7 +164,7 @@
     }
 
     .line {
-        border: 1px var(--yellow-300) solid;
+        border: 0.01rem var( --white-400) solid;
         width: 10rem;
 
         align-items: center;
@@ -174,9 +175,11 @@
 
     .whatsapp {
 
-        height: 30px;
-        min-width: 80%;
-        border-radius: 50%;
+        height: 33px;
+        
+        min-width: 250%;
+        border-radius: 8px;
+
 
         display: flex;
         justify-content: center;
@@ -184,7 +187,6 @@
         cursor: pointer;
 
 
-        border-radius: 5px;
 
 
 

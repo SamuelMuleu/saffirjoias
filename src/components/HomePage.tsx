@@ -98,7 +98,7 @@ function HomePage() {
   }
   const handleClicktAtendant = (clickedCard:{description:string}) => {
    const itemName = clickedCard.description;
-   const mensage = `Gostaria de Saber Mais Sobre esse item ${itemName}`;
+   const mensage = ` Ola,Gostaria de Saber Mais Sobre esse item ${itemName}`;
    const mensagemCodificada = encodeURIComponent(mensage);
    const Whatsapp = "+5522998371359"
 
@@ -174,7 +174,9 @@ function HomePage() {
 
   return (
     <div className={styles.app}>
-      <Header onClickContact={handleClickContact} onClickService={handleClickService} />
+
+<Header onClickContact={handleClickContact} onClickService={handleClickService} />
+
 
 
 
@@ -199,15 +201,12 @@ function HomePage() {
               disableOnInteraction: false,
             }}
             slidesPerView={1}
-            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-
+            
             loop={true}
-
-
-            navigation={false}
-            pagination={{ clickable: true }}
-
-
+            pagination={true} 
+       
+            
+            modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
 
           >
             {imageCarousel.map((img) => (
@@ -232,7 +231,7 @@ function HomePage() {
           <div className={styles.category}>
 
             <h1 className={styles.text}>Conheça nossa Coleção</h1>
-            < p>A Modernidade e a Sofisticação em Peças Artesanais e Exclusivas</p>
+            < p>A Modernidade e a Sofisticação em Peças <span className={styles.span}>  Artesanais e Exclusivas  </span></p>
           </div>
  
       <h2 className={styles.text2}>Escolha Por Categoria</h2>

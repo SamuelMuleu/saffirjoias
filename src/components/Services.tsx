@@ -21,7 +21,7 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/scrollbar';
 
 interface Props {
-    onClick: () => void;
+    onClick?: () => void;
 }
 
 export default function Services({ onClick }: Props) {
@@ -49,7 +49,7 @@ export default function Services({ onClick }: Props) {
         disableOnInteraction: false,
     }}
     loop={true}
-    pagination={{ clickable: true }}
+    pagination={true} 
     scrollbar={{ draggable: true }}
 >
     <div className={styles.swiperslide}>

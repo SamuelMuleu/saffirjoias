@@ -7,7 +7,7 @@ import sara from "../assets/sara1.png";
 
 interface Props {
 
-    onClick: () => void;
+    onClick?: () => void;
 
 }
 export default function ContactUs(props: Props) {
@@ -32,7 +32,7 @@ export default function ContactUs(props: Props) {
                     className={styles.a}
                         href="https://api.whatsapp.com/send?phone=5522998371359"
                         target="_blank">
-                        Whatsapp -
+                   
                         <img src={whatsapp} className={styles.whatsapp} />
                     </a>
                     <div className={styles.line}></div>
@@ -51,7 +51,6 @@ export default function ContactUs(props: Props) {
                     href="https://api.whatsapp.com/send?phone=5522997927387" 
                     target="_blank">
 
-                        Whatsapp -
                         <img src={whatsapp} className={styles.whatsapp} />
                     </a>
                 </div>
