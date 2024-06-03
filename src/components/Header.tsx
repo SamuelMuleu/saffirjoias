@@ -7,7 +7,7 @@ import React from 'react';
 
 import Modal from 'react-modal';
 
-import { WhatsappLogo, CallBell, MagnifyingGlass, List,X } from "@phosphor-icons/react";
+import { MagnifyingGlass, List,X } from "@phosphor-icons/react";
 import { useState } from "react";
 
 
@@ -85,8 +85,8 @@ export default function Header({ onClickContact, onClickService }: Props) {
                 >
                     <div className={styles.wrapperModal}>
 
-                        <button onClick={() => handleClickItem(onClickContact)} className={styles.talkToUsMobile}>Fale conosco <WhatsappLogo size={18} /> </button>
-                        <button onClick={() => handleClickItem(onClickService)}className={styles.serviceMobile}>Serviços<CallBell size={18} /> </button>
+                        <button onClick={() => handleClickItem(onClickContact)} className={styles.talkToUsMobile}>Fale conosco </button>
+                        <button onClick={() => handleClickItem(onClickService)}className={styles.serviceMobile}>Serviços </button>
                         <form className={styles.search} >
 
                             <input value={search} onChange={handleSearchItems} className={styles.inputMobile} placeholder="Pesquisar" type="text" />
@@ -101,8 +101,8 @@ export default function Header({ onClickContact, onClickService }: Props) {
                 </Modal>
 
 
-                <button onClick={onClickContact} className={styles.talkToUs}>Fale conosco <WhatsappLogo size={18} /> </button>
-                <button onClick={onClickService} className={styles.service}>Serviços<CallBell size={18} /> </button>
+                <button onClick={onClickContact} className={styles.talkToUs}>Fale conosco </button>
+                <button onClick={onClickService} className={styles.service}>Serviços </button>
 
 
             </div>
