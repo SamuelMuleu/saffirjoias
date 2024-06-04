@@ -125,7 +125,8 @@
         cursor: pointer;
 
         border-radius: 5px;
-
+        background-color: var(--blue-100);
+        color: var(--yellow-300);
         margin-top: 1rem;
         padding: 0.2rem;
         width: 100%;
@@ -281,7 +282,8 @@
         margin-top: 1rem;
         margin-bottom: 1rem;
         border-radius: 5px;
-
+        background-color: var(--blue-100);
+        color: var(--yellow-300);
 
         border: 1px black solid;
     }
