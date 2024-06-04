@@ -17,7 +17,7 @@
     padding: 1rem;
     margin: 0 auto;
 
-
+    padding-bottom: 2rem;
   }
 
   .swiper img {
@@ -28,6 +28,8 @@
 
 
   }
+
+
 
   .swiperslide {
 
@@ -105,14 +107,16 @@
 @media (max-width: 600px) {
 
   .swiper {
-  
+
     z-index: -1;
     margin: 0 auto;
   }
 
   .swiper img {
-    margin-left: 5rem;
-    margin-bottom: 4rem;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 
   }
 
@@ -162,11 +166,12 @@
 
 
   }
-  .span{
-  
-  margin-left: 4rem;
-  margin-top: .2rem;
 
-  }   
+  .span {
+
+    margin-left: 4rem;
+    margin-top: .2rem;
+
+  }
 
 }

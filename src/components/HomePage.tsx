@@ -1,4 +1,4 @@
-import Header from "./Header.tsx"
+
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -60,25 +60,6 @@ function HomePage() {
 
 
 
-  const handleClickContact = () => {
-
-
-    setShowWhatsapp(true)
-    setShowService(false);
-
-
-  }
-
-  const handleBack = () => {
-
-
-
-    setShowWhatsapp(false)
-    setShowService(false);
-
-
-
-  }
 
   const handleBackCard = () => {
 
@@ -87,24 +68,20 @@ function HomePage() {
 
     setSelectedComponent(null);
 
+    setShowWhatsapp
+    setShowService
   }
 
-  const handleClickService = () => {
-    setShowService(true);
-    setShowWhatsapp(false);
 
-    setSelectedComponent(null)
-
-  }
-  const handleClicktAtendant = (clickedCard:{description:string}) => {
-   const itemName = clickedCard.description;
-   const mensage = ` Ola,Gostaria de Saber Mais Sobre esse item ${itemName}`;
-   const mensagemCodificada = encodeURIComponent(mensage);
-   const Whatsapp = "+5522998371359"
+  const handleClicktAtendant = (clickedCard: { description: string }) => {
+    const itemName = clickedCard.description;
+    const mensage = ` Ola,Gostaria de Saber Mais Sobre esse item ${itemName}`;
+    const mensagemCodificada = encodeURIComponent(mensage);
+    const Whatsapp = "+5522998371359"
 
 
 
-   window.open( `https://wa.me/${Whatsapp}?text=${mensagemCodificada}`,'_blank');
+    window.open(`https://wa.me/${Whatsapp}?text=${mensagemCodificada}`, '_blank');
 
 
   }
@@ -134,7 +111,7 @@ function HomePage() {
       url: alianca,
       alt: 'Imagem 2',
       text: 'Anéis',
-      component: () => <Cards propsCard={aneisCard} onClick={handleBackCard} onClickCard={handleClicktAtendant}/>
+      component: () => <Cards propsCard={aneisCard} onClick={handleBackCard} onClickCard={handleClicktAtendant} />
     },
     {
       id: uuidv4(),
@@ -148,14 +125,14 @@ function HomePage() {
       url: canga,
       alt: 'Imagem 2',
       text: 'Pingentes',
-      component: () => <Cards propsCard={pingenteCard} onClick={handleBackCard}onClickCard={handleClicktAtendant} />
+      component: () => <Cards propsCard={pingenteCard} onClick={handleBackCard} onClickCard={handleClicktAtendant} />
     },
     {
       id: uuidv4(),
       url: escapulario,
       alt: 'Imagem 2',
       text: 'escapulários',
-      component: () => <Cards propsCard={escapularioCard} onClick={handleBackCard} onClickCard={handleClicktAtendant}/>
+      component: () => <Cards propsCard={escapularioCard} onClick={handleBackCard} onClickCard={handleClicktAtendant} />
       ,
     }
 
@@ -175,20 +152,20 @@ function HomePage() {
   return (
     <div className={styles.app}>
 
-<Header onClickContact={handleClickContact} onClickService={handleClickService} />
+
 
 
 
 
       {showCard && showWhatsapp ? (
         <div>
-          <ContactUs onClick={handleBack} />
+          <ContactUs />
         </div>
       ) : selectedComponent ? (
         <div>{selectedComponent}</div>
       ) : showService ? (
         <div>
-          <Services onClick={handleBack} />
+          <Services />
         </div>
       ) : (
         <>
@@ -201,11 +178,12 @@ function HomePage() {
               disableOnInteraction: false,
             }}
             slidesPerView={1}
-            
+
             loop={true}
-            pagination={true} 
-       
-            
+
+            pagination={true}
+
+
             modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
 
           >
@@ -233,8 +211,8 @@ function HomePage() {
             <h1 className={styles.text}>Conheça nossa Coleção</h1>
             < p>A Modernidade e a Sofisticação em Peças <span className={styles.span}>  Artesanais e Exclusivas  </span></p>
           </div>
- 
-      <h2 className={styles.text2}>Escolha Por Categoria</h2>
+
+          <h2 className={styles.text2}>Escolha Por Categoria</h2>
           <div className={styles.line}></div>
           <div className={styles.options}>
 

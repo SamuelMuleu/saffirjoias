@@ -24,3 +24,11 @@
     color: var(--yellow-300);
 
 }
+.active {
+    font-weight: bold;
+    border-color: var(--black-500);
+    border: solid var(--black-500) 1px; 
+    background-color: var(--blue-100);
+    color: var(--yellow-300);
+
+  }

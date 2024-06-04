@@ -12,7 +12,7 @@ interface Props{
 
 const Pagination = (props:Props) => {
 
-    const { totalPosts, postsPerPage ,setCurrentPage} = props;
+    const { totalPosts, postsPerPage ,setCurrentPage,currentPage} = props;
 
     const pages = []
 
@@ -29,7 +29,7 @@ const Pagination = (props:Props) => {
         <button 
         key={index} 
         onClick={()=> setCurrentPage(page) }
-
+        className={`${styles.button} ${currentPage === page ? styles.active : ''}`}
         >{page}</button>
     )
 })}

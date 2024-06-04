@@ -10,16 +10,17 @@
         width: 100vw;
         display: flex;
         align-items: center;
+        justify-content: space-a;
 
         margin-bottom: 4rem;
+        gap: 11rem;
+        padding: 10px;
 
-        gap: 15rem;
     }
 
     .image {
         height: 16rem;
         width: 16rem;
-
 
 
 
@@ -39,7 +40,7 @@
         margin: 0 1rem;
         margin-left: 2rem;
         margin-bottom: -0.1rem;
-        
+
         cursor: pointer;
         font-weight: bold;
         gap: 0.3rem;
@@ -78,6 +79,7 @@
         gap: 0.3rem;
         position: relative;
         color: var(--yellow-300);
+        margin-left: 1rem;
     }
 
 
@@ -126,7 +128,8 @@
 
         display: flex;
         align-items: center;
-        margin-left: 4rem;
+        margin-left: 6rem;
+
         gap: 10px;
 
 
@@ -231,12 +234,12 @@
     .talkToUsMobile {
         display: flex;
         background: inherit;
-       justify-content:center;
+        justify-content: center;
         border: none;
         width: 70%;
 
         align-items: center;
-       
+
 
         cursor: pointer;
         font-weight: bold;
@@ -337,7 +340,7 @@
         color: var(--gray-300);
         position: absolute;
         right: 39px;
-        top: 198px;
+        top: 250px;
 
     }
 
@@ -363,7 +366,6 @@
 
 
     }
-
 
 
 

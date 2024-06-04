@@ -7,37 +7,26 @@ import React from 'react';
 
 import Modal from 'react-modal';
 
-import { MagnifyingGlass, List,X } from "@phosphor-icons/react";
+import { MagnifyingGlass, List, X } from "@phosphor-icons/react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 
-interface Props {
-
-    onClickContact: () => void;
-    onClickService: () => void;
-
-
-
-
-}
-export default function Header({ onClickContact, onClickService }: Props) {
+export default function Header() {
 
     const [search, setSearch] = useState('');
 
 
     const [modalIsOpen, setIsOpen] = React.useState(false);
 
-    function reloadPage() {
-        location.reload();
 
-    }
 
 
 
     function openModal() {
         setIsOpen(true);
 
-    
+
     }
 
 
@@ -45,7 +34,7 @@ export default function Header({ onClickContact, onClickService }: Props) {
     function closeModal() {
         setIsOpen(false);
 
-    
+
 
     }
 
@@ -58,11 +47,12 @@ export default function Header({ onClickContact, onClickService }: Props) {
         console.log(search);
 
     }
-    
-    const handleClickItem = (callback: () => void) => {
-        callback();
-        closeModal();
-    }
+   const handleClickItem = (callback: () => void) => {
+    callback();
+    closeModal();
+}
+
+
 
 
 
@@ -76,17 +66,18 @@ export default function Header({ onClickContact, onClickService }: Props) {
                     isOpen={modalIsOpen}
 
                     onRequestClose={closeModal}
-                 
+
                     className={styles.modal}
-             
+
                     overlayClassName={styles.overlay}
-             
+
 
                 >
                     <div className={styles.wrapperModal}>
 
-                        <button onClick={() => handleClickItem(onClickContact)} className={styles.talkToUsMobile}>Fale conosco </button>
-                        <button onClick={() => handleClickItem(onClickService)}className={styles.serviceMobile}>Serviços </button>
+                        <Link to={"/"} onClick={()=>handleClickItem(closeModal)} className={styles.serviceMobile}>Inicio</Link>
+                        <Link to={"/faleconosco"} onClick={()=>handleClickItem(closeModal)} className={styles.talkToUsMobile}>Fale conosco </Link>
+                        <Link to={"/servicos"} onClick={()=>handleClickItem(closeModal)} className={styles.serviceMobile}>Serviços </Link>
                         <form className={styles.search} >
 
                             <input value={search} onChange={handleSearchItems} className={styles.inputMobile} placeholder="Pesquisar" type="text" />
@@ -95,20 +86,19 @@ export default function Header({ onClickContact, onClickService }: Props) {
 
                             </button>
                         </form>
-                        <button className={styles.close} onClick={closeModal}><X size={30}/></button>
+                        <button className={styles.close} onClick={closeModal}><X size={30} /></button>
                     </div>
 
                 </Modal>
 
-
-                <button onClick={onClickContact} className={styles.talkToUs}>Fale conosco </button>
-                <button onClick={onClickService} className={styles.service}>Serviços </button>
-
+                <Link to={"/"} onClick={()=>handleClickItem(closeModal)} className={styles.service}>Inicio</Link>
+                <Link to="/faleconosco" onClick={()=>handleClickItem(closeModal)} className={styles.talkToUs}>Fale conosco</Link>
+                <Link to="/servicos" onClick={()=>handleClickItem(closeModal)} className={styles.service}>Serviços</Link>
 
             </div>
 
 
-            <img className={styles.image} src={image} alt="" onClick={reloadPage} />
+            <img className={styles.image} src={image} alt=""/>
 
             <form className={styles.search} >
 

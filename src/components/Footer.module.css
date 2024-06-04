@@ -49,8 +49,19 @@
     }
 
     .copyright {
-        margin-top: -0.3rem;
+
+        display: flex;
+        width: 36%;
+        flex-direction: column;
+        gap: 10px;
     }
+
+    .socialmediawrapper {
+        display: flex;
+
+        gap: 10px;
+    }
+
 
 
 }
@@ -62,7 +73,7 @@
         height: 300px;
         display: flex;
         flex-direction: column;
-gap: 10px;
+        gap: 10px;
 
         font-size: 12px;
         color: var(--white-100);
@@ -79,13 +90,23 @@ gap: 10px;
 
 
 
+
     .socialmedia {
         display: flex;
         align-items: center;
+        justify-content: center;
         gap: 9px;
         padding: 1rem;
         flex-direction: column;
+
     }
+
+    .socialmediawrapper {
+        display: flex;
+        gap: 10px;
+    }
+
+
 
     .face {
         height: 35px;

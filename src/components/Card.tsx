@@ -23,8 +23,8 @@ interface Card {
 
 interface Props {
     propsCard: Card[];
-    onClick: () => void;
-    onClickCard: (clickedCard: Card) => void;
+    onClick: () => void ;
+    onClickCard: (clickedCard: Card) => void ;
 
 }
 
@@ -51,12 +51,12 @@ export default function Alliance(props: Props) {
     const closeModal = () => {
         setIsOpen(false);
         setCurrentImage(null);
-        setPostPerPage
+      
     };
 
     const lastPostIndex = currentPage * postPerPage;
     const firstPostIndex = lastPostIndex - postPerPage;
-    const currentPosts = propsCard.slice(firstPostIndex, lastPostIndex);
+    const currentPosts = propsCard ?  propsCard.slice(firstPostIndex, lastPostIndex):[];
 
 
     return (

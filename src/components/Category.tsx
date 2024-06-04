@@ -5,17 +5,17 @@ interface Images {
   url: string;
   alt: string;
   text: string;
-  component: () => JSX.Element; 
+  component: () => JSX.Element;
 
 
 }
 
 interface ImagemMapProps {
   image: Images[];
-  onClick: (clickedImage: Images )  => void;
+  onClick: (clickedImage: Images) => void;
 }
-export default function Category( props:ImagemMapProps ) {
-const  {image,onClick} = props
+export default function Category(props: ImagemMapProps) {
+  const { image, onClick } = props
 
 
   const handleClick = (clickedImage: Images) => {
@@ -25,12 +25,12 @@ const  {image,onClick} = props
     <div className={styles.category} >
 
 
-      {image.map((img, index) => (
-        <div key={index} className={styles.card}  onClick={() => handleClick(img)} >
+      {image ? image.map((img, index) => (
+        <div key={index} className={styles.card} onClick={() => handleClick(img)} >
           <img src={img.url} alt={img.alt} />
           <p>{img.text}</p>
         </div>
-      ))}
+      )) : []}
     </div>
   )
 };

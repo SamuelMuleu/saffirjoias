@@ -10,6 +10,7 @@ export default function Footer() {
 
             <div className={styles.socialmedia}>
                 Acompanhe Nossas Redes Sociais
+                <div className={styles.socialmediawrapper}>
                 <a href="https://www.facebook.com/profile.php?id=100083311750657" target="_blank">
 
                     <img src={faceSvg} alt="" className={styles.face} />
@@ -18,6 +19,8 @@ export default function Footer() {
 
                     <img src={instagram} className={styles.face} alt="" />
                 </a>
+                </div>
+
 
             </div>
 
@@ -30,6 +33,7 @@ export default function Footer() {
             <div  className={styles.dev}>   Avenida Pelinca, 100, Loja 66 - Parque Tamandare, Campos dos Goytacazes - RJ, 28.035-053</div>
 
             <div className={styles.copyright}>
+            
                 <div>   Desenvolvido Por Samuel Muleu </div>
                 <div >Copyright © 2024, todos os direitos reservados.</div>
             </div>

@@ -19,69 +19,67 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import 'swiper/css/scrollbar';
+import { Link } from "react-router-dom";
 
-interface Props {
-    onClick?: () => void;
-}
-
-export default function Services({ onClick }: Props) {
+export default function Services() {
 
 
     return (
 
         <div>
-            <div className={styles.back} onClick={onClick}> <ArrowFatLeft />Voltar</div>
+            <Link className={styles.back} to={"/"}> <ArrowFatLeft size={20} />Voltar</Link>
 
 
 
 
 
 
-<div className={styles.text} >Alianças Sem Solda</div>
+            <div className={styles.text} >Alianças Sem Solda</div>
 
-<Swiper className={styles.swiper}
+            <Swiper className={styles.swiper}
 
-    effect="fade"
-    modules={[EffectFade, Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-    slidesPerView={1}
-    autoplay={{
-        delay: 4500,
-        disableOnInteraction: false,
-    }}
-    loop={true}
-    pagination={true} 
-    scrollbar={{ draggable: true }}
->
-    <div className={styles.swiperslide}>
-
-<div className={styles.swiperslide}>
-
-        <SwiperSlide><img src={aliancasemsolda1} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={aliancasemsolda4} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={aliancasemsolda5} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={aliancasemsolda3} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={aliancasemsolda2} alt="" /></SwiperSlide>
-
-</div>
+                effect="fade"
+                modules={[EffectFade, Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+                slidesPerView={1}
+                autoplay={{
+                    delay: 4500,
+                    disableOnInteraction: true,
+                }}
+                loop={true}
+                pagination={true}
 
 
+            >
+                <div className={styles.swiperslide}>
+
+                    <div className={styles.swiperslide}>
+
+                        <SwiperSlide><img src={aliancasemsolda1} alt="" /></SwiperSlide>
+                        <SwiperSlide><img src={aliancasemsolda4} alt="" /></SwiperSlide>
+                        <SwiperSlide><img src={aliancasemsolda5} alt="" /></SwiperSlide>
+                        <SwiperSlide><img src={aliancasemsolda3} alt="" /></SwiperSlide>
+                        <SwiperSlide><img src={aliancasemsolda2} alt="" /></SwiperSlide>
+
+                    </div>
 
 
 
-    </div>
-</Swiper>
 
-<div className={styles.imageWrapper}>
 
-    <div className={styles.text} >Consertos em Geral</div>
-    <img src={consertos} alt="" />
-    <div className={styles.text} >Fundições</div>
-    <img src={fundiçoes} alt="" />
-    <div className={styles.text} >Joias Personalizadas</div>
-    <img src={personalizado} alt="" />
-</div>
+                </div>
+            </Swiper>
 
-</div>
+            <div className={styles.imageWrapper}>
+
+                <div className={styles.text} >Consertos em Geral</div>
+                <img src={consertos} alt="" />
+                <div className={styles.text} >Fundições</div>
+                <img src={fundiçoes} alt="" />
+                <div className={styles.text} >Joias Personalizadas</div>
+                <img src={personalizado} alt="" />
+            </div>
+
+        </div>
 
     );
 }

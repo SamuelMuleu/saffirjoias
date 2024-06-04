@@ -10,26 +10,33 @@
         color: var(--yellow-300);
         box-shadow: 1px 2px 4px 4px rgba(190, 181, 181, 0.2);
         border-radius: 8px;
-        margin-top: -15rem;
 
-        margin-right: 3rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: -1rem;
 
     }
 
     .header {
+
         display: flex;
         flex-direction: column;
         align-items: center;
         padding: 1.5rem;
         gap: 30px;
-        margin-top: 13.8rem;
+
+
 
 
     }
 
     .image {
-        height: 60px;
-        border-radius: 50%;
+        border-radius: 5rem;
+        height: 14rem;
 
     }
 
@@ -66,7 +73,7 @@
 
     }
 
-    a:hover {
+    .image:hover {
 
         cursor: pointer;
         transform: scale(1.1);
@@ -91,14 +98,16 @@
     }
 
     .back {
-
-        margin-left: -11rem;
+        position: relative;
+        right: 32rem;
+        bottom: 1.5rem;
         display: flex;
         align-items: center;
         gap: 5px;
-
+        color: var(--black-100);
         cursor: pointer;
         font-weight: bold;
+
 
     }
 
@@ -111,6 +120,9 @@
 
 @media (max-width: 600px) {
 
+
+
+
     .back {
         display: flex;
         justify-content: center;
@@ -120,8 +132,9 @@
         cursor: pointer;
         font-weight: bold;
         position: absolute;
-        top: 11rem;
-        left: 1rem;
+        color: var(--black-100);
+        top: 10.3rem;
+        left: 1.3rem;
 
 
     }
@@ -149,25 +162,31 @@
 
     .header {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
-        padding: 2rem 1rem;
-        gap: 20px;
+
+        padding: 1.7rem;
+        gap: 10px;
+
+
+
 
 
     }
 
     .image {
-        height: 60px;
-        border-radius: 50%;
+        height: 160px;
+
+        border-radius: 14px;
 
     }
 
     .line {
-        border: 0.01rem var( --white-400) solid;
-        width: 10rem;
+        border: 1px var(--white-400) solid;
 
-        align-items: center;
+        height: 20rem;
+        margin-right: 1.8rem;
+        margin-left: -1rem;
 
 
 
@@ -176,7 +195,7 @@
     .whatsapp {
 
         height: 33px;
-        
+
         min-width: 250%;
         border-radius: 8px;
 
@@ -206,7 +225,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 5px;
+        gap: 8px;
 
 
     }
@@ -217,16 +236,17 @@
         transform: scale(1.1);
     }
 
-    .a {
+    .button {
         color: var(--white-400);
         text-decoration: none;
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
+        position: relative;
+        top: 9rem;
+        right: 5.8rem;
+
 
     }
 
-    .a:hover {
+    .button:hover {
 
         cursor: pointer;
         transform: scale(1.1);
