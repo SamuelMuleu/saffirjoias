@@ -50,6 +50,7 @@ export default function Alliance(props: Props) {
 
     const closeModal = () => {
         setIsOpen(false);
+        setPostPerPage
         setCurrentImage(null);
       
     };
