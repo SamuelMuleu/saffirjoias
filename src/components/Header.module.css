@@ -192,13 +192,15 @@
     }
 
     .modal {
-        position: fixed;
+        position: sticky;
         display: table;
         height: 100%;
         width: 50%;
         top: 0;
         left: 0;
-        z-index: 9999;
+        z-index: 2000
+        ;
+ 
         background-color: #0a1b2d;
         opacity: 0;
         transform: translateY(-100%);
@@ -211,6 +213,7 @@
         top: 0;
         left: 0;
         right: 0;
+        z-index: 34;
         bottom: 0;
         background: rgba(0, 0, 0, 0);
     }

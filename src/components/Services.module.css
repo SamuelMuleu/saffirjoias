@@ -84,7 +84,7 @@
 @media (max-width: 600px) {
 
   .swiper {
-    z-index: -1;
+
     margin-left: 3rem;
     position: relative;
     margin-top: 2rem;
