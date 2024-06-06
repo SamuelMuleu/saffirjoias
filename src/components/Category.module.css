@@ -8,9 +8,10 @@
         justify-content: center;
         align-items: center;
         gap: 30px;
- 
+
 
         margin-top: 2rem;
+
 
 
 
@@ -29,6 +30,7 @@
     .category img {
         margin-top: 2rem;
         transition: transform 0.3s ease;
+
     }
 
     .category img:hover {
@@ -46,12 +48,24 @@
         justify-content: center;
         align-items: center;
         padding: 5rem;
-   margin-left: 0.4rem;
+        margin-left: 1rem;
         width: 15rem;
-        gap: 10px;
+        gap: 20px;
     }
-    .category img{
-        width: 11.2rem;
+
+    .category img {
+        width: 10rem;
+        height: 15rem;
+    }
+
+    .text {
+        display: flex;
+        font-weight: bold;
+        margin-left:2.9rem;
+     
+        margin-top: .7rem;
+        justify-content: start;
+
     }
 
 }

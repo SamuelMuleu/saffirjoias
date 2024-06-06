@@ -131,7 +131,7 @@ function HomePage() {
       id: uuidv4(),
       url: escapulario,
       alt: 'Imagem 2',
-      text: 'escapulários',
+      text: 'Correntes',
       component: () => <Cards propsCard={escapularioCard} onClick={handleBackCard} onClickCard={handleClicktAtendant} />
       ,
     }

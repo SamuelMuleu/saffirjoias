@@ -23,7 +23,9 @@
         border-radius: 18px;
         cursor: pointer;
 
+
     }
+
 
     .back {
         display: flex;
@@ -60,7 +62,7 @@
         position: fixed;
         z-index: 1;
         margin-left: 33rem;
-        margin: -72.7rem auto 1rem 15rem;
+        margin: -61.8rem auto 1rem 15rem;
         height: 38rem;
 
     }
@@ -70,7 +72,7 @@
         z-index: 1;
         color: var(--white-200);
         margin-left: 33rem;
-        margin: -72rem 66rem -100rem;
+        margin: -62rem 66rem;
 
         background: none;
         border: none;
@@ -103,8 +105,8 @@
         padding: 1.2rem;
 
 
-        width: 220px;
-        height: 440px;
+        width: 13rem;
+        height: 22rem;
 
         border: 2px solid var(--blue-100);
         justify-content: center;
@@ -127,9 +129,10 @@
         border-radius: 5px;
         background-color: var(--blue-100);
         color: var(--yellow-300);
-        margin-top: 1rem;
+
         padding: 0.2rem;
         width: 100%;
+        margin-top: .5rem;
 
         border: 1px black solid;
     }
@@ -165,16 +168,16 @@
         display: grid;
         grid-template-columns: 2fr 50%;
         gap: 7px;
-        justify-content: center;
+
         align-items: center;
 
-        padding-left: .23rem;
+        padding-left: .7rem;
 
 
     }
 
     img {
-        height: 18.7rem;
+        height: 15rem;
         border-radius: 18px;
         cursor: pointer;
 
@@ -215,7 +218,7 @@
         z-index: 1;
         position: fixed;
         top: 100px;
-        left:7px;
+        left: 7px;
         height: 31rem;
 
 
@@ -260,8 +263,10 @@
     .card {
         display: flex;
         flex-direction: column;
-        padding: 0.6rem;
-        width: 11.8rem;
+        padding: 0.5rem;
+        padding-top: 1rem;
+        width: 11rem;
+        height: 20rem;
 
 
         border: 2px solid var(--blue-100);
@@ -280,6 +285,7 @@
         align-items: center;
         cursor: pointer;
         margin-top: 1rem;
+
         margin-bottom: 1rem;
         border-radius: 5px;
         background-color: var(--blue-100);
@@ -288,9 +294,4 @@
         border: 1px black solid;
     }
 
-    .button:hover {
-
-        background-color: var(--blue-100);
-        color: var(--yellow-300);
-    }
 }

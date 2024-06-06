@@ -13,7 +13,7 @@
         justify-content: space-a;
 
         margin-bottom: 4rem;
-        gap: 11rem;
+        gap: 14rem;
         padding: 10px;
 
     }
@@ -21,7 +21,6 @@
     .image {
         height: 16rem;
         width: 16rem;
-
 
 
     }
@@ -39,7 +38,7 @@
         align-items: center;
         margin: 0 1rem;
         margin-left: 2rem;
-        margin-bottom: -0.1rem;
+
 
         cursor: pointer;
         font-weight: bold;
@@ -50,23 +49,6 @@
     }
 
 
-
-    .talkToUs::after {
-
-        content: '';
-        position: absolute;
-        background-color: var(--white-300);
-        height: 3px;
-        width: 0;
-        bottom: 0;
-
-    }
-
-    .talkToUs:hover::after {
-
-        width: 100%;
-        transition: width 0.9s ease;
-    }
 
     .service {
         background: inherit;
@@ -78,42 +60,34 @@
         font-weight: bold;
         gap: 0.3rem;
         position: relative;
+
         color: var(--yellow-300);
-        margin-left: 1rem;
-    }
-
-
-    .service:hover {
-
-        color: var(--yellow-400);
 
     }
 
-    .service::after {
+    .start {
+        background: inherit;
+        border: none;
+        display: flex;
+        align-items: center;
+        margin-bottom: -0.1rem;
+        cursor: pointer;
+        font-weight: bold;
+        gap: 0.3rem;
+        position: relative;
 
-        content: '';
-        position: absolute;
-        background-color: var(--white-300);
-        height: 3px;
-        width: 0;
-        bottom: 0;
+        color: var(--yellow-300);
+        ;
+    }
+
+
+    .active {
+        border-bottom: 2px solid var(--white-300);
 
     }
 
-    .service:hover::after {
 
-        width: 100%;
-        transition: width 0.9s ease;
-    }
 
-    .service.active {
-        width: 100%;
-        position: absolute;
-        background-color: var(--white-300);
-        height: 3px;
-        width: 0;
-        bottom: 0;
-    }
 
     .help {
         display: flex;
@@ -122,14 +96,16 @@
         align-items: center;
 
 
+
     }
 
     .search {
 
         display: flex;
         align-items: center;
-        margin-left: 6rem;
 
+
+        margin: 0 auto;
         gap: 10px;
 
 
@@ -162,11 +138,13 @@
     .button:hover {
         color: var(--white-200);
     }
+
+
 }
 
 @media (max-width: 600px) {
 
-    .talkToUs, .service, .input, .button {
+    .talkToUs, .service, .input, .button,.start {
         display: none;
     }
 
@@ -198,9 +176,8 @@
         width: 50%;
         top: 0;
         left: 0;
-        z-index: 2000
-        ;
- 
+        z-index: 2000;
+
         background-color: #0a1b2d;
         opacity: 0;
         transform: translateY(-100%);
@@ -255,24 +232,6 @@
 
 
 
-    .talkToUsMobile::after {
-
-        content: '';
-        position: absolute;
-        background-color: var(--white-300);
-        height: 3px;
-        width: 0;
-        bottom: 0;
-
-    }
-
-    .talkToUsMobile:hover::after {
-
-        width: 100%;
-        transition: width 0.9s ease;
-    }
-
-
     .serviceMobile {
         display: flex;
         background: inherit;
@@ -291,22 +250,6 @@
 
 
 
-    .serviceMobile::after {
-
-        content: '';
-        position: absolute;
-        background-color: var(--white-300);
-        height: 3px;
-        width: 0;
-        bottom: 0;
-
-    }
-
-    .serviceMobile:hover::after {
-
-        width: 100%;
-        transition: width 0.9s ease;
-    }
 
     .inputMobile {
 
@@ -368,6 +311,11 @@
         border: 1px black solid;
 
 
+    }
+
+    .image {
+        margin: 0 auto;
+        margin-left: 1.3rem;
     }
 
 

@@ -2,26 +2,6 @@
 
 
 
-
-  .back {
-    margin-left: -65rem;
-    display: flex;
-    color: var(--black-100);
-
-    align-items: center;
-    gap: 5px;
-    cursor: pointer;
-    font-weight: bold;
-    color: var(--black-100);
-    transition: color 0.3s ease;
-  }
-
-  .back:hover {
-
-
-    color: var(--yellow-400);
-  }
-
   .swiper {
     max-width: 30rem;
     max-height: 25rem;
@@ -85,7 +65,7 @@
 
   .swiper {
 
-    margin-left: 3rem;
+    margin-left: 4.7rem;
     position: relative;
     margin-top: 2rem;
   }

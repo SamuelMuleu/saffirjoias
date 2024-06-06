@@ -1,0 +1,33 @@
+@media (min-width:601px) {}
+
+.back {
+
+
+    position: absolute;
+    left: 2rem;
+    align-items: center;
+    color: var(--black-100);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    font-weight: bold;
+
+
+}
+
+.back:hover {
+
+
+    color: var(--yellow-400);
+}
+
+@media (max-width:600px) {
+
+
+    .back {
+        position: absolute;
+        top: 5.2rem;
+        left: 1rem;
+    }
+}

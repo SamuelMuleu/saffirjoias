@@ -16,7 +16,7 @@ export default function Header() {
 
     const [search, setSearch] = useState('');
 
-
+    const [activeLink, setActiveLink] = useState("Inicio");
     const [modalIsOpen, setIsOpen] = React.useState(false);
 
 
@@ -40,17 +40,14 @@ export default function Header() {
 
 
 
-    const handleSearchItems = (event: React.ChangeEvent<HTMLInputElement>) => {
 
-        event.preventDefault();
-        setSearch(event.target.value);
-        console.log(search);
-
+    const handleCloseModalAndNavigate = (callback: () => void) => {
+        callback();
+        closeModal();
+        setSearch
+     
     }
-   const handleClickItem = (callback: () => void) => {
-    callback();
-    closeModal();
-}
+    
 
 
 
@@ -75,12 +72,12 @@ export default function Header() {
                 >
                     <div className={styles.wrapperModal}>
 
-                        <Link to={"/"} onClick={()=>handleClickItem(closeModal)} className={styles.serviceMobile}>Inicio</Link>
-                        <Link to={"/faleconosco"} onClick={()=>handleClickItem(closeModal)} className={styles.talkToUsMobile}>Fale conosco </Link>
-                        <Link to={"/servicos"} onClick={()=>handleClickItem(closeModal)} className={styles.serviceMobile}>Serviços </Link>
+                        <Link to={"/"} onClick={() => handleCloseModalAndNavigate(closeModal)} className={styles.serviceMobile}>Inicio</Link>
+                        <Link to={"/faleconosco"} onClick={() => handleCloseModalAndNavigate(closeModal)} className={styles.talkToUsMobile}>Fale conosco </Link>
+                        <Link to={"/servicos"} onClick={() => handleCloseModalAndNavigate(closeModal)} className={styles.serviceMobile}>Serviços </Link>
                         <form className={styles.search} >
 
-                            <input value={search} onChange={handleSearchItems} className={styles.inputMobile} placeholder="Pesquisar" type="text" />
+                            <input value={search} className={styles.inputMobile} placeholder="Pesquisar" type="text" />
                             <button className={styles.buttonMobile}  >
                                 <MagnifyingGlass size={18} />
 
@@ -91,18 +88,24 @@ export default function Header() {
 
                 </Modal>
 
-                <Link to={"/"} onClick={()=>handleClickItem(closeModal)} className={styles.service}>Inicio</Link>
-                <Link to="/faleconosco" onClick={()=>handleClickItem(closeModal)} className={styles.talkToUs}>Fale conosco</Link>
-                <Link to="/servicos" onClick={()=>handleClickItem(closeModal)} className={styles.service}>Serviços</Link>
+                <Link to={"/"}
+                    onClick={() => setActiveLink("Inicio")}
+                    className={`${styles.start} ${activeLink === "Inicio" ? styles.active : ''}`}>
+                    Inicio
+                </Link>
+                <Link to="/faleconosco" onClick={() => setActiveLink("FaleConosco")}
+                    className={`${styles.talkToUs} ${activeLink === "FaleConosco" ? styles.active : ''}`}>Fale conosco</Link>
+                <Link to="/servicos" onClick={() => setActiveLink("Servicos")}
+                    className={`${styles.service} ${activeLink === "Servicos" ? styles.active : ''}`}>Serviços</Link>
 
             </div>
 
 
-            <img className={styles.image} src={image} alt=""/>
+            <img className={styles.image} src={image} alt="" />
 
             <form className={styles.search} >
 
-                <input value={search} onChange={handleSearchItems} className={styles.input} placeholder="Pesquisar" type="text" />
+                <input value={search} className={styles.input} placeholder="Pesquisar" type="text" />
                 <button className={styles.button}  >
                     <MagnifyingGlass size={18} />
 

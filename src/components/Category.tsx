@@ -28,7 +28,7 @@ export default function Category(props: ImagemMapProps) {
       {image ? image.map((img, index) => (
         <div key={index} className={styles.card} onClick={() => handleClick(img)} >
           <img src={img.url} alt={img.alt} />
-          <p>{img.text}</p>
+          <p className={styles.text}>{img.text}</p>
         </div>
       )) : []}
     </div>

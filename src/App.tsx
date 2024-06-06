@@ -14,6 +14,8 @@ import 'swiper/css/scrollbar';
 import Modal from 'react-modal';
 import Services from "./components/Services.tsx";
 import Header from "./components/Header.tsx";
+import Card from "./components/Card.tsx";
+
 
 
 
@@ -33,6 +35,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/faleconosco" element={<ContactUs />} />
         <Route path="/servicos" element={<Services />} />
+        <Route path="/categorias" element={<Card />} />
 
 
 

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styles from './Card.module.css';
-import { ArrowFatLeft, XCircle } from "@phosphor-icons/react";
+import { XCircle } from "@phosphor-icons/react";
 
 
 import 'swiper/css';
@@ -12,6 +12,7 @@ import Modal from 'react-modal';
 
 
 import Pagination from './Pagination.tsx';
+import BackPage from './BackPage.tsx';
 
 interface Card {
     name: string;
@@ -61,10 +62,8 @@ export default function Alliance(props: Props) {
 
 
     return (
-        <div>
-            <div className={styles.back} onClick={onClick}>
-                <ArrowFatLeft /> Voltar
-            </div>
+        <div onClick={onClick}>
+          <BackPage />
             <div>
 
                 <div

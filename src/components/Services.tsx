@@ -19,7 +19,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import 'swiper/css/scrollbar';
-import { Link } from "react-router-dom";
+
+import BackPage from "./BackPage";
 
 export default function Services() {
 
@@ -27,7 +28,7 @@ export default function Services() {
     return (
 
         <div>
-            <Link className={styles.back} to={"/"}> <ArrowFatLeft size={20} />Voltar</Link>
+         <BackPage/>
 
 
 

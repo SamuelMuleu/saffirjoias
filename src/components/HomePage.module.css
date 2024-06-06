@@ -106,16 +106,24 @@
 
 @media (max-width: 600px) {
 
+
+  .app {
+    padding: 2rem -2rem;
+  }
+
   .swiper {
 
     z-index: 1;
     margin: 0 auto;
+
   }
 
   .swiper img {
     margin: 0 auto;
     align-items: center;
     display: flex;
+    height: 22rem;
+    width: 16rem;
     justify-content: center;
 
   }
@@ -135,7 +143,9 @@
 
   }
 
+
   .category p {
+
     margin: 0.35rem;
     margin-left: 2rem;
     opacity: 0.5;
@@ -146,6 +156,11 @@
 
   .text {
     margin: 0.6rem;
+    margin-top: 5rem;
+
+    align-items: center;
+    display: flex;
+    justify-content: center;
 
 
   }
