@@ -1,4 +1,3 @@
-import { ArrowFatLeft } from "@phosphor-icons/react"
 import styles from "./Services.module.css";
 import aliancasemsolda5 from "../assets/aliancasemsolda5.png";
 import aliancasemsolda1 from "../assets/aliancasemsolda.png";
