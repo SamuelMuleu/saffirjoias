@@ -133,27 +133,7 @@
 
 
 
-    .back {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 4px;
 
-        cursor: pointer;
-        font-weight: bold;
-        position: absolute;
-        color: var(--black-100);
-        top: 10.3rem;
-        left: 1.3rem;
-
-
-    }
-
-    .back:hover {
-
-
-        color: var(--yellow-400);
-    }
 
     .contactUs {
 
@@ -165,7 +145,8 @@
         color: var(--yellow-300);
         box-shadow: 1px 2px 4px 4px rgba(190, 181, 181, 0.2);
         border-radius: 8px;
-        margin: 5rem auto 10rem;
+        margin: 0 auto;
+        margin-top: 4rem;
 
 
 
@@ -179,13 +160,11 @@
         flex-direction: row;
         align-items: center;
 
-        padding: 2.2rem;
 
+        margin: 0 auto;
+        padding-left: 2.8rem;
 
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 10px;
+        padding-top: 4rem;
 
 
 
@@ -206,8 +185,10 @@
 
         height: 20rem;
 
-        margin-right: 1.4rem;
-        margin-left: -3.3rem;
+        position: absolute;
+        left: 12.2rem;
+        top: 15rem;
+
 
 
 
@@ -263,7 +244,7 @@
         text-decoration: none;
         position: relative;
         top: 9rem;
-        right: 5.8rem;
+        right: 4.6rem;
 
 
     }
@@ -276,7 +257,7 @@
     }
 
     .text {
-    margin-left: 1rem;
+        margin-left: 1rem;
     }
 
 
