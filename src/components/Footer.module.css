@@ -16,18 +16,13 @@
 
 
 
-    .dev {
-
-        padding: 0.5rem;
-
-
-    }
+ 
 
 
 
     .socialmedia {
         display: flex;
-        margin-right: 5rem;
+        margin-right: 2rem;
         justify-content: center;
         align-items: center;
 
@@ -52,8 +47,8 @@
 
         display: flex;
         width: 36%;
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row;
+        gap: 22px;
     }
 
     .socialmediawrapper {

@@ -16,17 +16,18 @@ import ContactUs from "./ContactUs.tsx";
 import Services from "./Services.tsx";
 import { v4 as uuidv4 } from 'uuid';
 
-import cristo from "../assets/cristo.png";
+
 import canga from "../assets/canga.png";
 import trevo from "../assets/trevo.png";
 
 
-import escapulario from "../assets/escapulario.png";
+import correntes from "../assets/saffir23.png";
 
 import brinco from "../assets/brinco.png";
 
 
-import alianca from "../assets/aliança.png";
+import aneis from "../assets/saffir17.png";
+import alianças from "../assets/saffir1.png";
 
 import styles from "./HomePage.module.css"
 import { useEffect, useState } from "react";
@@ -93,7 +94,7 @@ function HomePage() {
 
     {
       id: uuidv4(),
-      url: cristo,
+      url: alianças,
       alt: 'Imagem 1',
       text: 'Alianças',
       component: () => <Cards propsCard={allianceCards} onClick={handleBackCard} onClickCard={handleClicktAtendant} />
@@ -108,7 +109,7 @@ function HomePage() {
     },
     {
       id: uuidv4(),
-      url: alianca,
+      url: aneis,
       alt: 'Imagem 2',
       text: 'Anéis',
       component: () => <Cards propsCard={aneisCard} onClick={handleBackCard} onClickCard={handleClicktAtendant} />
@@ -129,7 +130,7 @@ function HomePage() {
     },
     {
       id: uuidv4(),
-      url: escapulario,
+      url: correntes,
       alt: 'Imagem 2',
       text: 'Correntes',
       component: () => <Cards propsCard={escapularioCard} onClick={handleBackCard} onClickCard={handleClicktAtendant} />

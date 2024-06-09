@@ -44,6 +44,8 @@ export default function Header() {
     const handleCloseModalAndNavigate = (callback: () => void) => {
         callback();
         closeModal();
+        setActiveLink("");
+        
         setSearch
      
     }
@@ -90,13 +92,13 @@ export default function Header() {
 
                 <Link to={"/"}
                     onClick={() => setActiveLink("Inicio")}
-                    className={`${styles.start} ${activeLink === "Inicio" ? styles.active : ''}`}>
+                    className={`${styles.start} ${activeLink === "Inicio" ? styles.active :styles.desactive}`}>
                     Inicio
                 </Link>
                 <Link to="/faleconosco" onClick={() => setActiveLink("FaleConosco")}
-                    className={`${styles.talkToUs} ${activeLink === "FaleConosco" ? styles.active : ''}`}>Fale conosco</Link>
+                    className={`${styles.talkToUs} ${activeLink === "FaleConosco" ? styles.active : styles.desactive}`}>Fale conosco</Link>
                 <Link to="/servicos" onClick={() => setActiveLink("Servicos")}
-                    className={`${styles.service} ${activeLink === "Servicos" ? styles.active : ''}`}>Serviços</Link>
+                    className={`${styles.service} ${activeLink === "Servicos" ? styles.active :styles.desactive}`}>Serviços</Link>
 
             </div>
 
@@ -105,7 +107,7 @@ export default function Header() {
 
             <form className={styles.search} >
 
-                <input value={search} className={styles.input} placeholder="Pesquisar" type="text" />
+                <input value={search} className={styles.input} placeholder="Pesquisar" type="text"  onChange={openModal}/>
                 <button className={styles.button}  >
                     <MagnifyingGlass size={18} />
 

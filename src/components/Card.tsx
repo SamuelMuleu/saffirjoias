@@ -12,7 +12,8 @@ import Modal from 'react-modal';
 
 
 import Pagination from './Pagination.tsx';
-import BackPage from './BackPage.tsx';
+import { useNavigate } from 'react-router-dom';
+
 
 interface Card {
     name: string;
@@ -24,25 +25,27 @@ interface Card {
 
 interface Props {
     propsCard: Card[];
-    onClick: () => void ;
-    onClickCard: (clickedCard: Card) => void ;
+    onClick: () => void;
+    onClickCard: (clickedCard: Card) => void;
 
 }
 
 
+Modal.setAppElement('#root');
 
-export default function Alliance(props: Props) {
-    const { onClick, propsCard, onClickCard } = props;
+export default function Card(props: Props) {
+    const {  propsCard, onClickCard } = props;
     const [isOpen, setIsOpen] = useState(false);
     const [currentImage, setCurrentImage] = useState<string | null>(null);
     const [currentPage, setCurrentPage] = useState(1);
-    const [postPerPage, setPostPerPage] = useState(8);
+    const [postPerPage, setPostPerPage] = useState(6);
 
-
+    const navigate = useNavigate();
 
     const handleImageClick = (img: string) => {
         setCurrentImage(img);
         setIsOpen(true);
+        setPostPerPage
 
     };
 
@@ -51,19 +54,21 @@ export default function Alliance(props: Props) {
 
     const closeModal = () => {
         setIsOpen(false);
-        setPostPerPage
-        setCurrentImage(null);
-      
-    };
 
+        setCurrentImage(null);
+
+    };
+ 
     const lastPostIndex = currentPage * postPerPage;
     const firstPostIndex = lastPostIndex - postPerPage;
-    const currentPosts = propsCard ?  propsCard.slice(firstPostIndex, lastPostIndex):[];
+    const currentPosts = propsCard ? propsCard.slice(firstPostIndex, lastPostIndex) : [];
 
 
     return (
-        <div onClick={onClick}>
-          <BackPage />
+        <div>
+            <div className={styles.back} onClick={() => navigate(0)}>
+                Voltar
+            </div>
             <div>
 
                 <div
@@ -85,6 +90,7 @@ export default function Alliance(props: Props) {
                                 src={card.img}
                                 alt={card.description}
                                 onClick={() => handleImageClick(card.img)}
+
                                 className={styles.image}
                             />
                             <p > {card.name}</p>
@@ -123,16 +129,16 @@ export default function Alliance(props: Props) {
                         size={32} />
                 </button>
             }
-                                <div className={styles.pagination}>
+            <div className={styles.pagination}>
 
-<Pagination
-    totalPosts={propsCard.length}
-    postsPerPage={postPerPage}
-    setCurrentPage={setCurrentPage}
-    currentPage={currentPage}
+                <Pagination
+                    totalPosts={propsCard.length}
+                    postsPerPage={postPerPage}
+                    setCurrentPage={setCurrentPage}
+                    currentPage={currentPage}
 
-/>
-</div>
+                />
+            </div>
 
         </div>
     )

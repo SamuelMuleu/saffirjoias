@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: row;
 
-    align-items: center;
-    justify-content: center;
+    align-items: start;
+    justify-content: start;
     gap: 6px;
     margin-top: 2rem;
 
@@ -13,6 +13,7 @@
 
     width: 1.4rem;
     height: 1.4rem;
+    align-items: center;
 
 }
 
@@ -30,5 +31,6 @@
     border: solid var(--black-500) 1px; 
     background-color: var(--blue-100);
     color: var(--yellow-300);
+    align-items: center;
 
   }

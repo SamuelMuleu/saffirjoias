@@ -12,23 +12,22 @@ import personalizado from "../assets/personalizado.png";
 import { Navigation, Pagination, Scrollbar, A11y, EffectFade, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-// Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import 'swiper/css/scrollbar';
 
-import BackPage from "./BackPage";
+
+
 
 export default function Services() {
 
-
+ 
     return (
 
         <div>
-         <BackPage/>
-
+ 
 
 
 

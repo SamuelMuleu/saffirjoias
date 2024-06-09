@@ -21,9 +21,9 @@
   }
 
   .swiper img {
-    width: 55%;
-    height: 350px;
-
+    width: auto;
+    height: 400px;
+    margin: 0 auto;
 
 
 
@@ -92,6 +92,7 @@
 
   .text {
     padding: 2rem;
+    margin: 0 auto;
   }
 
   .text2 {

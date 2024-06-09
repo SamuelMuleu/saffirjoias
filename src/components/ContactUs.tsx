@@ -3,18 +3,17 @@ import styles from "./ContactUs.module.css";
 
 import sara from "../assets/sara1.png";
 import michele from "../assets/michele.png";
-import BackPage from "./BackPage.tsx";
+
 
 
 
 
 export default function ContactUs() {
 
-
     return (
         <div >
 
-<BackPage />
+
             <div className={styles.contactUs}>
                 <div className={styles.header}>
 
@@ -31,7 +30,7 @@ export default function ContactUs() {
                         href="https://api.whatsapp.com/send?phone=5522998371359"
                         target="_blank">
 
-                        <button className={styles.whatsapp}>
+                        <button className="btn btn-success">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -67,7 +66,7 @@ export default function ContactUs() {
                         href="https://api.whatsapp.com/send?phone=5522997927387"
                         target="_blank">
 
-                        <button className={styles.whatsapp}>
+                        <button className="btn btn-success btn-larg">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 xmlnsXlink="http://www.w3.org/1999/xlink"

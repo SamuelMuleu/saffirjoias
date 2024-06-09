@@ -5,6 +5,7 @@ import ContactUs from "./components/ContactUs.tsx";
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -14,6 +15,7 @@ import 'swiper/css/scrollbar';
 import Modal from 'react-modal';
 import Services from "./components/Services.tsx";
 import Header from "./components/Header.tsx";
+
 
 
 
@@ -35,7 +37,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/faleconosco" element={<ContactUs />} />
         <Route path="/servicos" element={<Services />} />
-     
+
 
 
 
