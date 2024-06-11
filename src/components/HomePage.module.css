@@ -204,11 +204,12 @@
 
 }
 
-@media (min-width:428px) {
+@media (min-width:414px) {
   .options {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    margin-left: 1rem;
+padding-left: .4rem;
+
   }
 }
