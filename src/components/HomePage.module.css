@@ -1,4 +1,4 @@
-@media (min-width: 601px) {
+@media (min-width: 768px) {
 
 
 
@@ -106,7 +106,7 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
 
 
   .app {
@@ -151,6 +151,7 @@
     margin: 0.35rem;
     margin-left: 2rem;
     opacity: 0.5;
+
     padding: 1rem;
 
 
@@ -169,9 +170,11 @@
 
   .text2 {
 
-    margin-left: 4rem;
-    margin-top: 3.2rem;
-    margin-bottom: -3rem;
+    display: flex;
+
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: -2rem;
 
   }
 
@@ -191,4 +194,17 @@
 
   }
 
+  .options {
+    margin: 0 -1.1rem;
+  }
+
+}
+
+@media (min-width:428px) {
+  .options {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    margin-left: 1rem;
+  }
 }

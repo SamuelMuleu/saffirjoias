@@ -213,8 +213,8 @@ function HomePage() {
             < p>A Modernidade e a Sofisticação em Peças <span className={styles.span}>  Artesanais e Exclusivas  </span></p>
           </div>
 
-          <h2 className={styles.text2}>Escolha Por Categoria</h2>
           <div className={styles.line}></div>
+          <h2 className={styles.text2}>Escolha Por Categoria</h2>
           <div className={styles.options}>
 
 
