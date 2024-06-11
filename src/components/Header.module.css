@@ -79,7 +79,8 @@
         color: var(--yellow-300);
         ;
     }
-    .desactive{
+
+    .desactive {
         border-bottom: none;
     }
 
@@ -147,7 +148,7 @@
 
 @media (max-width: 768px) {
 
-    .talkToUs, .service, .input, .button,.start {
+    .talkToUs, .service, .input, .button, .start {
         display: none;
     }
 
@@ -175,12 +176,13 @@
     .modal {
         position: sticky;
         display: table;
-        height: 100vh;
+
         width: 50%;
         top: 0;
         left: 0;
         z-index: 2000;
         border: none;
+        min-height: 100vh;
 
         background-color: #0a1b2d;
         opacity: 0;
@@ -312,7 +314,7 @@
 
 
 
- 
+
 
 
     }
