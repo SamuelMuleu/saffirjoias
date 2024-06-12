@@ -221,7 +221,7 @@
     }
 
     .image {
-        max-height: 15.5rem;
+        min-height: 15.5rem;
         margin-top: .3rem;
         border-radius: 18px;
         cursor: pointer;
