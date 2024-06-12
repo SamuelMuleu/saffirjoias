@@ -1,0 +1,42 @@
+.cookieConsentContainer {
+    display: flex;
+    justify-content: end;
+    position: fixed;
+    width: 25rem;
+    height: 12.5rem;
+    margin-left: 2rem;
+    border-radius: 8px;
+    padding: .7rem;
+    margin-bottom: .7rem;
+    bottom: 0;
+    display: block;
+    background-color: var(--blue-100);
+    color: var(--white-200);
+
+}
+
+
+.declineButtonClasses {
+
+    margin-right: 1rem;
+}
+
+
+.buttonClasses, .declineButtonClasses {
+    background-color: var(--yellow-300);
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    padding: .1rem;
+
+
+}
+
+.link {
+    display: flex;
+    margin-right: "7rem";
+    margin-top: '1rem';
+    color: #E6D35B;
+    opacity: 0.7;
+    cursor: pointer
+}
