@@ -99,7 +99,7 @@ export default function Card(props: Props) {
                                 onClick={() => onClickCard(card)}
                                 className={styles.button}
                                 formTarget='_blank'
-                            >Falar com Atendente
+                            >Comprar
                             </button>
 
                         </div>
