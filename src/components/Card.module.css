@@ -343,8 +343,10 @@
         border-radius: 5px;
         background-color: var(--blue-100);
         color: var(--yellow-300);
+  
         height: 2rem;
-   
+  
+        border: none;
     
 
     }
