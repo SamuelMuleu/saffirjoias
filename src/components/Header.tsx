@@ -73,7 +73,7 @@ export default function Header() {
 
                         <Link to={"/"} onClick={() => handleCloseModalAndNavigate(closeModal)} className={styles.serviceMobile}>Inicio</Link>
                         <Link to={"/faleconosco"} onClick={() => handleCloseModalAndNavigate(closeModal)} className={styles.talkToUsMobile}>Fale conosco </Link>
-                        <Link to={"/sobrenos"} onClick={() => handleCloseModalAndNavigate(closeModal)} className={styles.serviceMobile}>Serviços </Link>
+                        <Link to={"/sobrenos"} onClick={() => handleCloseModalAndNavigate(closeModal)} className={styles.serviceMobile}>Sobre Nós</Link>
                       
                         <button className={styles.close} onClick={closeModal}><X size={30} /></button>
                     </div>
