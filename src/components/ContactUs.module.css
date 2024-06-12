@@ -36,8 +36,7 @@
 
     .image {
         border-radius: 5rem;
-        height: 14rem;
-
+        width: 180px;
     }
 
     .text {
@@ -127,138 +126,88 @@
         color: var(--yellow-400);
     }
 }
-
 @media (max-width: 600px) {
-
-
-
-
-
-
     .contactUs {
-
-
-
         background: var(--blue-100);
         width: 90vw;
-        height: 60vh;
+        height: auto;
         color: var(--yellow-300);
         box-shadow: 1px 2px 4px 4px rgba(190, 181, 181, 0.2);
         border-radius: 8px;
-        margin: 0 auto;
-        margin-top: 5rem;
-
-
-
-
-
-
+        margin: 5rem auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 0;
     }
 
     .header {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
-
-
-        margin: 0 auto;
-        padding-left: 2.8rem;
-
-        padding-top: 6rem;
-
-
-
-
+        justify-content: center;
+        gap: 20px;
     }
 
     .image {
-        height: 160px;
-
-        border-radius: 14px;
-
-
+        width: 130px;
+        align-items: center;
+        margin-top: 1rem;
+        transition: transform 0.3s ease;
     }
 
+    .text {
+        text-align: center;
+        margin-top: 0.5rem;
+    }
 
     .line {
         border: 1px var(--white-400) solid;
-
-        height: 20rem;
-
-        position: absolute;
-        left: 13rem;
-        top: 18rem;
-
-
-
-
-
+        width: 80%;
+        margin: 1rem 0;
     }
 
-
     .whatsapp {
-
         height: 30px;
         width: 4rem;
         border-radius: 8px;
-
         border: none;
-        align-items: center;
         display: flex;
         justify-content: center;
+        align-items: center;
         background-color: var(--green-500);
-
-
+        transition: background-color 0.3s ease;
     }
 
     .whatsapp:hover {
-
         cursor: pointer;
         background-color: var(--green-600);
-        ;
     }
 
-
     a {
-        color: var(--white-400);
         text-decoration: none;
-
-
+        color: var(--white-400);
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 8px;
-
-
+        transition: transform 0.3s ease;
     }
 
     a:hover {
-
-        cursor: pointer;
         transform: scale(1.1);
     }
 
     .button {
         color: var(--white-400);
         text-decoration: none;
-        position: relative;
-        top: 9rem;
-        right: 4.6rem;
-
-
+        margin-top: 1rem;
     }
 
     .button:hover {
-
         cursor: pointer;
         transform: scale(1.1);
-        color: var(--green-500);
     }
-
-    .text {
-        margin-left: 1rem;
-    }
-
-
 }

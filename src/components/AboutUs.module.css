@@ -1,0 +1,41 @@
+/* AboutUs.module.css */
+
+.aboutUs {
+
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+}
+
+.intro, .history, .values, .team {
+  margin-bottom: 40px;
+}
+
+h1, h2 {
+  font-family: 'Times New Roman', Times, serif;
+  color: #333;
+}
+
+p, ul {
+  font-family: Arial, sans-serif;
+  color: #666;
+  line-height: 1.6;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+.values ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.values li {
+  margin-bottom: 10px;
+}
+.history img,.team img{
+  width: 20rem;
+}

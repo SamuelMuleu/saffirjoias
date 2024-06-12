@@ -13,7 +13,7 @@ import 'swiper/css/scrollbar';
 import Category from "./Category.tsx";
 
 import ContactUs from "./ContactUs.tsx";
-import Services from "./Services.tsx";
+import Services from "./AboutUs.tsx";
 import { v4 as uuidv4 } from 'uuid';
 
 
@@ -32,6 +32,11 @@ import alianças from "../assets/saffir1.png";
 import styles from "./HomePage.module.css"
 import { useEffect, useState } from "react";
 import Cards from "./Card.tsx";
+
+
+
+
+
 
 interface CustomImage {
   id: string;

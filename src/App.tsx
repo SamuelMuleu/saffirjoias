@@ -13,7 +13,7 @@ import 'swiper/css/a11y';
 import 'swiper/css/scrollbar';
 
 import Modal from 'react-modal';
-import Services from "./components/Services.tsx";
+import Services from "./components/AboutUs.tsx";
 import Header from "./components/Header.tsx";
 import Cookies from "./components/Cookies.tsx";
 
@@ -35,7 +35,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/faleconosco" element={<ContactUs />} />
-        <Route path="/servicos" element={<Services />} />
+        <Route path="/sobrenos" element={<Services />} />
 
 
 

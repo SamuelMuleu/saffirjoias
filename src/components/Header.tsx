@@ -76,15 +76,8 @@ export default function Header() {
 
                         <Link to={"/"} onClick={() => handleCloseModalAndNavigate(closeModal)} className={styles.serviceMobile}>Inicio</Link>
                         <Link to={"/faleconosco"} onClick={() => handleCloseModalAndNavigate(closeModal)} className={styles.talkToUsMobile}>Fale conosco </Link>
-                        <Link to={"/servicos"} onClick={() => handleCloseModalAndNavigate(closeModal)} className={styles.serviceMobile}>Serviços </Link>
-                        <form className={styles.search} >
-
-                            <input value={search} className={styles.inputMobile} placeholder="Pesquisar" type="text" />
-                            <button className={styles.buttonMobile}  >
-                                <MagnifyingGlass size={18} />
-
-                            </button>
-                        </form>
+                        <Link to={"/sobrenos"} onClick={() => handleCloseModalAndNavigate(closeModal)} className={styles.serviceMobile}>Serviços </Link>
+                      
                         <button className={styles.close} onClick={closeModal}><X size={30} /></button>
                     </div>
 
@@ -97,22 +90,15 @@ export default function Header() {
                 </Link>
                 <Link to="/faleconosco" onClick={() => setActiveLink("FaleConosco")}
                     className={`${styles.talkToUs} ${activeLink === "FaleConosco" ? styles.active : styles.desactive}`}>Fale conosco</Link>
-                <Link to="/servicos" onClick={() => setActiveLink("Servicos")}
-                    className={`${styles.service} ${activeLink === "Servicos" ? styles.active :styles.desactive}`}>Sobre Nós</Link>
+                <Link to="/sobrenos" onClick={() => setActiveLink("Servicos")}
+                    className={`${styles.service} ${activeLink === "Servicos" ? styles.active :styles.desactive}`}>Sobre Nos</Link>
 
             </div>
 
 
             <img className={styles.image} src={image} alt="" />
 
-            <form className={styles.search} >
-
-                <input value={search} className={styles.input} placeholder="Pesquisar" type="text"  onChange={openModal}/>
-                <button className={styles.button}  >
-                    <MagnifyingGlass size={18} />
-
-                </button>
-            </form>
+           
         </div>
     )
 }
