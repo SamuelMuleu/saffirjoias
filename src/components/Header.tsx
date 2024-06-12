@@ -7,14 +7,13 @@ import React from 'react';
 
 import Modal from 'react-modal';
 
-import { MagnifyingGlass, List, X } from "@phosphor-icons/react";
+import { List, X } from "@phosphor-icons/react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
 
 export default function Header() {
 
-    const [search, setSearch] = useState('');
 
     const [activeLink, setActiveLink] = useState("Inicio");
     const [modalIsOpen, setIsOpen] = React.useState(false);
@@ -45,8 +44,6 @@ export default function Header() {
         callback();
         closeModal();
         setActiveLink("");
-        
-        setSearch
      
     }
     
