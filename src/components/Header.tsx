@@ -98,7 +98,7 @@ export default function Header() {
                 <Link to="/faleconosco" onClick={() => setActiveLink("FaleConosco")}
                     className={`${styles.talkToUs} ${activeLink === "FaleConosco" ? styles.active : styles.desactive}`}>Fale conosco</Link>
                 <Link to="/servicos" onClick={() => setActiveLink("Servicos")}
-                    className={`${styles.service} ${activeLink === "Servicos" ? styles.active :styles.desactive}`}>Serviços</Link>
+                    className={`${styles.service} ${activeLink === "Servicos" ? styles.active :styles.desactive}`}>Sobre Nós</Link>
 
             </div>
 

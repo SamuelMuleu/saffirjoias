@@ -140,6 +140,7 @@
 
         padding: 0.2rem;
         width: 98%;
+        font-weight: bold;
         margin: 0 auto;
         margin-top: 1rem;
 
@@ -343,11 +344,11 @@
         border-radius: 5px;
         background-color: var(--blue-100);
         color: var(--yellow-300);
-  
+
         height: 2rem;
-  
+        font-weight: bold;
         border: none;
-    
+
 
     }
 

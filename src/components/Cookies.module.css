@@ -40,6 +40,10 @@
 
 
     }
+    .buttonClasses:hover, .declineButtonClasses:hover {
+
+            background-color: #ebd43a;
+    }
 
     .link {
         display: flex;
