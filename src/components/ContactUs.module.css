@@ -152,6 +152,7 @@
 
     .image {
         width: 130px;
+        height:130px;
         align-items: center;
         margin-top: 1rem;
         transition: transform 0.3s ease;
