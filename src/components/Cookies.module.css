@@ -118,6 +118,14 @@
 
     }
 
+    @media (max-width:428px) {
+        .cookieConsentContainer{
+            margin-left: 1.7rem;
+            
+        }
+
+    }
+
 }
 @keyframes slideDown {
     from {

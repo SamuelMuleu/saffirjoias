@@ -16,7 +16,7 @@
 
 
 
- 
+
 
 
 
@@ -105,7 +105,8 @@
 
     .face {
         height: 35px;
-        border-radius: 100%;
+        width: 35px;
+        border-radius: 50%;
         transition: transform 0.3s ease;
     }
 
