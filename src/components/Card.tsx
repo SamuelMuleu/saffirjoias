@@ -14,6 +14,8 @@ import Modal from 'react-modal';
 import Pagination from './Pagination.tsx';
 import { useNavigate } from 'react-router-dom';
 
+import Database from "./DataBase.tsx";
+
 
 interface Card {
     name: string;
@@ -65,7 +67,11 @@ export default function Card(props: Props) {
 
 
     return (
+
+
         <div>
+          
+            <Database/>
             <div className={styles.back} onClick={() => navigate(0)}>
                 Voltar
             </div>

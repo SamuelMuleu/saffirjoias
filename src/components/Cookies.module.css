@@ -29,7 +29,7 @@
 
         margin-right: 2rem;
     }
-  
+
 
 
     .buttonClasses, .declineButtonClasses {
@@ -39,14 +39,15 @@
         border-radius: 5px;
         font-size: .9rem;
         padding: .3rem;
-    
+
 
 
 
     }
+
     .buttonClasses:hover, .declineButtonClasses:hover {
 
-            background-color: #ebd43a;
+        background-color: #ebd43a;
     }
 
     .link {
@@ -62,24 +63,25 @@
     }
 }
 
+
 @media (max-width: 678px) {
 
     .cookieConsentContainer {
-        display: flex;
-        justify-content: center;
+
+
         position: fixed;
         width: 23rem;
-        align-items: center;
+
         height: 13.5rem;
 
         border-radius: 8px;
-        padding: .7rem .8rem 1rem;
+        padding: .7rem .8rem 2rem;
         z-index: 100000;
 
         border: 2px solid var(--yellow-300);
         margin-bottom: .6rem;
-        margin-left: .7rem;
-        bottom: 0;
+
+        margin-left: 1.5rem;
         display: block;
         background-color: var(--blue-100);
         color: var(--white-200);
@@ -119,15 +121,10 @@
 
     }
 
-    @media (max-width:428px) {
-        .cookieConsentContainer{
-            margin-left: 1.7rem;
-            
-        }
 
-    }
 
 }
+
 @keyframes slideDown {
     from {
         opacity: 0;

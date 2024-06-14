@@ -18,6 +18,7 @@ import Header from "./components/Header.tsx";
 import Cookies from "./components/Cookies.tsx";
 
 
+
 (window as any).global = window;
 Modal.setAppElement('#root');
 
@@ -36,7 +37,6 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/faleconosco" element={<ContactUs />} />
         <Route path="/sobrenos" element={<Services />} />
-
 
 
 
