@@ -1,0 +1,52 @@
+.app {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--blue-100);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .app h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .input_container {
+    margin-bottom: 15px;
+  }
+  
+  .input_container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .input_container input[type="text"],
+  .input_container input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .input_container input[type="file"] {
+    padding: 10px 0; /* Ajuste o espaçamento conforme necessário */
+  }
+  
+  .input_container button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .input_container button:hover {
+    background-color: #45a049;
+  }
+  

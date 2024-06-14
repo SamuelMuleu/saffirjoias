@@ -58,6 +58,13 @@
 
 
     }
+    .modalEdit{
+        background: var(--blue-100);
+        position: absolute;
+        top: 20%;
+        left: 38%;
+        
+    }
 
     .modalImage {
         -webkit-animation-name: zoom;
@@ -108,6 +115,7 @@
 
 
     }
+
 
     .card {
         display: flex;
@@ -295,6 +303,13 @@
         font-size: 1.2rem;
         font-weight: bold;
     }
+
+    .editButton{
+ position: absolute;
+right: 1rem;
+top: 11rem;
+}
+
 
     .closeButton:hover {
         transform: scale(1.1);

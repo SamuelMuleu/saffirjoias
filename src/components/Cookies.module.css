@@ -79,10 +79,11 @@
         z-index: 100000;
 
         border: 2px solid var(--yellow-300);
-        margin-bottom: .6rem;
-
-        margin-left: 1.5rem;
+   
         display: block;
+        align-items: center;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
         background-color: var(--blue-100);
         color: var(--white-200);
 

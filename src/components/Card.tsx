@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styles from './Card.module.css';
-import { XCircle } from "@phosphor-icons/react";
+import { XCircle,Pencil } from "@phosphor-icons/react";
 
 
 import 'swiper/css';
@@ -41,6 +41,7 @@ export default function Card(props: Props) {
     const [currentImage, setCurrentImage] = useState<string | null>(null);
     const [currentPage, setCurrentPage] = useState(1);
     const [postPerPage, setPostPerPage] = useState(6);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     const navigate = useNavigate();
 
@@ -51,7 +52,13 @@ export default function Card(props: Props) {
 
     };
 
+    const openModalEdit = () => {
+        setIsModalOpen(true);
+      };
 
+      const closeModalEdit = () => {
+        setIsModalOpen(false);
+      };
 
 
     const closeModal = () => {
@@ -60,6 +67,8 @@ export default function Card(props: Props) {
         setCurrentImage(null);
 
     };
+
+
  
     const lastPostIndex = currentPage * postPerPage;
     const firstPostIndex = lastPostIndex - postPerPage;
@@ -71,7 +80,17 @@ export default function Card(props: Props) {
 
         <div>
           
+          <button onClick={openModalEdit} className={styles.editButton}><Pencil size={32}  /></button>
+
+          <Modal isOpen={isModalOpen} className={styles.modalEdit} onRequestClose={closeModalEdit}  overlayClassName={styles.overlay}>
+
             <Database/>
+            <button onClick={closeModalEdit}
+                    className={styles.closeButtonEdit}>
+                    <XCircle
+                        size={32} />
+                </button>
+          </Modal>
             <div className={styles.back} onClick={() => navigate(0)}>
                 Voltar
             </div>
