@@ -19,6 +19,7 @@ function Database() {
         description: inputValue3
       });
       alert("Document written to Database");
+      docRef
   };
 
   return (
