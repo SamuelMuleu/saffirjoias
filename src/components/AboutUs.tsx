@@ -30,7 +30,7 @@ export default function AboutUs() {
             </div>
             
             <div className={styles.team}>
-                <h2>Nosso Time</h2>
+                <h2>Nossa Equipe</h2>
                 <p>
                     Nossa equipe é composta por artesãos experientes e apaixonados, que trabalham incansavelmente para criar joias que encantam e duram para sempre.
                 </p>

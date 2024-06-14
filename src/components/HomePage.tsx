@@ -186,9 +186,8 @@ function HomePage() {
             slidesPerView={1}
 
             loop={true}
-
-            pagination={true}
-
+       
+            pagination={{ clickable: true, el: '.swiper-pagination' }}
 
             modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
 
@@ -212,6 +211,7 @@ function HomePage() {
 
 
           </Swiper>
+          <div className="swiper-pagination"></div>
           <div className={styles.category}>
 
             <h1 className={styles.text}>Conheça nossa Coleção</h1>

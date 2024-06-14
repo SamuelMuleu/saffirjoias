@@ -19,6 +19,7 @@
     padding-bottom: 2rem;
   }
 
+
   .swiper img {
     width: auto;
     height: 400px;
@@ -27,10 +28,22 @@
     margin: 0 auto;
 
 
-
   }
-
-
+  
+  .swiper-pagination {
+    bottom: 10px; /* Ajuste a posição vertical das bullets conforme necessário */
+  }
+  
+  .swiper-pagination-bullet {
+    margin: 0 5px; /* Ajuste o espaçamento horizontal entre as bullets */
+    background-color: #000; /* Cor das bullets */
+    opacity: 0.7; /* Opacidade das bullets */
+  }
+  
+  .swiper-pagination-bullet-active {
+    background-color: #fff; /* Cor da bullet ativa */
+  }
+  
 
   .swiperslide {
 

@@ -15,14 +15,18 @@ export default function ContactUs() {
 
 
             <div className={styles.contactUs}>
+            <div className={styles.time}>
+                <h1>Horario de atendimento</h1>
+                <p>Segunda a Sexta de 9:00 as 18:00 e Sabado de 9:00 das 13:00</p>
+            </div>
                 <div className={styles.header}>
 
-                    <a href="https://api.whatsapp.com/send?phone=5522998371359" >
+                    <a href="https://api.whatsapp.com/send?phone=5522998371359" className={styles.sara} >
 
                         <img
                             src={sara}
                             className={styles.image} />
-                        <div className={styles.text}>Atendente Sara (22) 99837-1359 </div>
+                        <div className={styles.text}>Sara (22) <span className={styles.saraNumber}>  99837-1359</span>  </div>
 
                     </a>
                     <a
@@ -30,7 +34,7 @@ export default function ContactUs() {
                         href="https://api.whatsapp.com/send?phone=5522998371359"
                         target="_blank">
 
-                        <button className="btn btn-success">
+                        <button  className={styles.buttonWhatsapp}>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -58,7 +62,7 @@ export default function ContactUs() {
                         <img
                             src={michele}
                             className={styles.image} />
-                        <div className={styles.text}> Atendente Michele (22) 99792-7387</div>
+                        <div className={styles.text}>Michele (22) 99792-7387</div>
 
                     </a>
                     <a
@@ -66,7 +70,10 @@ export default function ContactUs() {
                         href="https://api.whatsapp.com/send?phone=5522997927387"
                         target="_blank">
 
-                        <button className="btn btn-success btn-larg">
+
+
+                    </a>
+                        <button className={styles.buttonWhatsapp}>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -85,9 +92,6 @@ export default function ContactUs() {
                                 </g>
                             </svg>
                         </button>
-
-
-                    </a>
                 </div>
 
             </div>
