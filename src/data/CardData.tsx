@@ -6,7 +6,7 @@ import pingentes from "../assets/pingentes.png";
 import cordao from "../assets/cordao.png";
 import brinco from "../assets/brinco.png";
 import { v4 as uuidv4 } from 'uuid';
-import saffir1 from "../assets/saffir1.png";
+//import saffir1 from "../assets/saffir1.png";
 //import saffir2 from "../assets/saffir2.png";
 //import saffir3 from "../assets/saffir3.png";//
 //import saffir4 from "../assets/saffir4.png";//
