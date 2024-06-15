@@ -62,7 +62,7 @@ export default function ContactUs() {
                         <img
                             src={michele}
                             className={styles.image} />
-                        <div className={styles.text}>Michele (22) 99792-7387</div>
+                        <div className={styles.text2}>Michele (22) 99792-7387</div>
 
                     </a>
                     <a

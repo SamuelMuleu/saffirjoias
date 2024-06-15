@@ -288,13 +288,13 @@ const escapularioCard: Product[] = [
 const imageCarousel: ImageCarouselItem[] = [
     {
         id: uuidv4(),
-        url: saffir1,
+        url: saffir17,
         alt: 'Imagem 1',
         text: 'Alianças',
     },
     {
         id: uuidv4(),
-        url: saffir11,
+        url: saffir23,
         alt: 'Imagem 1',
         text: 'Alianças',
     },

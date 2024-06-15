@@ -22,6 +22,16 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+}
+
+.time h1 {
+    color: var(--yellow-400);
+}
+
+.time p {
+    opacity: 0.5;
+    color: var(--yellow-400);
 }
 
 .sara {
@@ -104,7 +114,18 @@ a {
 
     .sara {
         margin-left: .9rem;
+
+    }
+
+    .text2 {
         margin-bottom: .6rem;
+        color: var(--white-400);
+        margin-top: .3rem
+    }
+
+    .text {
+        margin-top: .3rem;
+        margin-bottom: -.9rem;
     }
 
     .saraNumber {

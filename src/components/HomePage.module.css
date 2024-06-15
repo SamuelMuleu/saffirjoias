@@ -12,38 +12,26 @@
   }
 
   .swiper {
-    max-width: 60%;
+    max-width: 100%;
 
     align-items: center;
     margin-left: 18rem;
-    padding-bottom: 2rem;
+    padding-bottom: 2.5rem;
+    margin-left: -7rem;
+    margin-top: -4.5rem;
+
   }
 
 
   .swiper img {
-    width: auto;
+    width: 100%;
+    object-fit: contain;
     height: 400px;
     border-radius: 8px;
 
-    margin: 0 auto;
-
 
   }
-  
-  .swiper-pagination {
-    bottom: 10px; /* Ajuste a posição vertical das bullets conforme necessário */
-  }
-  
-  .swiper-pagination-bullet {
-    margin: 0 5px; /* Ajuste o espaçamento horizontal entre as bullets */
-    background-color: #000; /* Cor das bullets */
-    opacity: 0.7; /* Opacidade das bullets */
-  }
-  
-  .swiper-pagination-bullet-active {
-    background-color: #fff; /* Cor da bullet ativa */
-  }
-  
+
 
   .swiperslide {
 
@@ -116,10 +104,16 @@
   .swiper-button-prev, .swiper-button-next {
     color: white;
 
+
   }
+
 }
 
 @media (max-width: 768px) {
+
+
+
+
 
 
   .app {
@@ -172,7 +166,7 @@
 
   .text {
     margin: 0.6rem;
-    margin-top: 5rem;
+    margin-top: 7rem;
 
     align-items: center;
     display: flex;

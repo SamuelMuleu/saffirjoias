@@ -1,9 +1,4 @@
-
-
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-import { allianceCards, imageCarousel, brincoCard, aneisCard, colarCard, pingenteCard, escapularioCard } from "../data/CardData.tsx";
-
 import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -11,32 +6,19 @@ import 'swiper/css/pagination';
 import 'swiper/css/a11y';
 import 'swiper/css/scrollbar';
 import Category from "./Category.tsx";
-
 import ContactUs from "./ContactUs.tsx";
 import Services from "./AboutUs.tsx";
 import { v4 as uuidv4 } from 'uuid';
-
-
-import canga from "../assets/canga.png";
-import trevo from "../assets/trevo.png";
-
-
-import correntes from "../assets/saffir23.png";
-
-import brinco from "../assets/brinco.png";
-
-
-import aneis from "../assets/saffir17.png";
-import alianças from "../assets/saffir1.png";
-
-import styles from "./HomePage.module.css"
+import styles from "./HomePage.module.css";
 import { useEffect, useState } from "react";
 import Cards from "./Card.tsx";
-
-
-
-
-
+import { allianceCards, imageCarousel, brincoCard, aneisCard, colarCard, pingenteCard, escapularioCard } from "../data/CardData.tsx";
+import canga from "../assets/canga.png";
+import trevo from "../assets/trevo.png";
+import correntes from "../assets/saffir23.png";
+import brinco from "../assets/brinco.png";
+import aneis from "../assets/saffir17.png";
+import alianças from "../assets/saffir1.png";
 
 interface CustomImage {
   id: string;
@@ -46,7 +28,6 @@ interface CustomImage {
   component: () => JSX.Element;
 }
 
-
 function HomePage() {
   const [showWhatsapp, setShowWhatsapp] = useState(false);
   const [showService, setShowService] = useState(false);
@@ -54,49 +35,28 @@ function HomePage() {
   const [clickedImage, setClickedImage] = useState<CustomImage | null>(null);
   const [showCard, setShowCard] = useState(true);
 
-
-
   useEffect(() => {
     if (clickedImage) {
-
       setSelectedComponent(clickedImage.component);
     }
   }, [clickedImage]);
 
-
-
-
-
   const handleBackCard = () => {
-
-
-    setShowCard(true)
-
+    setShowCard(true);
     setSelectedComponent(null);
-
-    setShowWhatsapp
-    setShowService
-  }
-
+    setShowWhatsapp(false);
+    setShowService(false);
+  };
 
   const handleClicktAtendant = (clickedCard: { description: string }) => {
     const itemName = clickedCard.description;
-    const mensage = ` Ola,Gostaria de Saber Mais Sobre esse item ${itemName}`;
+    const mensage = `Ola, gostaria de saber mais sobre esse item ${itemName}`;
     const mensagemCodificada = encodeURIComponent(mensage);
-    const Whatsapp = "+5522998371359"
-
-
-
+    const Whatsapp = "+5522998371359";
     window.open(`https://wa.me/${Whatsapp}?text=${mensagemCodificada}`, '_blank');
-
-
-  }
-
-
-
+  };
 
   const images = [
-
     {
       id: uuidv4(),
       url: alianças,
@@ -110,7 +70,6 @@ function HomePage() {
       alt: 'Imagem 2',
       text: 'Brincos',
       component: () => <Cards propsCard={brincoCard} onClick={handleBackCard} onClickCard={handleClicktAtendant} />
-
     },
     {
       id: uuidv4(),
@@ -138,31 +97,17 @@ function HomePage() {
       url: correntes,
       alt: 'Imagem 2',
       text: 'Correntes',
-      component: () => <Cards propsCard={escapularioCard} onClick={handleBackCard} onClickCard={handleClicktAtendant} />
-      ,
+      component: () => <Cards propsCard={escapularioCard} onClick={handleBackCard} onClickCard={handleClicktAtendant} />,
     }
-
   ];
-
-
-
 
   const handleClickCard = (clickedImage: CustomImage) => {
     setClickedImage(clickedImage);
     setSelectedComponent(clickedImage.component);
-
   };
-
-
 
   return (
     <div className={styles.app}>
-
-
-
-
-
-
       {showCard && showWhatsapp ? (
         <div>
           <ContactUs />
@@ -175,67 +120,44 @@ function HomePage() {
         </div>
       ) : (
         <>
-
           <Swiper
-
             className={styles.swiper}
             autoplay={{
               delay: 3000,
               disableOnInteraction: false,
             }}
             slidesPerView={1}
-
             loop={true}
-       
-            pagination={{ clickable: true, el: '.swiper-pagination' }}
-
+            pagination={{
+              el: '.swiper-pagination',
+              clickable: true,
+              bulletClass: 'swiper-pagination-bullet',
+              bulletActiveClass: 'swiper-pagination-bullet-active',
+            }}
             modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-
           >
             {imageCarousel.map((img) => (
-
-
-              <SwiperSlide key={img.id} >
-                <div className={styles.swiperslide}  >
-
-                  <img
-
-                    src={img.url}
-                    alt={img.alt}
-
-                  />
+              <SwiperSlide key={img.id}>
+                <div className={styles.swiperslide}>
+                  <img src={img.url} alt={img.alt} />
                 </div>
               </SwiperSlide>
-
             ))}
-
-
           </Swiper>
-          <div className="swiper-pagination"></div>
+          <div className="swiper-pagination" style={{marginBottom:'2rem'}}></div>
           <div className={styles.category}>
-
             <h1 className={styles.text}>Conheça nossa Coleção</h1>
-            < p>A Modernidade e a Sofisticação em Peças <span className={styles.span}>  Artesanais e Exclusivas  </span></p>
+            <p>A Modernidade e a Sofisticação em Peças <span className={styles.span}>Artesanais e Exclusivas</span></p>
           </div>
-
           <div className={styles.line}></div>
           <h2 className={styles.text2}>Escolha Por Categoria</h2>
           <div className={styles.options}>
-
-
             <Category image={images} onClick={handleClickCard} />
-
-
-
           </div>
-
         </>
       )}
-
-
-
     </div>
-  )
+  );
 }
 
 export default HomePage;
