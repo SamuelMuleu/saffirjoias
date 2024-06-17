@@ -52,10 +52,13 @@ a {
     width: 180px;
 }
 
-.text,.text2{
+.text{
     margin-top: 0.7rem;
     color: var(--white-400);
 
+}
+ .text2{
+      color:var(--white-400);
 }
 
 .buttonWhatsapp {
