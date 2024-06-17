@@ -52,7 +52,7 @@ a {
     width: 180px;
 }
 
-.text {
+.text,.text2{
     margin-top: 0.7rem;
     color: var(--white-400);
 
