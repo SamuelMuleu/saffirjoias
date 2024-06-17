@@ -58,6 +58,7 @@ a {
 
 }
  .text2{
+      margin-bootom:0.4rem;
       margin-top:0.4rem;
       color:var(--white-400);
 }
