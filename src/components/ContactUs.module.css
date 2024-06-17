@@ -125,6 +125,7 @@ a {
 
     .text {
         margin-top: .3rem;
+        color: var(--white-400);
         margin-bottom: -.9rem;
     }
 
