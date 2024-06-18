@@ -144,7 +144,8 @@ function HomePage() {
               </SwiperSlide>
             ))}
           </Swiper>
-          <div className="swiper-pagination" style={{marginBottom:'2rem'}}></div>
+          <div className="swiper-pagination" style={{display:'flex', alignItems:'center' , justifyContent:"center", top:'28rem'}}></div>
+
           <div className={styles.category}>
             <h1 className={styles.text}>Conheça nossa Coleção</h1>
             <p>A Modernidade e a Sofisticação em Peças <span className={styles.span}>Artesanais e Exclusivas</span></p>
