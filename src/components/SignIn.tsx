@@ -3,8 +3,6 @@ import { useState } from 'react';
 import styles from './SignIn.module.css';
 import googleLogo from "../assets/googleLogo.svg"
 import { auth } from "../services/firebaseConfig.ts";
-import { useHistory } from "react-router-dom";
-
 import { GoogleAuthProvider, signInWithPopup, User } from 'firebase/auth';
 
 
@@ -24,8 +22,8 @@ const Login = () => {
       .then((result) => {
         setUser(result.user);
         localStorage.setItem('user', JSON.stringify(result));
-        history.push("/");
-
+        
+      window.location.href = '/';
 
       })
       .catch((error) => {
