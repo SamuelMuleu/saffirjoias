@@ -67,6 +67,7 @@ export default function Header() {
     const handleExitUser = () => {
 
         localStorage.removeItem('user');
+        window.location.reload();
 
     }
 
