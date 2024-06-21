@@ -9,6 +9,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    
     padding: 1rem;
 }
 
@@ -115,11 +116,16 @@ margin-top: 1rem;
 @media (max-width: 600px) {
     .contactUs {
         flex-direction: column;
+        height: 32rem;
 
+    }
+    .header{
+        margin-bottom: 1rem;
     }
 
     .sara {
         margin-left: .9rem;
+
 
     }
 
@@ -156,7 +162,7 @@ margin-top: 1rem;
 
     .line {
         width: 80%;
-        margin-left: -4rem;
+        margin-left: -4.7rem;
     }
 
     .time {
@@ -167,5 +173,6 @@ margin-top: 1rem;
     .buttonWhatsapp {
         top: 9.9rem;
         right: 7.7rem;
+        
     }
 }

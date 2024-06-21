@@ -2,12 +2,13 @@
 import styles from "./Header.module.css"
 import image from "../assets/image1.png"
 
+import { useEffect } from "react";
 
 import React from 'react';
 
 import Modal from 'react-modal';
 
-import { List, X } from "@phosphor-icons/react";
+import { List, X, UserCircle } from "@phosphor-icons/react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -17,6 +18,8 @@ export default function Header() {
 
     const [activeLink, setActiveLink] = useState("Inicio");
     const [modalIsOpen, setIsOpen] = React.useState(false);
+    const [imageUrl, setImageUrl] = useState('');
+    const [nameProfile, setNameProfile] = useState('');
 
 
 
@@ -44,13 +47,24 @@ export default function Header() {
         callback();
         closeModal();
         setActiveLink("");
-     
+
     }
-    
 
+    useEffect(() => {
+        // Fetch the stored user string from localStorage
+        const storedUserStr = localStorage.getItem('user');
 
+        // Parse the stored user string to a JavaScript object
+        if (storedUserStr) {
+            const storedUser = JSON.parse(storedUserStr);
 
+            console.log("", storedUser);
+            // Update the imageUrl state with the photoURL from storedUser
+            setImageUrl(storedUser.user.photoURL);
+            setNameProfile(storedUser.user.displayName);
 
+        }
+    }, [imageUrl]);
 
     return (
 
@@ -74,7 +88,7 @@ export default function Header() {
                         <Link to={"/"} onClick={() => handleCloseModalAndNavigate(closeModal)} className={styles.serviceMobile}>Inicio</Link>
                         <Link to={"/faleconosco"} onClick={() => handleCloseModalAndNavigate(closeModal)} className={styles.talkToUsMobile}>Fale conosco </Link>
                         <Link to={"/sobrenos"} onClick={() => handleCloseModalAndNavigate(closeModal)} className={styles.serviceMobile}>Sobre Nós</Link>
-                      
+
                         <button className={styles.close} onClick={closeModal}><X size={30} /></button>
                     </div>
 
@@ -82,20 +96,25 @@ export default function Header() {
 
                 <Link to={"/"}
                     onClick={() => setActiveLink("Inicio")}
-                    className={`${styles.start} ${activeLink === "Inicio" ? styles.active :styles.desactive}`}>
+                    className={`${styles.start} ${activeLink === "Inicio" ? styles.active : styles.desactive}`}>
                     Inicio
                 </Link>
                 <Link to="/faleconosco" onClick={() => setActiveLink("FaleConosco")}
                     className={`${styles.talkToUs} ${activeLink === "FaleConosco" ? styles.active : styles.desactive}`}>Fale conosco</Link>
                 <Link to="/sobrenos" onClick={() => setActiveLink("Servicos")}
-                    className={`${styles.service} ${activeLink === "Servicos" ? styles.active :styles.desactive}`}>Sobre Nos</Link>
+                    className={`${styles.service} ${activeLink === "Servicos" ? styles.active : styles.desactive}`}>Sobre Nos</Link>
 
             </div>
 
 
             <img className={styles.image} src={image} alt="" />
 
-           
+
+            {imageUrl ? <div className={styles.profileUser}>  <img src={imageUrl} alt="" />  <p>Ola, {nameProfile}</p> </div> : <Link to={"/signin"}>
+                <UserCircle size={35} style={{ marginRight: '1rem', color: '#E6D35B' }} />
+            </Link>}
+
+
         </div>
     )
 }

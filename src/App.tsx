@@ -16,6 +16,7 @@ import Modal from 'react-modal';
 import Services from "./components/AboutUs.tsx";
 import Header from "./components/Header.tsx";
 import Cookies from "./components/Cookies.tsx";
+import SignIn from "./components/SignIn.tsx";
 
 
 
@@ -37,6 +38,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/faleconosco" element={<ContactUs />} />
         <Route path="/sobrenos" element={<Services />} />
+        <Route path="/signin" element={<SignIn />} />
 
 
 

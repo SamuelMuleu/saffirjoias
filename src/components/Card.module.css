@@ -172,6 +172,7 @@
         color: var(--yellow-300);
     }
 
+
 }
 
 .pagination {
@@ -344,7 +345,7 @@ top: 11rem;
         justify-content: center;
         margin-bottom: 1rem;
         background-color: #fff;
-        box-shadow: 6px 7px 12px var(--blue-100);
+        box-shadow: 4px 2px 15px var(--blue-100);
         border-radius: 8px;
 
     }

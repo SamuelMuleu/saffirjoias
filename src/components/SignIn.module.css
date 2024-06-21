@@ -1,0 +1,98 @@
+/* Login.module.css */
+
+.login {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--blue-100);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color:var(--yellow-300);
+}
+
+.formGroup {
+    margin-bottom: 20px;
+}
+
+.formGroup label {
+    display: block;
+    margin-bottom: 5px;
+    color:var(--yellow-300);
+}
+
+.formGroup input[type="email"],
+.formGroup input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.formGroup ::placeholder{
+background-color: var();
+}
+
+.formGroup input[type="email"]:focus,
+.formGroup input[type="password"]:focus {
+    outline: none;
+    border-color:var(--yellow-300);
+}
+
+.button {
+
+    cursor: pointer;
+
+    border-radius: 5px;
+    background-color: var(--blue-200);
+    color: var(--yellow-300);
+
+    padding: 0.2rem;
+    width: 98%;
+    font-weight: bold;
+    margin: 0 auto;
+    margin-top: 1rem;
+
+    border: 1px black solid;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+
+    background-color: #092b4f;
+    color: #ecf406;
+    transform: scale(1.02);
+}
+
+.googleButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    color: var(--black-100);
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 0.2rem;
+    width: 98%;
+    height: 2.2rem;
+    gap: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.googleButton:hover {
+transform: scale(1.02);
+}
+
+.googleIcon {
+    width: 1.4rem;
+    height: 3rem;
+
+    padding-bottom: 1.2rem;
+
+}
