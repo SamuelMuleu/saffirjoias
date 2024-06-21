@@ -38,9 +38,9 @@
 
     .profileUser p {
         color: var(--yellow-300);
- 
+
         font-weight: bold;
-   
+
         margin-top: .7rem;
     }
 
@@ -170,6 +170,10 @@
         color: var(--white-200);
     }
 
+    .exitProfileUser {
+        margin-left: -14rem;
+        margin-right: 1rem;
+    }
 
 }
 

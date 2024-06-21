@@ -51,20 +51,24 @@ export default function Header() {
     }
 
     useEffect(() => {
-        // Fetch the stored user string from localStorage
+
         const storedUserStr = localStorage.getItem('user');
 
-        // Parse the stored user string to a JavaScript object
         if (storedUserStr) {
             const storedUser = JSON.parse(storedUserStr);
 
-            console.log("", storedUser);
-            // Update the imageUrl state with the photoURL from storedUser
+    
+         
             setImageUrl(storedUser.user.photoURL);
             setNameProfile(storedUser.user.displayName);
 
         }
-    }, [imageUrl]);
+    }, []);
+    const handleExitUser = () => {
+
+        localStorage.removeItem('user');
+
+    }
 
     return (
 
@@ -113,8 +117,10 @@ export default function Header() {
             {imageUrl ? <div className={styles.profileUser}>  <img src={imageUrl} alt="" />  <p>Ola, {nameProfile}</p> </div> : <Link to={"/signin"}>
                 <UserCircle size={35} style={{ marginRight: '1rem', color: '#E6D35B' }} />
             </Link>}
+            {imageUrl ? < div > <p onClick={handleExitUser} className={styles.exitProfileUser}>sair</p></div> : null}
 
 
-        </div>
+
+        </div >
     )
 }

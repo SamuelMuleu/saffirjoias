@@ -8,6 +8,7 @@ import { GoogleAuthProvider, signInWithPopup, User } from 'firebase/auth';
 
 
 
+
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -22,7 +23,7 @@ const Login = () => {
       .then((result) => {
         setUser(result.user);
         localStorage.setItem('user', JSON.stringify(result));
-        
+        window.location.reload();
 
 
       })
