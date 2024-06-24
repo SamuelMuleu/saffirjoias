@@ -1,52 +1,76 @@
-.app {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: var(--blue-100);
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
 
-  .app h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-  
-  .input_container {
-    margin-bottom: 15px;
-  }
-  
-  .input_container label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .input_container input[type="text"],
-  .input_container input[type="file"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-  }
-  
-  .input_container input[type="file"] {
-    padding: 10px 0; /* Ajuste o espaçamento conforme necessário */
-  }
-  
-  .input_container button {
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .input_container button:hover {
-    background-color: #45a049;
-  }
-  
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--blue-200);
+  border-radius: 8px;
+  color: var(--yellow-300);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.app h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+
+  color: var(--yellow-300);
+
+}
+
+.input_container {
+  margin-bottom: 15px;
+
+}
+
+.input_container label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input_container input[type="text"],
+.input_container input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: var(--gray-500);
+  font-size: 16px;
+}
+
+.input_container input[type="file"] {
+  padding: 10px 10px;
+  width: 100%;
+
+  color: var(--black-100);
+}
+
+
+.input_container input[type="text"]:focus,
+.input_container input[type="file"]:focus {
+  outline: none;
+  border-color: var(--yellow-400);
+}
+
+.button {
+  background-color:var(--blue-100);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--yellow-300);
+  font-weight: bold;
+
+}
+
+.button:hover {
+color:var(--yellow-400);
+transform: scale(1.1);
+}

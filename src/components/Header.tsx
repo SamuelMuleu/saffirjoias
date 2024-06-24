@@ -13,6 +13,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 
+
+
 export default function Header() {
 
 
@@ -32,14 +34,12 @@ export default function Header() {
     }
 
 
-
     function closeModal() {
         setIsOpen(false);
 
 
 
     }
-
 
 
 
@@ -54,20 +54,31 @@ export default function Header() {
 
         const storedUserStr = localStorage.getItem('user');
 
+
         if (storedUserStr) {
             const storedUser = JSON.parse(storedUserStr);
 
-    
-         
-            setImageUrl(storedUser.user.photoURL);
-            setNameProfile(storedUser.user.displayName);
 
+            if (storedUser && storedUser.photoURL || storedUser.displayName) {
+
+
+                setImageUrl(storedUser.photoURL);
+                setNameProfile(storedUser.displayName);
+
+            }
+            else {
+
+                setImageUrl(storedUser.user.photoURL);
+                setNameProfile(storedUser.user.displayName);
+            }
         }
     }, []);
+
     const handleExitUser = () => {
 
         localStorage.removeItem('user');
         window.location.reload();
+
 
     }
 
@@ -89,6 +100,18 @@ export default function Header() {
 
                 >
                     <div className={styles.wrapperModal}>
+
+
+                        {imageUrl || nameProfile ? <div
+                            className={styles.profileUserMobile}>  <img src={imageUrl} alt="" /> <p> Ola, {nameProfile}</p>  </div> : <Link to={"/signin"}>
+
+                            <UserCircle onClick={closeModal}  size={35} style={{ marginLeft: '.1rem', color: '#E6D35B' }} />
+
+                        </Link>}
+
+                        {nameProfile ? < div > <p onClick={handleExitUser} className={styles.exitProfileUserMobile}>sair</p></div> : null}
+                        <div className={styles.line}></div>
+
 
                         <Link to={"/"} onClick={() => handleCloseModalAndNavigate(closeModal)} className={styles.serviceMobile}>Inicio</Link>
                         <Link to={"/faleconosco"} onClick={() => handleCloseModalAndNavigate(closeModal)} className={styles.talkToUsMobile}>Fale conosco </Link>
@@ -115,10 +138,12 @@ export default function Header() {
             <img className={styles.image} src={image} alt="" />
 
 
-            {imageUrl ? <div className={styles.profileUser}>  <img src={imageUrl} alt="" />  <p>Ola, {nameProfile}</p> </div> : <Link to={"/signin"}>
-                <UserCircle size={35} style={{ marginRight: '1rem', color: '#E6D35B' }} />
+            {imageUrl || nameProfile ? <div className={styles.profileUser}>  <img src={imageUrl} alt="" /> <p> Ola, {nameProfile}</p>  </div> : <Link to={"/signin"}>
+
+                <UserCircle size={35} className={styles.userlogo} style={{ marginRight: '1rem', color: '#E6D35B' }} />
+
             </Link>}
-            {imageUrl ? < div > <p onClick={handleExitUser} className={styles.exitProfileUser}>sair</p></div> : null}
+            {nameProfile ? < div > <p onClick={handleExitUser} className={styles.exitProfileUser}>sair</p></div> : null}
 
 
 

@@ -1,17 +1,16 @@
 import { useState } from 'react';
-
 import styles from './SignIn.module.css';
 import googleLogo from "../assets/googleLogo.svg"
 import { auth } from "../services/firebaseConfig.ts";
-import { GoogleAuthProvider, signInWithPopup, User } from 'firebase/auth';
+import { GoogleAuthProvider, signInWithPopup, User, signInWithEmailAndPassword } from 'firebase/auth';
 
-
-
+import { Link } from 'react-router-dom';
 
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [user, setUser] = useState<User>({} as User);
+  const [user, setUser] = useState<User | null>(null);
+
 
 
 
@@ -22,20 +21,32 @@ const Login = () => {
       .then((result) => {
         setUser(result.user);
         localStorage.setItem('user', JSON.stringify(result));
-        
-      window.location.href = '/';
-
+        window.location.href = '/';
+        user
       })
       .catch((error) => {
         console.log(error);
-      })
+      });
   }
-  console.log(user)
+
+  const handleEmailSignIn = async (e: React.FormEvent) => {
+    e.preventDefault();
+    try {
+      const userCredential = await signInWithEmailAndPassword(auth, email, password);
+      const loggedInUser = userCredential.user;
+      setUser(loggedInUser);
+      localStorage.setItem('user', JSON.stringify(loggedInUser));
+      window.location.href = '/';
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div>
       <div className={styles.login}>
-        <h2>Sign In</h2>
-        <form >
+        <h2>Entrar</h2>
+        <form onSubmit={handleEmailSignIn}>
           <div className={styles.formGroup}>
             <label htmlFor="email">Email:</label>
             <input
@@ -62,10 +73,12 @@ const Login = () => {
           <img src={googleLogo} alt="Google Icon" className={styles.googleIcon} />
           Entrar com o Google
         </button>
-
+        <div>
+          <Link className={styles.createAccount} to='/create-account'>Criar Conta</Link>
+        </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default Login
+export default Login;

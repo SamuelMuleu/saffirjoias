@@ -1,33 +1,27 @@
 .contactUs {
     background: var(--blue-100);
-    width: 90vw;
+    width: 60vw;
     color: var(--yellow-300);
-    box-shadow: 1px 2px 4px 4px rgba(190, 181, 181, 0.2);
+
     border-radius: 8px;
-    margin: 4rem auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    
-    padding: 1rem;
-}
-
-a {
-    text-decoration: none;
-}
-
-.time {
-    flex: 1;
+    margin: 1rem auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 1rem;
+}
 
+.time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
 .time h1 {
     color: var(--yellow-400);
+    margin-bottom: 0.5rem;
 }
 
 .time p {
@@ -35,125 +29,97 @@ a {
     color: var(--yellow-400);
 }
 
-.sara {
-    margin-top: -1.8rem;
-}
-
 .header {
-    flex: 1;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     padding: 1.5rem;
     gap: 30px;
+    width: 100%;
 }
 
 .image {
-    border-radius: 5rem;
     width: 180px;
+    height: auto;
+    border-radius: 10%;
+
+    transition: transform 0.3s ease;
 }
 
-.text {
-margin-top: 1rem;
+.imageSara {
+    width: 180px;
+    margin-left: 3rem;
+    margin-right: 4rem;
+    border-radius: 10%;
 
-    color: var(--white-400);
-
+    transition: transform 0.3s ease;
 }
+
+
 
 .text2 {
-    margin-top: 1rem;
     color: var(--white-400);
+    text-align: center;
+    margin-top: .5rem;
+
 }
 
-.buttonWhatsapp {
-    background-color: #25D366;
-    /* Cor verde padrão do WhatsApp */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    position: relative;
-    top: 9.3rem;
-    right: 1.8rem;
+.saraNumber {
+    display: block;
 
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+    color: var(--gray-300);
 
-.buttonWhatsapp:hover {
-    background-color: #128C7E;
-    /* Cor verde escura do WhatsApp ao passar o mouse */
 }
 
 
-.line {
-    border: 1px solid var(--white-400);
-    height: 300px;
-    margin: 0 auto;
+
+a {
+    text-decoration: none;
 }
 
 .contactLink {
-    text-decoration: none;
+
     color: var(--white-400);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 5px;
+
 }
 
-.image:hover {
+
+
+.buttonWhatsapp {
+    background-color: #25D366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    position: relative;
+    bottom: -10rem;
+    left: -3rem;
+    text-decoration: none;
     cursor: pointer;
-    transform: scale(1.1);
+    transition: background-color 0.3s ease;
 }
 
-
-
-.back:hover {
-    color: var(--yellow-400);
+.buttonWhatsapp:hover {
+    background-color: #128C7E;
 }
 
 @media (max-width: 600px) {
     .contactUs {
-        flex-direction: column;
-        height: 32rem;
-
-    }
-    .header{
-        margin-bottom: 1rem;
-    }
-
-    .sara {
-        margin-left: .9rem;
-
-
-    }
-
-    .text2 {
-        margin-bottom: .6rem;
-        color: var(--white-400);
-        margin-top: .3rem
-    }
-
-    .text {
-        margin-top: .3rem;
-        color: var(--white-400);
-        margin-bottom: -.9rem;
-    }
-
-    .saraNumber {
-        display: block;
-        align-items: center;
-
+        width: 100%;
+        padding: 1rem;
     }
 
     .header {
-        padding: 1rem;
+        flex-direction: column;
         gap: 20px;
-
-        width: 120%;
+        text-align: center;
     }
-
 
     .image {
         width: 130px;
@@ -162,17 +128,10 @@ margin-top: 1rem;
 
     .line {
         width: 80%;
-        margin-left: -4.7rem;
+        margin: 0.5rem auto;
     }
 
     .time {
         margin-bottom: 1rem;
-        text-align: center;
-    }
-
-    .buttonWhatsapp {
-        top: 9.9rem;
-        right: 7.7rem;
-        
     }
 }

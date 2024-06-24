@@ -24,8 +24,8 @@ function Database() {
 
   return (
     <div className={styles.app}>
-      <h1>Adicionar Joias</h1>
-      <div className="input-container">
+      <h1>Adicionar Joia</h1>
+      <div className={styles.input_container}>
         <label>Nome:</label>
         <input
           type="text"
@@ -49,7 +49,7 @@ function Database() {
           onChange={(e) => setInputValue3(e.target.value)}
         />
       </div>
-      <button onClick={saveDataToFirestore}>Salvar no Firestore</button>
+      <button onClick={saveDataToFirestore} className={styles.button}>Salvar no Firestore</button>
     </div>
   );
 }

@@ -1,15 +1,15 @@
 import { useState } from 'react';
 import styles from './Card.module.css';
-import { XCircle,Pencil } from "@phosphor-icons/react";
+import { XCircle, Pencil } from "@phosphor-icons/react";
 
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-
+import { auth, firestore } from "../services/firebaseConfig.ts";
 import Modal from 'react-modal';
-
-
+import { doc, getDoc } from 'firebase/firestore';
+import { useEffect } from 'react';
 
 import Pagination from './Pagination.tsx';
 import { useNavigate } from 'react-router-dom';
@@ -36,12 +36,15 @@ interface Props {
 Modal.setAppElement('#root');
 
 export default function Card(props: Props) {
-    const {  propsCard, onClickCard } = props;
+    const { propsCard, onClickCard } = props;
     const [isOpen, setIsOpen] = useState(false);
     const [currentImage, setCurrentImage] = useState<string | null>(null);
     const [currentPage, setCurrentPage] = useState(1);
     const [postPerPage, setPostPerPage] = useState(6);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isAdmin, setIsAdmin] = useState(false);
+
+
 
     const navigate = useNavigate();
 
@@ -54,11 +57,11 @@ export default function Card(props: Props) {
 
     const openModalEdit = () => {
         setIsModalOpen(true);
-      };
+    };
 
-      const closeModalEdit = () => {
+    const closeModalEdit = () => {
         setIsModalOpen(false);
-      };
+    };
 
 
     const closeModal = () => {
@@ -69,28 +72,71 @@ export default function Card(props: Props) {
     };
 
 
- 
+    useEffect(() => {
+        const checkAdminRole = async () => {
+            try {
+                const user = auth.currentUser;
+                if (user) {
+                    const userDocRef = doc(firestore, 'users', user.uid);
+                    const userDocSnap = await getDoc(userDocRef);
+
+                    if (userDocSnap.exists()) {
+                        const userData = userDocSnap.data();
+
+                        setIsAdmin(userData.role === 'admin');
+
+                    } else {
+                        console.log('No such document!');
+                    }
+                }
+            } catch (error) {
+                console.error('Error fetching user data:', error);
+            }
+        };
+
+        checkAdminRole();
+    }, []);
+
+
+
     const lastPostIndex = currentPage * postPerPage;
     const firstPostIndex = lastPostIndex - postPerPage;
     const currentPosts = propsCard ? propsCard.slice(firstPostIndex, lastPostIndex) : [];
-
 
     return (
 
 
         <div>
-          
-          <button onClick={openModalEdit} className={styles.editButton}><Pencil size={32}  /></button>
 
-          <Modal isOpen={isModalOpen} className={styles.modalEdit} onRequestClose={closeModalEdit}  overlayClassName={styles.overlay}>
 
-            <Database/>
-            <button onClick={closeModalEdit}
-                    className={styles.closeButtonEdit}>
-                    <XCircle
-                        size={32} />
-                </button>
-          </Modal>
+
+            {isAdmin ? <div className={styles.modal}> <button
+                onClick={openModalEdit}
+                className={styles.editButton}>
+                <Pencil
+                    size={32} /></button>
+
+                <Modal
+                    isOpen={isModalOpen}
+                    className={styles.modalEdit}
+                    onRequestClose={closeModalEdit}
+                    overlayClassName={styles.overlay}>
+
+                    <Database />
+                    <div className={styles.closeButtonContainer}>
+
+                    <button onClick={closeModalEdit}
+                       
+                       className={styles.closeButtonEdit}
+                       >
+                        <XCircle
+                            size={32} />
+                    </button>
+                    </div>
+                </Modal>
+            </div> : null}
+
+
             <div className={styles.back} onClick={() => navigate(0)}>
                 Voltar
             </div>

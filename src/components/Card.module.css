@@ -58,12 +58,13 @@
 
 
     }
-    .modalEdit{
+
+    .modalEdit {
         background: var(--blue-100);
         position: absolute;
         top: 20%;
         left: 38%;
-        
+
     }
 
     .modalImage {
@@ -188,6 +189,33 @@
 
 }
 
+.editButton {
+    position: relative;
+    left: 52.5rem;
+    bottom: .2rem;
+    margin-bottom: 1rem;
+    border: none;
+}
+
+.editButton:hover {
+    color: var(--yellow-400);
+}
+
+.closeButtonContainer {
+    background-color: var(--blue-200);
+}
+
+.closeButtonEdit {
+    background-color: transparent;
+    border: none;
+    position: relative;
+    right: -23rem;
+    bottom: .5rem;
+}
+.closeButtonEdit:hover{
+    color: var(--yellow-400);
+}
+
 @-webkit-keyframes zoom {
     from {
         -webkit-transform: scale(1)
@@ -305,11 +333,11 @@
         font-weight: bold;
     }
 
-    .editButton{
- position: absolute;
-right: 1rem;
-top: 11rem;
-}
+    .editButton {
+        position: absolute;
+        right: 1rem;
+        top: 11rem;
+    }
 
 
     .closeButton:hover {
