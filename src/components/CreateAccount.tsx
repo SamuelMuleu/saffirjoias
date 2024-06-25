@@ -60,7 +60,7 @@ const Login = () => {
 
             .catch((error) => {
                 console.log(error);
-                setError('Erro ao criar conta');
+                setError(error);
             });
     };
     console.log(user)
