@@ -48,10 +48,11 @@ const Login = () => {
         e.preventDefault();
        
         createUserWithEmailAndPassword(auth, email, password)
+   const photoURL = userProfile || userProfile;
             .then(async (result) => {
 
                 await updateProfile(result.user, { displayName: name, photoURL: userProfile });
-                await saveUserData(result.user.uid, { displayName: name, email: email,photoURL:googleLogo, role: 'admin' });
+                await saveUserData(result.user.uid, { displayName: name, email: email, role: 'admin' });
                 setUser(result.user);
                 localStorage.setItem('user', JSON.stringify(result.user));
                 window.location.href = '/';
