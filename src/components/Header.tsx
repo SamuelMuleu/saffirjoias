@@ -59,10 +59,9 @@ export default function Header() {
             const storedUser = JSON.parse(storedUserStr);
 
 
-            if (storedUser  ) {
-                setNameProfile(storedUser.user.displayName);
-setImageUrl(storedUser.user.photoURL);
-            }
+           if (storedUser && (storedUser.photoURL || storedUser.displayName)) {
+            setImageUrl(storedUser.photoURL || userProfile);
+            setNameProfile(storedUser.displayName);
             else {
 
                 setImageUrl(storedUser.user.photoURL);
