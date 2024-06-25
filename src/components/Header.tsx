@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import React from 'react';
 
 import Modal from 'react-modal';
-
+import userProfile from "../assets/user.jpg"
 import { List, X, UserCircle } from "@phosphor-icons/react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
@@ -59,10 +59,10 @@ export default function Header() {
             const storedUser = JSON.parse(storedUserStr);
 
 
-            if (storedUser && storedUser.photoURL || storedUser.displayName) {
+            if (storedUser ) {
 
 
-                setImageUrl(storedUser.photoURL);
+               const photoURL = storedUser.photoURL || storedUser.user?.photoURL || userProfile ; setImageUrl(storedUser.photoURL);
                 setNameProfile(storedUser.displayName);
 
             }
