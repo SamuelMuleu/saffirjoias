@@ -46,9 +46,9 @@ const Login = () => {
 
     const handleCreateAccount = async (e: React.FormEvent) => {
         e.preventDefault();
-       
+        const photoURL = userProfile || userProfile;
         createUserWithEmailAndPassword(auth, email, password)
-   const photoURL = userProfile || userProfile;
+  
             .then(async (result) => {
 
                 await updateProfile(result.user, { displayName: name, photoURL: userProfile });
