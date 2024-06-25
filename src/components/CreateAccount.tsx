@@ -52,7 +52,7 @@ const Login = () => {
             .then(async (result) => {
 
                 await updateProfile(result.user, { displayName: name, photoURL: userProfile });
-                await saveUserData(result.user.uid, { displayName: name, email: email, role: 'admin' });
+                await saveUserData(result.user.uid, { displayName: name, email: email, role: 'admin' ,photoUrl: userProfile});
                 setUser(result.user);
                 localStorage.setItem('user', JSON.stringify(result.user));
                 window.location.href = '/';
