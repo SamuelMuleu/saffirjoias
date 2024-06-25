@@ -60,7 +60,7 @@ const Login = () => {
 
             .catch((error) => {
                 console.log(error);
-                setError(error);
+                setError("erro ao fazer login");
             });
     };
     console.log(user)
