@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { auth, firestore } from "../services/firebaseConfig.ts";
 import Modal from 'react-modal';
-import { doc, getDoc } from 'firebase/firestore';
+import { doc, getDoc, getFirestore, collection, getDocs } from 'firebase/firestore';
 import { useEffect } from 'react';
 
 import Pagination from './Pagination.tsx';
@@ -16,15 +16,16 @@ import { useNavigate } from 'react-router-dom';
 
 import Database from "./DataBase.tsx";
 
+const db = getFirestore();
 
 interface Card {
     name: string;
     img: string;
     description: string;
-    price: string;
+    category: string;
+
 
 }
-
 interface Props {
     propsCard: Card[];
     onClick: () => void;
@@ -43,7 +44,7 @@ export default function Card(props: Props) {
     const [postPerPage, setPostPerPage] = useState(6);
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [isAdmin, setIsAdmin] = useState(false);
-
+    const [cards, setCards] = useState<Card[]>([]);
 
 
     const navigate = useNavigate();
@@ -97,11 +98,40 @@ export default function Card(props: Props) {
         checkAdminRole();
     }, []);
 
+    useEffect(() => {
+
+        const fetchCards = async () => {
+
+            try {
+                const cardsCollection = collection(db, 'myCollection');
+                const querySnapshot = await getDocs(cardsCollection);
+                const fetchedCards: Card[] = [];
+                querySnapshot.forEach((doc) => {
+                    const cardData = doc.data();
+                    fetchedCards.push({
+                        name: cardData.name || '',
+                        img: cardData.img || '',
+                        description: cardData.description || '',
+                        category: cardData.category || '',
+
+                    });
+                });
+                setCards(fetchedCards);
+
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+        fetchCards();
 
 
-    const lastPostIndex = currentPage * postPerPage;
-    const firstPostIndex = lastPostIndex - postPerPage;
-    const currentPosts = propsCard ? propsCard.slice(firstPostIndex, lastPostIndex) : [];
+        console.log(cards)
+    }, []);
+
+
+
+
 
     return (
 
@@ -125,13 +155,13 @@ export default function Card(props: Props) {
                     <Database />
                     <div className={styles.closeButtonContainer}>
 
-                    <button onClick={closeModalEdit}
-                       
-                       className={styles.closeButtonEdit}
-                       >
-                        <XCircle
-                            size={32} />
-                    </button>
+                        <button onClick={closeModalEdit}
+
+                            className={styles.closeButtonEdit}
+                        >
+                            <XCircle
+                                size={32} />
+                        </button>
                     </div>
                 </Modal>
             </div> : null}
@@ -147,7 +177,7 @@ export default function Card(props: Props) {
                     className={styles.container}
                 >
 
-                    {currentPosts.map((card, index) => (
+                    {cards.map((card, index) => (
 
 
                         <div

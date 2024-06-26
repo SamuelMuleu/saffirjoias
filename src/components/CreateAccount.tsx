@@ -13,6 +13,7 @@ import { doc, setDoc } from 'firebase/firestore';
 const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
     const [name, setName] = useState('');
     const [user, setUser] = useState<User | null>(null);
     const [error, setError] = useState<string>('');
@@ -52,7 +53,7 @@ const Login = () => {
             .then(async (result) => {
 
                 await updateProfile(result.user, { displayName: name, photoURL: userProfile });
-                await saveUserData(result.user.uid, { displayName: name, email: email, role: 'user', photoUrl: userProfile });
+                await saveUserData(result.user.uid, { displayName: name, email: email, role: 'admin', photoUrl: userProfile});
                 setUser(result.user);
                 localStorage.setItem('user', JSON.stringify(result.user));
                 window.location.href = '/';
@@ -101,6 +102,7 @@ const Login = () => {
                             onChange={(e) => setPassword(e.target.value)}
                             required
                         />
+                      
                     </div>
                     {error && <p className={styles.error}>{error}</p>}
                     <button className={styles.button} type="submit">Criar Conta</button>

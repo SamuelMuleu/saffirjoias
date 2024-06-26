@@ -212,7 +212,8 @@
     right: -23rem;
     bottom: .5rem;
 }
-.closeButtonEdit:hover{
+
+.closeButtonEdit:hover {
     color: var(--yellow-400);
 }
 
@@ -249,7 +250,7 @@
 
         align-items: center;
 
-        padding-left: 1.3rem;
+        padding-left: .9rem;
 
 
     }
@@ -319,6 +320,19 @@
 
 
     }
+    .modalEdit{
+        position: absolute;
+        top: 15%;
+        width: 90%;
+        left: 5%;
+    }
+    .closeButtonEdit{
+        position: absolute;
+        right: 2rem;
+        top: -23rem;
+        left: 19rem;
+        background: transparent;
+    }
 
     .closeButton {
         position: fixed;
@@ -336,7 +350,10 @@
     .editButton {
         position: absolute;
         right: 1rem;
-        top: 11rem;
+        top: -17rem;
+        left: 21rem;
+        background: transparent;
+
     }
 
 
@@ -395,6 +412,7 @@
 
 
     }
+
 
 
     @-webkit-keyframes zoom {

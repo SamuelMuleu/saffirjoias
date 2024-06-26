@@ -1,14 +1,14 @@
-
 .app {
   max-width: 600px;
   margin: 0 auto;
   padding: 20px;
+
   background-color: var(--blue-200);
-  border-radius: 8px;
   color: var(--yellow-300);
   display: flex;
   flex-direction: column;
   gap: 10px;
+
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 
 }
@@ -58,7 +58,7 @@
 }
 
 .button {
-  background-color:var(--blue-100);
+  background-color: var(--blue-100);
   color: white;
   border: none;
   padding: 10px 20px;
@@ -71,6 +71,27 @@
 }
 
 .button:hover {
-color:var(--yellow-400);
-transform: scale(1.1);
+  color: var(--yellow-400);
+  transform: scale(1.1);
+}
+
+.select {
+  font-family: Arial, sans-serif;
+  width: 100%;
+  font-size: 16px;
+  color: #333;
+  padding: 8px;
+  border: 1px solid var(--black-100);
+  background-color: var(--gray-500);
+  border-radius: 4px;
+}
+
+
+.select::after {
+  content: '\25BC';
+  /* Setinha para navegadores que suportam */
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
 }

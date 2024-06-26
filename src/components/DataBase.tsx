@@ -1,26 +1,41 @@
 
-import  { useState } from 'react';
-import '../services/firebaseConfig'; 
+import { useState } from 'react';
+import '../services/firebaseConfig';
 import styles from "./Database.module.css"
 
-import { getFirestore, addDoc, collection } from "firebase/firestore"; 
+import { getFirestore, addDoc, collection, } from "firebase/firestore";
+
+
 
 function Database() {
   const [inputValue1, setInputValue1] = useState('');
   const [inputValue2, setInputValue2] = useState('');
   const [inputValue3, setInputValue3] = useState('');
+  const [category, setCategory] = useState('');
 
   const db = getFirestore();
 
   const saveDataToFirestore = async () => {
-      const docRef = await addDoc(collection(db, "myCollection"), {
-        name: inputValue1,
-        image: inputValue2,
-        description: inputValue3
-      });
-      alert("Document written to Database");
-      docRef
+
+
+
+
+
+
+    const docRef = await addDoc(collection(db, "myCollection"), {
+      name: inputValue1,
+      image: inputValue2,
+      description: inputValue3,
+      category: category
+    });
+    alert("Joia Adicionada Com Sucesso!");
+    docRef
+
   };
+
+
+
+
 
   return (
     <div className={styles.app}>
@@ -48,8 +63,19 @@ function Database() {
           value={inputValue3}
           onChange={(e) => setInputValue3(e.target.value)}
         />
+        <label htmlFor="category">Categoria:</label>
+
+        <select className={styles.select}  onChange={(e)=>setCategory(e.target.value)}> 
+          <option value="Alianças">Alianças</option>
+          <option value="Brincos">Brincos</option>
+          <option value="Aneis">Aneis</option>
+          <option value="Colares">Colares</option>
+          <option value="Pingentes">Pingentes</option>
+          <option value="Correntes">Correntes</option>
+        </select>
+
       </div>
-      <button onClick={saveDataToFirestore} className={styles.button}>Salvar no Firestore</button>
+      <button onClick={saveDataToFirestore} className={styles.button}>Salvar</button>
     </div>
   );
 }
