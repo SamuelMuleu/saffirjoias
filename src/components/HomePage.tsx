@@ -12,7 +12,7 @@ import { v4 as uuidv4 } from 'uuid';
 import styles from "./HomePage.module.css";
 import { useEffect, useState } from "react";
 import Cards from "./Card.tsx";
-import { allianceCards, imageCarousel, brincoCard, aneisCard, colarCard, pingenteCard, escapularioCard } from "../data/CardData.tsx";
+import {  imageCarousel} from "../data/CardData.tsx";
 import canga from "../assets/canga.png";
 import trevo from "../assets/trevo.png";
 import correntes from "../assets/saffir23.png";
@@ -62,42 +62,42 @@ function HomePage() {
       url: alianças,
       alt: 'Imagem 1',
       text: 'Alianças',
-      component: () => <Cards propsCard={allianceCards} onClick={handleBackCard} onClickCard={handleClicktAtendant} />
+      component: () => <Cards  onClick={handleBackCard} onClickCard={handleClicktAtendant} />
     },
     {
       id: uuidv4(),
       url: brinco,
       alt: 'Imagem 2',
       text: 'Brincos',
-      component: () => <Cards propsCard={brincoCard} onClick={handleBackCard} onClickCard={handleClicktAtendant} />
+      component: () => <Cards onClick={handleBackCard} onClickCard={handleClicktAtendant} />
     },
     {
       id: uuidv4(),
       url: aneis,
       alt: 'Imagem 2',
       text: 'Anéis',
-      component: () => <Cards propsCard={aneisCard} onClick={handleBackCard} onClickCard={handleClicktAtendant} />
+      component: () => <Cards onClick={handleBackCard} onClickCard={handleClicktAtendant} />
     },
     {
       id: uuidv4(),
       url: trevo,
       alt: 'Imagem 2',
       text: 'Colares',
-      component: () => <Cards propsCard={colarCard} onClick={handleBackCard} onClickCard={handleClicktAtendant} />
+      component: () => <Cards onClick={handleBackCard} onClickCard={handleClicktAtendant} />
     },
     {
       id: uuidv4(),
       url: canga,
       alt: 'Imagem 2',
       text: 'Pingentes',
-      component: () => <Cards propsCard={pingenteCard} onClick={handleBackCard} onClickCard={handleClicktAtendant} />
+      component: () => <Cards  onClick={handleBackCard} onClickCard={handleClicktAtendant} />
     },
     {
       id: uuidv4(),
       url: correntes,
       alt: 'Imagem 2',
       text: 'Correntes',
-      component: () => <Cards propsCard={escapularioCard} onClick={handleBackCard} onClickCard={handleClicktAtendant} />,
+      component: () => <Cards  onClick={handleBackCard} onClickCard={handleClicktAtendant} />,
     }
   ];
 

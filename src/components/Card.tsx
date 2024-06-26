@@ -27,7 +27,7 @@ interface Card {
 
 }
 interface Props {
-    propsCard: Card[];
+
     onClick: () => void;
     onClickCard: (clickedCard: Card) => void;
 
@@ -37,7 +37,7 @@ interface Props {
 Modal.setAppElement('#root');
 
 export default function Card(props: Props) {
-    const { propsCard, onClickCard } = props;
+    const {  onClickCard } = props;
     const [isOpen, setIsOpen] = useState(false);
     const [currentImage, setCurrentImage] = useState<string | null>(null);
     const [currentPage, setCurrentPage] = useState(1);
@@ -233,7 +233,7 @@ export default function Card(props: Props) {
             <div className={styles.pagination}>
 
                 <Pagination
-                    totalPosts={propsCard.length}
+                    totalPosts={cards.length}
                     postsPerPage={postPerPage}
                     setCurrentPage={setCurrentPage}
                     currentPage={currentPage}
