@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styles from './Card.module.css';
-import { XCircle, Pencil } from "@phosphor-icons/react";
+import { XCircle } from "@phosphor-icons/react";
 
 
 import 'swiper/css';
@@ -14,7 +14,6 @@ import { useEffect } from 'react';
 import Pagination from './Pagination.tsx';
 import { useNavigate } from 'react-router-dom';
 
-import Database from "./DataBase.tsx";
 
 const db = getFirestore();
 
@@ -42,7 +41,7 @@ export default function Card(props: Props) {
     const [currentImage, setCurrentImage] = useState<string | null>(null);
     const [currentPage, setCurrentPage] = useState(1);
     const [postPerPage, setPostPerPage] = useState(6);
-    const [isModalOpen, setIsModalOpen] = useState(false);
+
     const [isAdmin, setIsAdmin] = useState(false);
     const [cards, setCards] = useState<Card[]>([]);
 
@@ -56,13 +55,6 @@ export default function Card(props: Props) {
 
     };
 
-    const openModalEdit = () => {
-        setIsModalOpen(true);
-    };
-
-    const closeModalEdit = () => {
-        setIsModalOpen(false);
-    };
 
 
     const closeModal = () => {
@@ -126,7 +118,7 @@ export default function Card(props: Props) {
         fetchCards();
 
 
-        console.log(cards)
+        console.log(isAdmin)
     }, []);
 
 
@@ -140,31 +132,6 @@ export default function Card(props: Props) {
 
 
 
-            {isAdmin ? <div className={styles.modal}> <button
-                onClick={openModalEdit}
-                className={styles.editButton}>
-                <Pencil
-                    size={32} /></button>
-
-                <Modal
-                    isOpen={isModalOpen}
-                    className={styles.modalEdit}
-                    onRequestClose={closeModalEdit}
-                    overlayClassName={styles.overlay}>
-
-                    <Database />
-                    <div className={styles.closeButtonContainer}>
-
-                        <button onClick={closeModalEdit}
-
-                            className={styles.closeButtonEdit}
-                        >
-                            <XCircle
-                                size={32} />
-                        </button>
-                    </div>
-                </Modal>
-            </div> : null}
 
 
             <div className={styles.back} onClick={() => navigate(0)}>

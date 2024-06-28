@@ -3,7 +3,7 @@ import { useState } from 'react';
 import '../services/firebaseConfig';
 import styles from "./Database.module.css"
 
-import { getFirestore, addDoc, collection, } from "firebase/firestore";
+import { getFirestore, addDoc, collection } from "firebase/firestore";
 
 
 
@@ -14,6 +14,8 @@ function Database() {
   const [category, setCategory] = useState('');
 
   const db = getFirestore();
+
+
 
   const saveDataToFirestore = async () => {
 
