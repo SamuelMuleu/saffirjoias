@@ -6,6 +6,8 @@
   background-color: var(--blue-200);
   color: var(--yellow-300);
   display: flex;
+
+
   flex-direction: column;
   gap: 10px;
 

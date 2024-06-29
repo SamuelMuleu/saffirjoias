@@ -102,12 +102,15 @@ export default function Card(props: Props) {
                     const cardData = doc.data();
                     fetchedCards.push({
                         name: cardData.name || '',
-                        img: cardData.img || '',
+                        img: cardData.image || '',
                         description: cardData.description || '',
                         category: cardData.category || '',
 
                     });
+         
+
                 });
+   
                 setCards(fetchedCards);
 
             } catch (error) {
@@ -117,14 +120,13 @@ export default function Card(props: Props) {
 
         fetchCards();
 
-
         console.log(isAdmin)
     }, []);
 
 
 
 
-
+console.log(cards)
     return (
 
 

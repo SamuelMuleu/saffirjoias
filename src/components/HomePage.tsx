@@ -29,8 +29,6 @@ import Modal from "react-modal";
 import { XCircle, Pencil } from "@phosphor-icons/react";
 import Database from "./DataBase.tsx";
 
-
-
 interface CustomImage {
   id: string;
   url: string;
@@ -53,7 +51,10 @@ function HomePage() {
     const user = localStorage.getItem("user");
     if (user !== null) {
       const userVeri = JSON.parse(user);
-      if (userVeri.email === "saffirjoias@gmail.com") {
+      if (
+        userVeri.email === "saffirjoias@gmail.com" ||
+        "samuelpereiramuleu@gmail.com"
+      ) {
         setIsAdmin(true);
       }
     }
@@ -152,8 +153,6 @@ function HomePage() {
   const closeModalEdit = () => {
     setIsModalOpen(false);
   };
-
-
 
   return (
     <div className={styles.app}>
