@@ -7,6 +7,7 @@
     gap: 16px;
     justify-content: center;
     align-items: center;
+    max-width: 50%;
 
     margin: 0 auto;
   }
@@ -35,7 +36,6 @@
     color: var(--yellow-400);
   }
 
-  
   .modalImage {
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
@@ -85,18 +85,26 @@
     flex-direction: column;
     padding: 1.2rem;
 
-    width: 13rem;
-    height: 22rem;
+    width: 15rem;
+    height: 27rem;
 
     border: 2px solid var(--blue-100);
     justify-content: center;
     margin-bottom: 1rem;
     background-color: #fff;
-    box-shadow: 15px 15px 19px var(--blue-100);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
-    transition: transform 0.2s;
+    transition: transform 0.3s;
     cursor: pointer;
+  }
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  .title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
   }
 
   .button {
@@ -181,20 +189,26 @@
     grid-template-columns: 2fr 50%;
     gap: 7px;
 
+
     align-items: center;
 
-    padding-left: 0.9rem;
+
+place-items: center;
   }
 
-  img {
-    height: 15rem;
-  }
 
   .image {
-    min-height: 15.5rem;
+    min-height: 6rem;
+    max-height: 15rem;
     margin-top: 0.5rem;
     border-radius: 18px;
     cursor: pointer;
+  }
+  .title {
+
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
   }
 
   .back {
@@ -295,9 +309,8 @@
     flex-direction: column;
     padding: 0.5rem;
     padding-top: 1rem;
-    width: 11rem;
-    height: 24rem;
-
+    width: 10rem;
+    height: 22rem;
     border: 2px solid var(--blue-100);
     justify-content: center;
     margin-bottom: 1rem;

@@ -163,7 +163,7 @@ console.log(cards)
 
                                 className={styles.image}
                             />
-                            <p > {card.name}</p>
+                            <p className={styles.title}> {card.name}</p>
                             <p>{card.description}</p>
                             <button
                                 onClick={() => onClickCard(card)}
