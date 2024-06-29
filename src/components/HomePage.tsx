@@ -52,9 +52,8 @@ function HomePage() {
     if (user !== null) {
       const userVeri = JSON.parse(user);
       if (
-        userVeri.email === "saffirjoias@gmail.com" ||
-        "samuelpereiramuleu@gmail.com"
-      ) {
+        userVeri.email === "saffirjoias@gmail.com"
+   ) {
         setIsAdmin(true);
       }
     }
@@ -212,7 +211,7 @@ function HomePage() {
           <div className={styles.line}></div>
           <h2 className={styles.text2}>Escolha Por Categoria</h2>
           <div className={styles.options}>
-            {isAdmin ? (
+            {isAdmin  === true ? (
               <div className={styles.modal}>
                 {" "}
                 <button onClick={openModalEdit} className={styles.editButton}>
