@@ -1,6 +1,6 @@
 import styles from "./Footer.module.css";
 import faceSvg from "../assets/facebook.svg"
-import instagram from "../assets/instagram.svg"
+import instagram from "../assets/instagram1.svg"
 
 
 export default function Footer() {

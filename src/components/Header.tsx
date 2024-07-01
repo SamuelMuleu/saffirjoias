@@ -63,6 +63,8 @@ export default function Header() {
       });
 
     localStorage.removeItem("user");
+
+    localStorage.removeItem("isAdmin");
     window.location.reload();
   };
 

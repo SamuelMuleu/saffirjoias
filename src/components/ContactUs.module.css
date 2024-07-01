@@ -31,6 +31,11 @@ a {
   color: var(--yellow-400);
 }
 
+.span {
+  position: absolute;
+  top: 45%;
+  left: 43.3%;
+}
 .header {
   display: flex;
   flex-direction: column;
@@ -115,13 +120,17 @@ a {
 
   .time p {
     opacity: 0.5;
-    margin-left: 2rem;
+    margin-left: -1rem;
     color: var(--yellow-400);
   }
   .time2 {
     opacity: 0.5;
-    margin-right: 4rem;
+    margin-right: 3rem;
     color: var(--yellow-400);
+  }
+  .span {
+    position: relative;
+    left: 13%;
   }
 
   .image,
