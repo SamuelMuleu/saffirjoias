@@ -29,6 +29,9 @@ import Modal from "react-modal";
 import { XCircle, Pencil } from "@phosphor-icons/react";
 import Database from "./DataBase.tsx";
 
+import { doc, getDoc } from "firebase/firestore";
+import { auth, firestore } from "../services/firebaseConfig.ts";
+
 interface CustomImage {
   id: string;
   url: string;
@@ -45,18 +48,33 @@ function HomePage() {
   const [clickedImage, setClickedImage] = useState<CustomImage | null>(null);
   const [showCard, setShowCard] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isAdmin, setIsAdmin] = useState(false);
+  const [isAdmin, setIsAdmin] = useState("user");
 
   useEffect(() => {
-    const user = localStorage.getItem("user");
-    if (user !== null) {
-      const userVeri = JSON.parse(user);
-      if (
-        userVeri.email === "saffirjoias@gmail.com"
-   ) {
-        setIsAdmin(true);
+    const checkAdminRole = async () => {
+      try {
+        const user = auth.currentUser;
+        if (user) {
+          const userDocRef = doc(firestore, "users", user.uid);
+          const userDocSnap = await getDoc(userDocRef);
+
+          if (userDocSnap.exists()) {
+            const userData = userDocSnap.data();
+            if (userData.role === "admin") {
+              setIsAdmin("admin");
+            } else {
+              setIsAdmin("user");
+            }
+          } else {
+            console.log("No such document!");
+          }
+        }
+      } catch (error) {
+        console.error("Error fetching user data:", error);
       }
-    }
+    };
+
+    checkAdminRole();
   }, []);
 
   useEffect(() => {
@@ -211,7 +229,7 @@ function HomePage() {
           <div className={styles.line}></div>
           <h2 className={styles.text2}>Escolha Por Categoria</h2>
           <div className={styles.options}>
-            {isAdmin  === true ? (
+            {isAdmin == "admin" ? (
               <div className={styles.modal}>
                 {" "}
                 <button onClick={openModalEdit} className={styles.editButton}>
