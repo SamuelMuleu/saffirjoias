@@ -30,7 +30,6 @@ import { XCircle, Pencil } from "@phosphor-icons/react";
 import Database from "./DataBase.tsx";
 
 import { doc, getDoc } from "firebase/firestore";
-
 import { auth, firestore } from "../services/firebaseConfig.ts";
 
 interface CustomImage {
@@ -63,7 +62,6 @@ function HomePage() {
             const userData = userDocSnap.data();
             if (userData.role === "admin") {
               setIsAdmin("admin");
-              localStorage.setItem("isAdmin", "admin");
             } else {
               setIsAdmin("user");
               localStorage.setItem("isAdmin", "user");
@@ -108,8 +106,8 @@ function HomePage() {
     console.log(clickedCard);
     const itemName = clickedCard.name;
     const itemImg = clickedCard.img;
-    const mensage = `Ola, gostaria de saber mais sobre esse item ${itemName},seria essa imagem ${itemImg}`;
-    const mensagemCodificada = encodeURIComponent(mensage);
+    const mensagem = `Ola, gostaria de saber mais sobre esse item ${itemName}, seria essa imagem ${itemImg}`;
+    const mensagemCodificada = encodeURIComponent(mensagem);
     const Whatsapp = "+5522998371359";
     window.open(
       `https://wa.me/${Whatsapp}?text=${mensagemCodificada}`,
