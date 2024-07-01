@@ -40,7 +40,7 @@ export default function Card(props: Props) {
     const [isOpen, setIsOpen] = useState(false);
     const [currentImage, setCurrentImage] = useState<string | null>(null);
     const [currentPage, setCurrentPage] = useState(1);
-    const [postPerPage, setPostPerPage] = useState(6);
+    const [postPerPage] = useState(4);
 
     const [isAdmin, setIsAdmin] = useState(false);
     const [cards, setCards] = useState<Card[]>([]);
@@ -51,7 +51,7 @@ export default function Card(props: Props) {
     const handleImageClick = (img: string) => {
         setCurrentImage(img);
         setIsOpen(true);
-        setPostPerPage
+
 
     };
 
@@ -127,6 +127,9 @@ export default function Card(props: Props) {
 
 
 console.log(cards)
+const indexOfLastPost = currentPage * postPerPage;
+const indexOfFirstPost = indexOfLastPost - postPerPage;
+const currentCards = cards.slice(indexOfFirstPost, indexOfLastPost);
     return (
 
 
@@ -146,7 +149,7 @@ console.log(cards)
                     className={styles.container}
                 >
 
-                    {cards.map((card, index) => (
+                    {currentCards.map((card, index) => (
 
 
                         <div
