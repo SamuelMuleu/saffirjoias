@@ -7,7 +7,12 @@ export default function ContactUs() {
     <div className={styles.contactUs}>
       <div className={styles.time}>
         <h1>Horário de Atendimento</h1>
-        <p>Segunda a Sexta de 9:00 às 18:00 <p className={styles.time2}> Sábado de 9:00 às 13:00</p></p>
+        <p>
+          Segunda a Sexta de 9:00 às 18:00 <br />
+          <div className={styles.span}>
+          Sábado de 9:00 às 13:00
+            </div> 
+        </p>
       </div>
       <div className={styles.header}>
         <div className={styles.contactLink}>

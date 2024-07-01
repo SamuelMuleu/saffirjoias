@@ -30,6 +30,10 @@ import { XCircle, Pencil } from "@phosphor-icons/react";
 import Database from "./DataBase.tsx";
 
 import { doc, getDoc } from "firebase/firestore";
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8726c39 (role admin add)
 import { auth, firestore } from "../services/firebaseConfig.ts";
 
 interface CustomImage {
@@ -62,8 +66,15 @@ function HomePage() {
             const userData = userDocSnap.data();
             if (userData.role === "admin") {
               setIsAdmin("admin");
+<<<<<<< HEAD
             } else {
               setIsAdmin("user");
+=======
+              localStorage.setItem("isAdmin", "admin");
+            } else {
+              setIsAdmin("user");
+              localStorage.setItem("isAdmin", "user");
+>>>>>>> 8726c39 (role admin add)
             }
           } else {
             console.log("No such document!");
@@ -74,8 +85,23 @@ function HomePage() {
       }
     };
 
+<<<<<<< HEAD
     checkAdminRole();
+=======
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        checkAdminRole();
+      } else {
+        setIsAdmin("user");
+        localStorage.setItem("isAdmin", "user");
+      }
+    });
+
+    return () => unsubscribe();
+>>>>>>> 8726c39 (role admin add)
   }, []);
+
+  const verifyRole = localStorage.getItem("isAdmin");
 
   useEffect(() => {
     if (clickedImage) {
@@ -90,9 +116,11 @@ function HomePage() {
     setShowService(false);
   };
 
-  const handleClicktAtendant = (clickedCard: { description: string }) => {
-    const itemName = clickedCard.description;
-    const mensage = `Ola, gostaria de saber mais sobre esse item ${itemName}`;
+  const handleClicktAtendant = (clickedCard: { name: string; img: string }) => {
+    console.log(clickedCard);
+    const itemName = clickedCard.name;
+    const itemImg = clickedCard.img;
+    const mensage = `Ola, gostaria de saber mais sobre esse item ${itemName},seria essa imagem ${itemImg}`;
     const mensagemCodificada = encodeURIComponent(mensage);
     const Whatsapp = "+5522998371359";
     window.open(
@@ -229,7 +257,11 @@ function HomePage() {
           <div className={styles.line}></div>
           <h2 className={styles.text2}>Escolha Por Categoria</h2>
           <div className={styles.options}>
+<<<<<<< HEAD
             {isAdmin == "admin" ? (
+=======
+            {isAdmin === "admin" || verifyRole === "admin" ? (
+>>>>>>> 8726c39 (role admin add)
               <div className={styles.modal}>
                 {" "}
                 <button onClick={openModalEdit} className={styles.editButton}>
