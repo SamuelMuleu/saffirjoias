@@ -40,7 +40,8 @@
 
   .category img {
     width: 10rem;
-    height: 10rem;
+    height: 13rem;
+    border: 2px solid var(--yellow-400);
   }
 
   .text {

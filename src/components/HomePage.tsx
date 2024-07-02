@@ -122,7 +122,7 @@ function HomePage() {
       alt: "Imagem 1",
       text: "Alianças",
       component: () => (
-        <Cards onClick={handleBackCard} onClickCard={handleClicktAtendant} />
+        <Cards  onClick={handleBackCard} onClickCard={handleClicktAtendant} />
       ),
     },
     {
@@ -138,7 +138,7 @@ function HomePage() {
       id: uuidv4(),
       url: aneis,
       alt: "Imagem 2",
-      text: "Anéis",
+      text: "Aneis",
       component: () => (
         <Cards onClick={handleBackCard} onClickCard={handleClicktAtendant} />
       ),

@@ -8,7 +8,7 @@
 
   .swiper {
     max-width: 100%;
-    z-index: -1000;
+
 
     align-items: center;
     margin-left: 18rem;
@@ -91,6 +91,7 @@
   }
 
   .modalEdit {
+    
     position: sticky;
     display: table;
 
@@ -133,7 +134,7 @@
   }
 
   .swiper {
-    z-index: -1000;
+
     margin: 0 auto;
   }
 
