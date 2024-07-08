@@ -17,14 +17,14 @@ import Services from "./AboutUs.tsx";
 import { v4 as uuidv4 } from "uuid";
 import styles from "./HomePage.module.css";
 import { useEffect, useState } from "react";
-import Cards from "./Card.tsx";
+import Card from "./Card.tsx";
 import { imageCarousel } from "../data/CardData.tsx";
-import canga from "../assets/canga.png";
-import trevo from "../assets/trevo.png";
-import correntes from "../assets/saffir23.png";
-import brinco from "../assets/brinco.png";
-import aneis from "../assets/saffir17.png";
-import alianças from "../assets/saffir1.png";
+import canga from "../assets/saffir4.png";
+import trevo from "../assets/saffir4.png";
+import correntes from "../assets/saffir4.png";
+import brinco from "../assets/saffir4.png";
+import aneis from "../assets/saffir4.png";
+import alianças from "../assets/saffirBulgari.png";
 import Modal from "react-modal";
 import { XCircle, Pencil } from "@phosphor-icons/react";
 import Database from "./DataBase.tsx";
@@ -49,6 +49,10 @@ function HomePage() {
   const [showCard, setShowCard] = useState(true);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isAdmin, setIsAdmin] = useState("user");
+
+
+  const [selectedText, setSelectedText] = useState<string>('');
+
 
   useEffect(() => {
     const checkAdminRole = async () => {
@@ -92,8 +96,12 @@ function HomePage() {
   useEffect(() => {
     if (clickedImage) {
       setSelectedComponent(clickedImage.component);
+
+
     }
   }, [clickedImage]);
+
+  console.log(selectedText)
 
   const handleBackCard = () => {
     setShowCard(true);
@@ -115,6 +123,10 @@ function HomePage() {
     );
   };
 
+
+
+
+
   const images = [
     {
       id: uuidv4(),
@@ -122,7 +134,7 @@ function HomePage() {
       alt: "Imagem 1",
       text: "Alianças",
       component: () => (
-        <Cards  onClick={handleBackCard} onClickCard={handleClicktAtendant} />
+        <Card categoryCard="Alianças" onClick={handleBackCard} onClickCard={handleClicktAtendant} />
       ),
     },
     {
@@ -131,7 +143,7 @@ function HomePage() {
       alt: "Imagem 2",
       text: "Brincos",
       component: () => (
-        <Cards onClick={handleBackCard} onClickCard={handleClicktAtendant} />
+        <Card categoryCard="Brincos"  onClick={handleBackCard} onClickCard={handleClicktAtendant} />
       ),
     },
     {
@@ -140,7 +152,7 @@ function HomePage() {
       alt: "Imagem 2",
       text: "Aneis",
       component: () => (
-        <Cards onClick={handleBackCard} onClickCard={handleClicktAtendant} />
+        <Card categoryCard="Aneis" onClick={handleBackCard} onClickCard={handleClicktAtendant} />
       ),
     },
     {
@@ -149,7 +161,7 @@ function HomePage() {
       alt: "Imagem 2",
       text: "Colares",
       component: () => (
-        <Cards onClick={handleBackCard} onClickCard={handleClicktAtendant} />
+        <Card  categoryCard="Colares" onClick={handleBackCard} onClickCard={handleClicktAtendant} />
       ),
     },
     {
@@ -158,7 +170,7 @@ function HomePage() {
       alt: "Imagem 2",
       text: "Pingentes",
       component: () => (
-        <Cards onClick={handleBackCard} onClickCard={handleClicktAtendant} />
+        <Card  categoryCard="Pingentes"  onClick={handleBackCard} onClickCard={handleClicktAtendant} />
       ),
     },
     {
@@ -167,13 +179,16 @@ function HomePage() {
       alt: "Imagem 2",
       text: "Correntes",
       component: () => (
-        <Cards onClick={handleBackCard} onClickCard={handleClicktAtendant} />
+        <Card categoryCard="Correntes" onClick={handleBackCard} onClickCard={handleClicktAtendant} />
       ),
     },
   ];
 
+  
+
   const handleClickCard = (clickedImage: CustomImage) => {
     setClickedImage(clickedImage);
+    setSelectedText(clickedImage.text)
     setSelectedComponent(clickedImage.component);
   };
 
@@ -184,6 +199,8 @@ function HomePage() {
   const closeModalEdit = () => {
     setIsModalOpen(false);
   };
+  console.log(selectedText)
+
 
   return (
     <div className={styles.app}>

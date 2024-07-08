@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "./Card.module.css";
-import { XCircle } from "@phosphor-icons/react";
+import { XCircle, X } from "@phosphor-icons/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -13,6 +13,7 @@ import {
   getFirestore,
   collection,
   getDocs,
+  deleteDoc,
 } from "firebase/firestore";
 import { useEffect } from "react";
 
@@ -22,30 +23,28 @@ import { useNavigate } from "react-router-dom";
 const db = getFirestore();
 
 interface Card {
+  id: string;
   name: string;
   img: string;
   description: string;
   category: string;
-
 }
 
-
 interface Props {
+  categoryCard: string;
   onClick: () => void;
-  onClickCard: (clickedCard: Card) => void;
-
+  onClickCard: (clickedCard: { name: string; img: string }) => void;
 }
 
 Modal.setAppElement("#root");
 
 export default function Card(props: Props) {
-  const { onClickCard }=props;
-
+  const { categoryCard, onClickCard } = props;
 
   const [isOpen, setIsOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postPerPage] = useState(4);
+  const [postPerPage] = useState(6);
 
   const [isAdmin, setIsAdmin] = useState(false);
   const [cards, setCards] = useState<Card[]>([]);
@@ -75,6 +74,7 @@ export default function Card(props: Props) {
             const userData = userDocSnap.data();
 
             setIsAdmin(userData.role === "admin");
+            console.log(isAdmin);
           } else {
             console.log("No such document!");
           }
@@ -93,9 +93,11 @@ export default function Card(props: Props) {
         const cardsCollection = collection(db, "myCollection");
         const querySnapshot = await getDocs(cardsCollection);
         const fetchedCards: Card[] = [];
+
         querySnapshot.forEach((doc) => {
           const cardData = doc.data();
           fetchedCards.push({
+            id: doc.id,
             name: cardData.name || "",
             img: cardData.image || "",
             description: cardData.description || "",
@@ -110,15 +112,27 @@ export default function Card(props: Props) {
     };
 
     fetchCards();
-
-    console.log(isAdmin);
   }, []);
+
+  const deleteCard = async (id: String) => {
+    try {
+      await deleteDoc(doc(db, "myCollection", `${id}`));
+      setCards(cards.filter((card) => card.id !== id));
+    } catch (error) {
+      console.error("Erro ao deletar o documento: ", error);
+
+    }
+  };
 
   const indexOfLastPost = currentPage * postPerPage;
   const indexOfFirstPost = indexOfLastPost - postPerPage;
+
   const currentCards = cards.slice(indexOfFirstPost, indexOfLastPost);
 
-
+  console.log(cards)
+  const filteredCards = currentCards.filter(
+    (card) => card.category === categoryCard
+  );
 
   return (
     <div>
@@ -127,8 +141,11 @@ export default function Card(props: Props) {
       </div>
       <div>
         <div className={styles.container}>
-          {currentCards.map((card, index) => (
+          {filteredCards.map((card, index) => (
             <div key={index} className={styles.card}>
+              <button className={styles.deleteButton} onClick={() => deleteCard(card.id)}>
+                <X  size='20'/>
+              </button>
               <img
                 src={card.img}
                 alt={card.description}

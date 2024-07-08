@@ -16,6 +16,7 @@
   }
 
   .category img {
+
     margin-top: 2rem;
 
     transition: transform 0.3s ease;
@@ -39,7 +40,7 @@
   }
 
   .category img {
-    width: 10rem;
+    width: 13rem;
     height: 13rem;
     border: 2px solid var(--yellow-400);
   }

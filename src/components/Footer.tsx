@@ -17,7 +17,7 @@ export default function Footer() {
                 </a>
                 <a href="https://www.instagram.com/saffir_atelierdejoias/" target="_blank">
 
-                    <img src={instagram} className={styles.face}  />
+                    <img src={instagram}  className={styles.face} />
                 </a>
                 </div>
 
