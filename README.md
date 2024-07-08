@@ -20,6 +20,7 @@ e gerenciamento de conteúdo para administradores.
 ## Tecnologias Utilizadas
 - React.js
 - React Router
+- TypeScript
 - Firebase
 
 
