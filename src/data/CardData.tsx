@@ -2,7 +2,7 @@ import { v4 as uuidv4 } from "uuid";
 
 import saffir14 from "../assets/saffir4.png";
 
-import solitarioExplicaçao from "../assets/solitarioExplicaçao.png";
+import consertos from "../assets/consertos.png";
 
 import aliançaExplicaçao from "../assets/aliançaExplicaçao.png";
 import aliançaExplicaçao2 from "../assets/aliançaExplicaçao2.png";
@@ -45,7 +45,7 @@ const imageCarousel: ImageCarouselItem[] = [
   },
   {
     id: uuidv4(),
-    url: solitarioExplicaçao,
+    url: consertos,
     alt: "Imagem 1",
     text: "Alianças",
   },

@@ -114,4 +114,11 @@
     height: 2.7rem;
     border-radius: 8px;
     border: none;
+}@media (max-width:767px) {
+    .login{
+        margin:1.5rem;
+    }
+    .createAccount{
+        margin-left: 8.3rem;
+    }
 }

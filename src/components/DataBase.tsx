@@ -86,6 +86,7 @@ function Database() {
         <label htmlFor="category">Categoria:</label>
         <select
           className={styles.select}
+
           onChange={(e) => setCategory(e.target.value)}
         >
           <option value="Alianças">Alianças</option>

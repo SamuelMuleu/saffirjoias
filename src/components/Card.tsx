@@ -115,12 +115,18 @@ export default function Card(props: Props) {
   }, []);
 
   const deleteCard = async (id: String) => {
-    try {
-      await deleteDoc(doc(db, "myCollection", `${id}`));
-      setCards(cards.filter((card) => card.id !== id));
-    } catch (error) {
-      console.error("Erro ao deletar o documento: ", error);
+    const confirmDelete = window.confirm(
+      "Tem certeza de que deseja deletar esta Joia ?"
+    );
 
+    if (confirmDelete) {
+      try {
+        await deleteDoc(doc(db, "myCollection", `${id}`));
+        setCards(cards.filter((card) => card.id !== id));
+        alert("Joia deletada com sucesso!");
+      } catch (error) {
+        console.error("Erro ao deletar o documento: ", error);
+      }
     }
   };
 
@@ -128,7 +134,6 @@ export default function Card(props: Props) {
   const indexOfFirstPost = indexOfLastPost - postPerPage;
 
   const currentCards = cards.slice(indexOfFirstPost, indexOfLastPost);
-
 
   const filteredCards = currentCards.filter(
     (card) => card.category === categoryCard
@@ -143,11 +148,15 @@ export default function Card(props: Props) {
         <div className={styles.container}>
           {filteredCards.map((card, index) => (
             <div key={index} className={styles.card}>
+              {isAdmin ? (
+                <button
+                  className={styles.deleteButton}
+                  onClick={() => deleteCard(card.id)}
+                >
+                  <X size="20" />
+                </button>
+              ) : null}
 
-              {isAdmin ?      <button className={styles.deleteButton} onClick={() => deleteCard(card.id)}>
-                <X  size='20'/>
-              </button> : null }
-         
               <img
                 src={card.img}
                 alt={card.description}
@@ -155,7 +164,7 @@ export default function Card(props: Props) {
                 className={styles.image}
               />
               <p className={styles.title}> {card.name}</p>
-              <p>{card.description}</p>
+              <p > {card.description}</p>
               <button
                 onClick={() => onClickCard(card)}
                 className={styles.button}

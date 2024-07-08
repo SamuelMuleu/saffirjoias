@@ -186,7 +186,7 @@ export default function Header() {
         <div>
       
           <p onClick={handleExitUser} className={styles.exitProfileUser}>
-            sair
+          sair
           </p>
         </div>
       ) : null}

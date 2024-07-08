@@ -14,8 +14,8 @@
     display: flex;
     flex-direction: column;
     padding: 1.2rem;
-    width: 15rem;
-    height: 27rem;
+    width: 16rem;
+    height: 28rem;
     border: 2px solid var(--blue-100);
     justify-content: center;
     margin-bottom: 1rem;
@@ -35,6 +35,7 @@
     font-size: 1.2rem;
     font-weight: bold;
     margin: 10px 0;
+
   }
 
   .button {
@@ -46,13 +47,14 @@
     width: 98%;
     font-weight: bold;
     margin: 0 auto;
-    margin-top: 1rem;
+    margin-top: -.7rem;
     border: 1px solid black;
   }
 
   .image {
     width: auto;
-    min-height: 200px;
+    min-height: 17rem;
+
     border: 2px solid var(--yellow-400);
     border-radius: 8px;
     cursor: pointer;
@@ -264,7 +266,7 @@
     background-color: var(--blue-200);
     color: var(--yellow-300);
 
-    bottom: 27rem;
+    bottom: 28.5rem;
   }
 }
 
