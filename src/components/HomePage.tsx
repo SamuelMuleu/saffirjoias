@@ -19,11 +19,11 @@ import styles from "./HomePage.module.css";
 import { useEffect, useState } from "react";
 import Card from "./Card.tsx";
 import { imageCarousel } from "../data/CardData.tsx";
-import canga from "../assets/saffir4.png";
+import pingentes from "../assets/pingentes.png";
 import trevo from "../assets/saffir4.png";
-import correntes from "../assets/saffir4.png";
-import brinco from "../assets/saffir4.png";
-import aneis from "../assets/saffir4.png";
+import correntes from "../assets/escapularios.png";
+import brinco from "../assets/brincos.png";
+import aneis from "../assets/anelCoraçao.png";
 import alianças from "../assets/saffirBulgari.png";
 import Modal from "react-modal";
 import { XCircle, Pencil } from "@phosphor-icons/react";
@@ -166,7 +166,7 @@ function HomePage() {
     },
     {
       id: uuidv4(),
-      url: canga,
+      url: pingentes,
       alt: "Imagem 2",
       text: "Pingentes",
       component: () => (

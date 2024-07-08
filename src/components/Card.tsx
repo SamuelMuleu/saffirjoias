@@ -129,7 +129,7 @@ export default function Card(props: Props) {
 
   const currentCards = cards.slice(indexOfFirstPost, indexOfLastPost);
 
-  console.log(cards)
+
   const filteredCards = currentCards.filter(
     (card) => card.category === categoryCard
   );
@@ -143,9 +143,11 @@ export default function Card(props: Props) {
         <div className={styles.container}>
           {filteredCards.map((card, index) => (
             <div key={index} className={styles.card}>
-              <button className={styles.deleteButton} onClick={() => deleteCard(card.id)}>
+
+              {isAdmin ?      <button className={styles.deleteButton} onClick={() => deleteCard(card.id)}>
                 <X  size='20'/>
-              </button>
+              </button> : null }
+         
               <img
                 src={card.img}
                 alt={card.description}
