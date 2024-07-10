@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background-color: var(--white-200);
+  padding: 0 20px;
+  margin-top: -4rem;
+ 
+}
+
+.header {
+  font-size: 120px;
+  font-weight: bold;
+  background:var(--yellow-400);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0;
+
+}
+
+.subheader {
+  font-size: 24px;
+  color: var(--yellow-400);
+  font-weight: bold;
+  margin: 24px 0;
+}
+
+.message {
+  font-size: 16px;
+
+  color: var(--yellow-400);
+}
+
+.link {
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--yellow-300);
+  background-color: var(--blue-100);
+  padding: 12px 24px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.link:hover {
+  background-color: var(--blue-200);
+}
