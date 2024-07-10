@@ -125,20 +125,7 @@
   .closeButtonEdit:hover {
     color: var(--yellow-400);
   }
-  .editButton {
-    background: transparent;
-    position: absolute;
-    top: 50rem !important;
-    background-color: var(--blue-100);
-    color: var(--yellow-300);
-    height: 2.5rem;
-    width: 2.5rem;
-    border-radius: 50%;
-  }
-  .editButton:hover{
-   background-color: var(--blue-200); 
-   color: var(--yellow-400);
-  }
+
 }
 
 @media (max-width: 768px) {
@@ -257,10 +244,20 @@
   bottom: 31rem;
 }
 .editButton {
-  border: none;
+  background: transparent;
   position: absolute;
-  top: 53rem;
-  right: 2rem;
+  top: 51rem !important;
+  left: 77rem;
+  border: none;
+  background-color: var(--blue-100);
+  color: var(--yellow-300);
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+}
+.editButton:hover{
+ background-color: var(--blue-200); 
+ color: var(--yellow-400);
 }
 
 @media (min-width: 414px) {
@@ -279,4 +276,36 @@
     right: -12.5rem;
     bottom: 31rem;
   }
+  .editButton {
+  background: transparent;
+  position: absolute;
+  top: 51rem !important;
+  left: 77rem;
+  border: none;
+  background-color: var(--blue-100);
+  color: var(--yellow-300);
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+}
+.editButton:hover{
+ background-color: var(--blue-200); 
+ color: var(--yellow-400);
+}
+.editButton {
+  background: transparent;
+  position: absolute;
+  top: 53rem !important;
+  left: 20.5rem !important;
+  border: none;
+  background-color: var(--blue-100);
+  color: var(--yellow-300);
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+}
+.editButton:hover{
+ background-color: var(--blue-200); 
+ color: var(--yellow-400);
+}
 }
