@@ -140,13 +140,6 @@ export default function Card(props: Props) {
 
 
 
-  console.log("currentPage:", currentPage);
-  console.log("postPerPage:", postPerPage);
-  console.log("indexOfLastPost:", indexOfLastPost);
-  console.log("indexOfFirstPost:", indexOfFirstPost);
-  console.log("filteredCards:", filteredCards);
-  console.log("currentCards:", currentCards)
-
   return (
     <div>
       <div className={styles.back} onClick={() => navigate(0)}>
@@ -154,7 +147,7 @@ export default function Card(props: Props) {
       </div>
       <div>
         <div className={styles.container}>
-          {filteredCards.map((card, index) => (
+          {currentCards.map((card, index) => (
             <div key={index} className={styles.card}>
               {isAdmin ? (
                 <button
