@@ -74,10 +74,7 @@ function Database() {
       </div>
       <div className={styles.input_container}>
         <label>Imagem:</label>
-        <input
- type="file" 
-accept="image/*"
-onChange={fileChangedHandler} />
+        <input type="file" accept="image/*" onChange={fileChangedHandler} />
       </div>
       <div className={styles.input_container}>
         <label>Descrição:</label>
@@ -89,9 +86,10 @@ onChange={fileChangedHandler} />
         <label htmlFor="category">Categoria:</label>
         <select
           className={styles.select}
-
           onChange={(e) => setCategory(e.target.value)}
         >
+          <option value="">Selecione uma categoria</option>
+
           <option value="Alianças">Alianças</option>
           <option value="Brincos">Brincos</option>
           <option value="Aneis">Aneis</option>

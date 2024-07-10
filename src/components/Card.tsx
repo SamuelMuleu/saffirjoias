@@ -44,7 +44,7 @@ export default function Card(props: Props) {
   const [isOpen, setIsOpen] = useState(false);
   const [currentImage, setCurrentImage] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postPerPage] = useState(6);
+  const [postPerPage] = useState(4);
 
   const [isAdmin, setIsAdmin] = useState(false);
   const [cards, setCards] = useState<Card[]>([]);
@@ -129,15 +129,23 @@ export default function Card(props: Props) {
       }
     }
   };
+  const filteredCards = cards.filter(
+    (card) => card.category === categoryCard
+  );
 
   const indexOfLastPost = currentPage * postPerPage;
   const indexOfFirstPost = indexOfLastPost - postPerPage;
 
-  const currentCards = cards.slice(indexOfFirstPost, indexOfLastPost);
+  const currentCards = filteredCards.slice(indexOfFirstPost, indexOfLastPost);
 
-  const filteredCards = currentCards.filter(
-    (card) => card.category === categoryCard
-  );
+
+
+  console.log("currentPage:", currentPage);
+  console.log("postPerPage:", postPerPage);
+  console.log("indexOfLastPost:", indexOfLastPost);
+  console.log("indexOfFirstPost:", indexOfFirstPost);
+  console.log("filteredCards:", filteredCards);
+  console.log("currentCards:", currentCards)
 
   return (
     <div>
