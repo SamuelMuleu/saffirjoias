@@ -8,7 +8,7 @@ export default function AboutUs() {
             <div className={styles.intro}>
                 <h1>Sobre Nós</h1>
                 <p>
-                    Fundada em [Ano], a Saffir Joias tem sido um símbolo de elegância e qualidade. Nossa missão é criar peças únicas que celebram os momentos mais importantes da vida.
+                    Fundada em 2006, a Saffir Joias tem sido um símbolo de elegância e qualidade. Nossa missão é criar peças únicas que celebram os momentos mais importantes da vida.
                 </p>
             </div>
             
