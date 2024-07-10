@@ -74,7 +74,10 @@ function Database() {
       </div>
       <div className={styles.input_container}>
         <label>Imagem:</label>
-        <input type="file" onChange={fileChangedHandler} />
+        <input
+ type="file" 
+accept="image/*"
+onChange={fileChangedHandler} />
       </div>
       <div className={styles.input_container}>
         <label>Descrição:</label>
