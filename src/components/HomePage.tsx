@@ -26,7 +26,7 @@ import brinco from "../assets/brincos.png";
 import aneis from "../assets/anelCoraçao.png";
 import alianças from "../assets/saffirBulgari.png";
 import Modal from "react-modal";
-import { XCircle, Pencil } from "@phosphor-icons/react";
+import { XCircle, Plus } from "@phosphor-icons/react";
 import Database from "./DataBase.tsx";
 
 import { doc, getDoc } from "firebase/firestore";
@@ -264,7 +264,7 @@ function HomePage() {
               <div className={styles.modal}>
                 {" "}
                 <button onClick={openModalEdit} className={styles.editButton}>
-                  <Pencil size={32} />
+                  <Plus size={32} />
                 </button>
                 <Modal
                   isOpen={isModalOpen}
