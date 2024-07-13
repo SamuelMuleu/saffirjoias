@@ -35,7 +35,6 @@
     font-size: 1.2rem;
     font-weight: bold;
     margin: 10px 0;
-
   }
 
   .button {
@@ -47,13 +46,13 @@
     width: 98%;
     font-weight: bold;
     margin: 0 auto;
-    margin-top: -.7rem;
+    margin-top: -0.7rem;
     border: 1px solid black;
   }
 
   .image {
     width: auto;
-    min-height: 17rem;
+    min-height: 14rem;
 
     border: 2px solid var(--yellow-400);
     border-radius: 8px;
